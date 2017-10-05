@@ -1,0 +1,89 @@
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+    background: #111;
+    color: #eee;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.App {
+    margin: 0 1em;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+.nav ul {
+    position: fixed;
+    top: 25%;
+    right: -185px;
+    transform: rotate(90deg);
+    font-size: 1em;
+    z-index: 9999;
+}
+
+.nav li {
+    display: inline-block;
+}
+
+.nav li a {
+    margin: 4px;
+    padding: 4px;
+    text-decoration: none;
+    color: white;
+}
+
+.fadeTranslate-enter {
+    opacity: 0;
+    transform: translate(0, -5vh);
+    z-index: 1;
+}
+
+.fadeTranslate-enter.fadeTranslate-enter-active {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: opacity 300ms ease-in, transform 300ms ease-in-out;
+}
+
+.fadeTranslate-exit {
+    opacity: 1;
+    transform: translate(0, 0);
+    z-index: 0;
+}
+
+.fadeTranslate-exit.fadeTranslate-exit-active {
+    opacity: 0;
+    transform: translate(0, 5vh);
+    transition: opacity 300ms ease-in, transform 300ms ease-in-out;
+}
+
+.fix-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.slide-button a {
+    color: black;
+    font-size: 2.5em;
+}
+
+.active {
+    transition: 0.2s ease;
+    text-decoration: dotted;
+}

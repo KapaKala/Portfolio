@@ -1,0 +1,81 @@
+.landing-container {
+
+}
+
+.blinking {
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+}
+
+.not-blinking {
+    -webkit-animation: 0;
+    -moz-animation: 0;
+    -ms-animation: 0;
+    -o-animation: 0;
+    animation: 0;
+}
+
+@keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: white;
+    }
+}
+
+@-moz-keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: white;
+    }
+}
+
+@-webkit-keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: white;
+    }
+}
+
+@-ms-keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: white;
+    }
+}
+
+@-o-keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: white;
+    }
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.console {
+    display: inline-block;
+}
+
+.console-container {
+    outline: none;
+}
+
+.console-text-area {
+    outline: none;
+}
+
