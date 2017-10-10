@@ -4,7 +4,7 @@ exports.reply = (command) => {
             console.log(Math.random() * random.length);
             return random[Math.floor(Math.random() * random.length)];
         default:
-            return "lol"
+            return command + " is not a valid command"
     }
 };
 

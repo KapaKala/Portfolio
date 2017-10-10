@@ -17,9 +17,8 @@ body {
 }
 .nav ul {
     position: fixed;
-    top: 25%;
-    right: -185px;
-    transform: rotate(90deg);
+    top: 0;
+    right: 1%;
     font-size: 1em;
     z-index: 9999;
 }
@@ -80,9 +79,4 @@ body {
 .slide-button a {
     color: black;
     font-size: 2.5em;
-}
-
-.active {
-    transition: 0.2s ease;
-    text-decoration: dotted;
 }

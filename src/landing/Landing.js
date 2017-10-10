@@ -71,7 +71,7 @@ export default class Landing extends Component {
         const animateRow = this.animateRow;
         animateRow("Hello!", 1, () => {
             animateRow("I'm Henri", 2, () => {
-                animateRow("I write code and stuff", 3, () => {
+                animateRow("I study web and software development", 3, () => {
                     this.refs["console-area"].classList.remove("hidden");
                     // this.refs["landing-container"].focus();
 

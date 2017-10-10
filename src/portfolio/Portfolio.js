@@ -140,7 +140,7 @@ export default class Portfolio extends Component {
         return (
             <div className="portfolio-container">
                 <div className="portfolio-row">
-                    <h1 className="portfolio-title">Stuff I've done</h1>
+                    <h1 className="portfolio-title">My works</h1>
                 </div>
                 <div className="portfolio-row">
                     {this.createContent()}

@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Portfolio from './portfolio/Portfolio';
 import Landing from './landing/Landing';
+import About from './about/About';
+import Contact from './contact/Contact';
 import FourOhFour from './fourOhFour/FourOhFour';
 import { Route, NavLink, Switch, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition} from 'react-transition-group';
@@ -23,7 +25,7 @@ const scrollToTop = () => {
 };
 
 const activeStyle = {
-    transition: '1s ease',
+    transition: 'all 1s ease-in-out',
     textDecoration: 'underline'
 };
 
@@ -37,7 +39,10 @@ const NavLayout = ({ children }) => (
                     <NavLink exact onClick={scrollToTop()} to="/works" activeStyle={activeStyle}>Works</NavLink>
                 </li>
                 <li>
-                    <NavLink exact to="/404">404</NavLink>
+                    <NavLink exact onClick={scrollToTop()} to="/about" activeStyle={activeStyle}>About</NavLink>
+                </li>
+                <li>
+                    <NavLink exact onClick={scrollToTop()} to="/contact" activeStyle={activeStyle}>Contact</NavLink>
                 </li>
                 <li>
                     ###Work#In#Progress###
@@ -56,13 +61,15 @@ const App = props => {
                         <Switch location={props.location}>
                             <Route exact path="/" component={Landing}/>
                             <Route exact path="/works" component={Portfolio}/>
+                            <Route exact path="/about" component={About}/>
+                            <Route exact path="/contact" component={Contact}/>
                             <Route path="*" component={FourOhFour}/>
                         </Switch>
                     </div>
                 </PageFade>
 
             </TransitionGroup>
-            <div className="slide-button"><a>↑</a></div>
+            {/*<div className="slide-button"><a>↑</a></div>*/}
         </NavLayout>
     );
 };
