@@ -110,6 +110,7 @@ export default class Landing extends Component {
                     if (this.state.history.length > 0 && historyMover < this.state.history.length) {
                         historyMover++;
                         console.log("Arrow up!");
+
                         stateCopy.text = stateCopy.history[stateCopy.history.length-historyMover].text;
                         this.setState(stateCopy);
                     }

@@ -32,8 +32,8 @@ export default class ConsoleArea extends Component {
                 <h1 ref={"history-command-" + i}>
                     <span key={i}>{this.props.console + o.text}</span>
                 </h1>
-                <h1 ref={"history-reply-" + i}>
-                    <span key={i}>{o.reply}</span>
+                <h1 ref={"history-reply-" + i} style={{whiteSpace: 'pre', width: '100%', wordWrap: 'break-word'}}>
+                    <span style={o.reply.length > 50 ? {fontSize: '0.5em'} : {fontSize: '1em'}} key={i}>{o.reply}</span>
                 </h1>
             </div>
            )});
@@ -44,14 +44,11 @@ export default class ConsoleArea extends Component {
                     {history}
                 </div>
                 <div className="prompt">
-                    <h1>
-                        <span id={this.props.id}>{this.state.console}</span>
-                        <span className="console-text-area" >{this.props.text}</span>
+                    <h1 className="prompt-text">
+                        <span id={this.props.id}>{this.state.console}</span><span className="console-text-area" >{this.props.text}</span>
                         <span ref="console-area-cursor" className={this.props.blinking ? "blinking" : "not-blinking"}>{this.props.cursor}</span>
                     </h1>
                 </div>
-
-
             </div>
         )
     }

@@ -74,7 +74,7 @@ export default class Portfolio extends Component {
     createContent() {
         return this.state.content.map((obj, i) => {
             return (
-                <div key={obj.id} className={"portfolio-item item-"+i} onMouseOver={this.hovering} style={{backgroundImage: "url(" + obj.img + ")", width: 100/this.state.content.length + "%", opacity: 0, top: 50}}>
+                <div key={obj.id} className={"portfolio-item item-"+i} style={{backgroundImage: "url(" + obj.img + ")", opacity: 0}}>
                     <div ref="name" className="hidden name">
                         <h3>{obj.name}</h3>
                     </div>
@@ -97,43 +97,49 @@ export default class Portfolio extends Component {
         animationTimeline
             .add({
                 targets: ".item-0",
-                translateY: -50,
+                translateY: -25,
                 opacity: 1,
-                easing: 'easeOutExpo'
+                duration: 250,
+                offset: 0,
+                delay: 0,
+                ease: 'linear'
             })
             .add({
                 targets: ".item-1",
-                translateY: -50,
+                translateY: -25,
                 opacity: 1,
-                offset: '-=850',
-                easing: 'easeOutExpo'
+                duration: 250,
+                offset: 100,
+                delay: 0,
+                ease: 'linear'
             })
             .add({
                 targets: ".item-2",
-                translateY: -50,
+                translateY: -25,
                 opacity: 1,
-                offset: '-=850',
-                easing: 'easeOutExpo'
+                duration: 225,
+                offset: 200,
+                delay: 0,
+                ease: 'linear'
             })
             .add({
                 targets: ".item-3",
-                translateY: -50,
+                translateY: -25,
                 opacity: 1,
-                offset: '-=850',
-                easing: 'easeOutExpo'
+                duration: 200,
+                offset: 275,
+                delay: 0,
+                ease: 'linear'
             })
             .add({
                 targets: ".portfolio-title",
-                translateY: -10,
+                translateY: 16,
+                offset: 0,
+                duration: 2000,
                 opacity: 1,
-                offset: '-=500'
+                delay: 0,
+                ease: 'linear'
             })
-        //
-        // let cssSelector = anime({
-        //     targets: ".item-0, .item-1, .item-2, .item-3",
-        //     translateY: 250,
-        //     opacity: 1
-        // });
     }
 
     render() {

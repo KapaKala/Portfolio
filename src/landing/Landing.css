@@ -1,5 +1,5 @@
 .landing-container {
-    margin: 0 1em;
+    margin: 0 2em;
 }
 
 .blinking {
@@ -71,9 +71,12 @@
 
 .console-container {
     outline: none;
+    word-wrap: break-word;
 }
 
 .console-text-area {
     outline: none;
+    white-space: normal;
 }
+
 

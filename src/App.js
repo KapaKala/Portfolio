@@ -25,8 +25,9 @@ const scrollToTop = () => {
 };
 
 const activeStyle = {
-    transition: 'all 1s ease-in-out',
-    textDecoration: 'underline'
+    transition: 'all 0.6s ease-in-out',
+    // textDecoration: 'underline',
+    background: 'blue'
 };
 
 const NavLayout = ({ children }) => (
@@ -43,9 +44,6 @@ const NavLayout = ({ children }) => (
                 </li>
                 <li>
                     <NavLink exact onClick={scrollToTop()} to="/contact" activeStyle={activeStyle}>Contact</NavLink>
-                </li>
-                <li>
-                    ###Work#In#Progress###
                 </li>
             </ul>
         {children}
