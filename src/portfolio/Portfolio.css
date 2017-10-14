@@ -31,7 +31,6 @@ body {
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Chrome */
     display: flex;         /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    flex-flow: row wrap;
     justify-content: flex-start;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -47,11 +46,10 @@ body {
 .portfolio-item {
     background-size: cover;
     background-position: top;
-    height: 20em;
-    min-width: 20em;
+    height: 30em;
+    min-width: 10em;
     margin: 0 1em 1em 0;
     transition: all 0.25s ease;
-    flex: 1 1 0%;
 }
 
 .portfolio-item:hover {

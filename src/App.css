@@ -17,20 +17,25 @@ body {
 }
 
 .nav ul {
+    margin: 0;
     position: fixed;
     top: 0;
-    right: 1%;
+    right: 0;
     font-size: 1em;
     z-index: 9999;
+    width: 100px;
 }
 
 .nav li {
-    display: inline-block;
+    list-style: none;
+    text-align: center;
+    margin: 4px;
 }
 
 .nav li a {
-    margin: 0 4px;
-    padding: 16px 4px;
+    display: block;
+    padding: 4px;
+    width: 100px;
     text-decoration: none;
     color: white;
     transition: all 0.5s ease;

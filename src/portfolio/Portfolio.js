@@ -74,7 +74,7 @@ export default class Portfolio extends Component {
     createContent() {
         return this.state.content.map((obj, i) => {
             return (
-                <div key={obj.id} className={"portfolio-item item-"+i} style={{backgroundImage: "url(" + obj.img + ")", opacity: 0}}>
+                <div key={obj.id} className={"portfolio-item item-"+i} style={{backgroundImage: "url(" + obj.img + ")", width: 100/this.state.content.length-5 + "%", opacity: 0}}>
                     <div ref="name" className="hidden name">
                         <h3>{obj.name}</h3>
                     </div>
@@ -145,9 +145,6 @@ export default class Portfolio extends Component {
     render() {
         return (
             <div className="portfolio-container">
-                <div className="portfolio-row">
-                    <h1 className="portfolio-title">My works</h1>
-                </div>
                 <div className="portfolio-row">
                     {this.createContent()}
                 </div>
