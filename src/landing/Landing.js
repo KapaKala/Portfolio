@@ -135,7 +135,7 @@ export default class Landing extends Component {
                     stateCopy.text = "";
                     this.setState(stateCopy);
                     console.log(this.state.history);
-                    window.scrollBy(0, document.body.scrollHeight);
+                    this.refs["landing-container"].scrollTop = this.refs["landing-container"].scrollHeight - this.refs["landing-container"].clientHeight
                     break;
                 default:
                     break;
@@ -169,6 +169,7 @@ export default class Landing extends Component {
     render() {
         const print = this.state.print;
         return (
+            <div className="landing-wrapper">
             <div ref="landing-container" className="landing-container">
                 <div className="landing-row-1">
                     <h1>
@@ -194,6 +195,7 @@ export default class Landing extends Component {
                 <div ref="console-area" className="hidden">
                     <ConsoleArea id="input" history={this.state.history} blinking={this.state.consoleBlink} initialCommands={print} console={this.state.console} text={this.state.text} cursor={this.state.cursor}/>
                 </div>
+            </div>
             </div>
         )
     }

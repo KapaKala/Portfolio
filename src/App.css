@@ -21,12 +21,13 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    font-size: 1em;
     z-index: 9999;
     width: 100px;
 }
 
 .nav li {
+    font-size: 1.25em;
+    font-weight: bold;
     list-style: none;
     text-align: center;
     margin: 4px;

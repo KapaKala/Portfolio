@@ -1,5 +1,21 @@
+.landing-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
 .landing-container {
-    margin: 0 2em;
+    width: 70vw;
+    height: 70vh;
+    max-height: 80vh;
+    margin: auto auto;
+    padding: 1em;
+    border: 1px solid white;
+    border-top: 3em solid white;
+    overflow: auto;
+    font-size: 0.75em;
+    border-radius: 3px;
+
 }
 
 .blinking {
