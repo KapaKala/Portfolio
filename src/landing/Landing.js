@@ -170,6 +170,9 @@ export default class Landing extends Component {
         const print = this.state.print;
         return (
             <div className="landing-wrapper">
+                <div className="title">
+                    <span>HOME</span>
+                </div>
             <div ref="landing-container" className="landing-container">
                 <div className="landing-row-1">
                     <h1>

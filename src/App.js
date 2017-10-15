@@ -1,4 +1,5 @@
 import React from 'react';
+import Nav from './nav/Nav';
 import Portfolio from './portfolio/Portfolio';
 import Landing from './landing/Landing';
 import About from './about/About';
@@ -13,7 +14,7 @@ const PageFade = props => (
     <CSSTransition
         {...props}
         classNames="fadeTranslate"
-        timeout={600}
+        timeout={1000}
         mountOnEnter={true}
         unmountOnExit={true}
     />
@@ -51,9 +52,10 @@ const NavLayout = ({ children }) => (
 );
 
 const App = props => {
+
     return (
-        <NavLayout>
             <TransitionGroup>
+                <Nav scrollToTop={scrollToTop()}/>
                 <PageFade key={props.location.key}>
                     <div className="App fix-container">
                         <Switch location={props.location}>
@@ -67,8 +69,6 @@ const App = props => {
                 </PageFade>
 
             </TransitionGroup>
-            {/*<div className="slide-button"><a>↑</a></div>*/}
-        </NavLayout>
     );
 };
 

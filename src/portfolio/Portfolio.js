@@ -74,19 +74,19 @@ export default class Portfolio extends Component {
     createContent() {
         return this.state.content.map((obj, i) => {
             return (
-                <div key={obj.id} className={"portfolio-item item-"+i} style={{backgroundImage: "url(" + obj.img + ")", width: 100/this.state.content.length-5 + "%", opacity: 0}}>
-                    <div ref="name" className="hidden name">
-                        <h3>{obj.name}</h3>
+                    <div key={obj.id} className={"portfolio-item item-"+i} style={{backgroundImage: "url(" + obj.img + ")", opacity: 0}}>
+                        <div ref="name" className="hidden name">
+                            <h3>{obj.name}</h3>
+                        </div>
+                        <div ref="description" className="hidden description">
+                            <h5>{obj.description}</h5>
+                        </div>
+                        <div ref="links" className="hidden links">
+                            {obj.links.map((link, i) => {
+                                return <a key={i} href={link.url}><img src={link.img} alt={link.alt}/></a>
+                            })}
+                        </div>
                     </div>
-                    <div ref="description" className="hidden description">
-                        <h5>{obj.description}</h5>
-                    </div>
-                    <div ref="links" className="hidden links">
-                        {obj.links.map((link, i) => {
-                            return <a key={i} href={link.url}><img src={link.img} alt={link.alt}/></a>
-                        })}
-                    </div>
-                </div>
             )
         })
     }
@@ -97,7 +97,6 @@ export default class Portfolio extends Component {
         animationTimeline
             .add({
                 targets: ".item-0",
-                translateY: -25,
                 opacity: 1,
                 duration: 250,
                 offset: 0,
@@ -106,7 +105,6 @@ export default class Portfolio extends Component {
             })
             .add({
                 targets: ".item-1",
-                translateY: -25,
                 opacity: 1,
                 duration: 250,
                 offset: 100,
@@ -115,7 +113,6 @@ export default class Portfolio extends Component {
             })
             .add({
                 targets: ".item-2",
-                translateY: -25,
                 opacity: 1,
                 duration: 225,
                 offset: 200,
@@ -124,19 +121,9 @@ export default class Portfolio extends Component {
             })
             .add({
                 targets: ".item-3",
-                translateY: -25,
                 opacity: 1,
                 duration: 200,
                 offset: 275,
-                delay: 0,
-                ease: 'linear'
-            })
-            .add({
-                targets: ".portfolio-title",
-                translateY: 16,
-                offset: 0,
-                duration: 2000,
-                opacity: 1,
                 delay: 0,
                 ease: 'linear'
             })
@@ -144,9 +131,14 @@ export default class Portfolio extends Component {
 
     render() {
         return (
-            <div className="portfolio-container">
-                <div className="portfolio-row">
-                    {this.createContent()}
+            <div className="portfolio-wrapper">
+                <div className="title">
+                    <span>WORKS</span>
+                </div>
+                <div className="portfolio-container">
+                    <div className="portfolio-row">
+                        {this.createContent()}
+                    </div>
                 </div>
             </div>
         )

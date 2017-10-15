@@ -13,38 +13,19 @@ body {
     position: relative;
     display: flex;
     flex-flow: column;
-    margin: 0 2rem;
-}
-
-.nav ul {
     margin: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 9999;
-    width: 100px;
 }
 
-.nav li {
-    font-size: 1.25em;
-    font-weight: bold;
-    list-style: none;
-    text-align: center;
-    margin: 4px;
-}
-
-.nav li a {
-    display: block;
-    padding: 4px;
-    width: 100px;
-    text-decoration: none;
-    color: white;
-    transition: all 0.5s ease;
+.menu {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    font-weight: lighter;
 }
 
 .fadeTranslate-enter {
     opacity: 0;
-    transform: translate3d(0, 12px, 0);
+    transform: translate3d(0, 16px, 100px);
     z-index: 1;
 }
 
@@ -52,7 +33,7 @@ body {
     opacity: 1;
     /*transform: translate(0, 0);*/
     transform: translate3d(0, 0, 0);
-    transition: opacity 250ms ease-in, transform 250ms ease-in-out;
+    transition: opacity 500ms ease-in, transform 500ms ease-in-out;
 }
 
 .fadeTranslate-exit {
@@ -64,19 +45,28 @@ body {
 .fadeTranslate-exit.fadeTranslate-exit-active {
     opacity: 0;
     /*transform: translate(0, 5vh);*/
-    transform: translate3d(0, 12px, 0);
-    transition: opacity 175ms ease-in, transform 175ms ease-in-out;
+    transform: translate3d(0, 16px, 100px);
+    transition: opacity 250ms ease-in, transform 250ms ease-in-out;
 }
 
 .fix-container {
     position: absolute;
     width: 100%;
     /*height: 100%;*/
-    margin: -0.5em -1em;
-    overflow: hidden;
+    /*margin: -0.5em -1em;*/
+    /*overflow: hidden;*/
 }
 
-.slide-button a {
-    color: black;
-    font-size: 2.5em;
+.hidden {
+    opacity: 0;
+}
+
+.title {
+    position: absolute;
+    display: flex;
+    top: 1em;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    font-weight: bold;
 }
