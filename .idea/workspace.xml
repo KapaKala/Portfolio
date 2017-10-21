@@ -4,12 +4,8 @@
     <list default="true" id="8d5da975-5f73-4ba2-a7ba-969db8b6a2fd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.css" afterPath="$PROJECT_DIR$/src/App.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/landing/Landing.css" afterPath="$PROJECT_DIR$/src/landing/Landing.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/landing/Landing.js" afterPath="$PROJECT_DIR$/src/landing/Landing.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nav/Nav.css" afterPath="$PROJECT_DIR$/src/nav/Nav.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/nav/Nav.js" afterPath="$PROJECT_DIR$/src/nav/Nav.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/portfolio/Portfolio.css" afterPath="$PROJECT_DIR$/src/portfolio/Portfolio.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/portfolio/Portfolio.js" afterPath="$PROJECT_DIR$/src/portfolio/Portfolio.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -37,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Nav.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Nav.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nav/Nav.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="56" column="30" lean-forward="true" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
+            <state relative-caret-position="-112">
+              <caret line="34" column="21" lean-forward="false" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -52,8 +48,8 @@
       <file leaf-file-name="Nav.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/nav/Nav.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="55" column="15" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="286">
+              <caret line="103" column="27" lean-forward="false" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -62,8 +58,8 @@
       <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-407">
-              <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            <state relative-caret-position="-74">
+              <caret line="54" column="17" lean-forward="true" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -79,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Portfolio.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Portfolio.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/portfolio/Portfolio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="135" column="31" lean-forward="false" selection-start-line="135" selection-start-column="31" selection-end-line="135" selection-end-column="31" />
+            <state relative-caret-position="232">
+              <caret line="154" column="27" lean-forward="false" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -163,12 +159,12 @@
         <option value="$PROJECT_DIR$/src/landing/ConsoleArea.js" />
         <option value="$PROJECT_DIR$/src/landing/Landing.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/portfolio/Portfolio.js" />
         <option value="$PROJECT_DIR$/src/landing/Landing.css" />
         <option value="$PROJECT_DIR$/src/portfolio/Portfolio.css" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/nav/Nav.css" />
         <option value="$PROJECT_DIR$/src/nav/Nav.js" />
+        <option value="$PROJECT_DIR$/src/portfolio/Portfolio.js" />
       </list>
     </option>
   </component>
@@ -505,7 +501,7 @@
       <workItem from="1501230432917" duration="1248000" />
       <workItem from="1501845997841" duration="16645000" />
       <workItem from="1506609347660" duration="58965000" />
-      <workItem from="1507458729429" duration="32971000" />
+      <workItem from="1507458729429" duration="40634000" />
     </task>
     <task id="LOCAL-00001" summary="Change page transition enter animation from top in to bottom in">
       <created>1507242823197</created>
@@ -556,11 +552,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508069158986</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="UI changes">
+      <created>1508089511048</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1508089511048</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128192000" />
+    <option name="totallyTimeSpent" value="135855000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="878" extended-state="6" />
@@ -619,7 +622,8 @@
     <MESSAGE value="Change the works page around" />
     <MESSAGE value="Change nav" />
     <MESSAGE value="Make landing page look more like a console window" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make landing page look more like a console window" />
+    <MESSAGE value="UI changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1055,32 +1059,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/portfolio/Portfolio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="135" column="31" lean-forward="false" selection-start-line="135" selection-start-column="31" selection-end-line="135" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-407">
-          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/nav/Nav.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="55" column="15" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/portfolio/Portfolio.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1127">
@@ -1089,10 +1067,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-74">
+          <caret line="54" column="17" lean-forward="true" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/nav/Nav.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="103" column="27" lean-forward="false" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/nav/Nav.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="56" column="30" lean-forward="true" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
+        <state relative-caret-position="-112">
+          <caret line="34" column="21" lean-forward="false" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/portfolio/Portfolio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="154" column="27" lean-forward="false" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

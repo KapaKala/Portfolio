@@ -5,7 +5,7 @@ import './Nav.css';
 const activeStyle = {
     transition: 'all 0.6s ease-in-out',
     // textDecoration: 'underline',
-    backgroundColor: 'rgba(255,255,255,0.5)'
+    color: 'rgba(255,255,255,1)'
 };
 
 export default class Nav extends Component {
@@ -17,23 +17,23 @@ export default class Nav extends Component {
     }
 
     click() {
-        if (this.refs["overlay"].classList.contains("hidden")) {
-            this.refs["overlay"].classList.remove("hidden");
-            this.refs["menu"].innerHTML = "close menu";
-            this.refs["menu"].style.color = "darkgray";
-        } else {
-            this.refs["overlay"].classList.add("hidden");
+        if (this.refs["overlay"].classList.contains("open")) {
+            this.refs["overlay"].classList.remove("open");
+            this.refs["overlay"].classList.add("close");
             this.refs["menu"].innerHTML = "menu";
             this.refs["menu"].style.color = "white";
+        } else {
+            this.refs["overlay"].classList.remove("close");
+            this.refs["overlay"].classList.add("open");
+            this.refs["menu"].innerHTML = "close menu";
+            this.refs["menu"].style.color = "gray";
         }
         console.log("click")
     }
 
     menuClick() {
+        this.click();
         this.props.scrollToTop;
-        this.refs["overlay"].classList.add("hidden");
-        this.refs["menu"].innerHTML = "menu";
-        this.refs["menu"].style.color = "white";
     }
 
     render() {
@@ -44,21 +44,21 @@ export default class Nav extends Component {
                     <a>menu</a>
                 </div>
 
-                <div ref="overlay" className="overlay hidden">
-                    <div className="overlay-content">
-                        <div className="overlay-item item-1">
+                <div ref="overlay" className="overlay">
+                    <ul>
+                        <li>
                             <NavLink exact onClick={this.menuClick} to="/" activeStyle={activeStyle}>home</NavLink>
-                        </div>
-                        <div className="overlay-item item-2">
+                        </li>
+                        <li>
                             <NavLink exact onClick={this.menuClick} to="/works" activeStyle={activeStyle}>works</NavLink>
-                        </div>
-                        <div className="overlay-item item-3">
+                        </li>
+                        <li>
                             <NavLink exact onClick={this.menuClick} to="/about" activeStyle={activeStyle}>about</NavLink>
-                        </div>
-                        <div className="overlay-item item-4">
+                        </li>
+                        <li>
                             <NavLink exact onClick={this.menuClick} to="/contact" activeStyle={activeStyle}>contact</NavLink>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         )

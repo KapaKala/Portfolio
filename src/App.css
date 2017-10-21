@@ -52,7 +52,7 @@ body {
 .fix-container {
     position: absolute;
     width: 100%;
-    /*height: 100%;*/
+    height: 100%;
     /*margin: -0.5em -1em;*/
     /*overflow: hidden;*/
 }

@@ -11,7 +11,7 @@
 }
 
 .overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     margin: 0;
@@ -23,36 +23,132 @@
     background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
+    visibility: hidden;
+    opacity: 0;
 }
 
-.overlay-content {
+.overlay.open {
+    /*opacity: 1;*/
+    visibility: visible;
+}
+
+.overlay ul {
     display: flex;
     flex-flow: nowrap column;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.overlay-item a {
+.overlay ul li {
     display: block;
-    width: 100%;
     text-decoration: none;
-    color: white;
-    font-size: 3em;
-}
-
-.overlay-item a:hover {
-    background-color: rgba(200,200,200,0.5);
-}
-
-.overlay-item {
-    width: 100vw;
     text-align: center;
-    background-color:  rgba(125,125,125,0.5);
+    color: grey;
+    font-size: 3em;
+    opacity: 0;
+}
+
+.overlay ul li a {
+    display: block;
+    text-decoration: none;
+    color: grey;
+}
+
+.overlay ul li a:hover {
+    color: rgba(244,244,244,1);
+    transition: 0.25s ease;
 }
 
 .hidden {
     opacity: 0;
     z-index: 0;
     transition: all 1s ease;
+}
+
+.overlay.open {
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.overlay.open li {
+    animation: fadeFromTop 0.4s ease forwards;
+    animation-delay: 0.1s;
+}
+
+.overlay.open li:nth-of-type(2) {
+    animation-delay: 0.15s;
+}
+
+.overlay.open li:nth-of-type(3) {
+    animation-delay: 0.20s;
+}
+
+.overlay.open li:nth-of-type(4) {
+    animation-delay: 0.25s;
+}
+
+@keyframes fadeFromTop {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.overlay.close {
+    animation: fadeOut 0.4s ease both;
+    animation-delay: 0.2s;
+}
+
+.overlay.close li {
+    animation: fadeToTop 0.4s ease backwards;
+}
+
+.overlay.close li:nth-of-type(2) {
+    animation-delay: 0.05s;
+}
+
+.overlay.close li:nth-of-type(3) {
+    animation-delay: 0.1s;
+}
+
+.overlay.close li:nth-of-type(4) {
+    animation-delay: 0.15s;
+}
+
+@keyframes fadeToTop {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }

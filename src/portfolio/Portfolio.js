@@ -7,6 +7,7 @@ export default class Portfolio extends Component {
         super(props);
 
         this.state = {
+            loaded: false,
             content: [
                 {
                     id: 0,
@@ -69,12 +70,15 @@ export default class Portfolio extends Component {
                 ]
         };
 
+        this.checkIfLoaded = this.checkIfLoaded.bind(this);
+        this.handleLoaded = this.handleLoaded.bind(this);
     }
 
     createContent() {
-        return this.state.content.map((obj, i) => {
+        return this.state.loaded ? this.state.content.map((obj, i) => {
+            console.log("rendering");
             return (
-                    <div key={obj.id} className={"portfolio-item item-"+i} style={{backgroundImage: "url(" + obj.img + ")", opacity: 0}}>
+                    <div key={obj.id} className={"portfolio-item item-"+i} style={{backgroundImage: "url(" + obj.img + ")", opacity: 1}}>
                         <div ref="name" className="hidden name">
                             <h3>{obj.name}</h3>
                         </div>
@@ -88,45 +92,68 @@ export default class Portfolio extends Component {
                         </div>
                     </div>
             )
-        })
+        }) : <span>loading</span>
+    }
+
+    componentWillMount() {
+        this.checkIfLoaded();
     }
 
     componentDidMount() {
-        let animationTimeline = anime.timeline();
+        // let animationTimeline = anime.timeline();
+        //
+        // animationTimeline
+        //     .add({
+        //         targets: ".item-0",
+        //         opacity: 1,
+        //         duration: 250,
+        //         offset: 0,
+        //         delay: 0,
+        //         ease: 'linear'
+        //     })
+        //     .add({
+        //         targets: ".item-1",
+        //         opacity: 1,
+        //         duration: 250,
+        //         offset: 100,
+        //         delay: 0,
+        //         ease: 'linear'
+        //     })
+        //     .add({
+        //         targets: ".item-2",
+        //         opacity: 1,
+        //         duration: 225,
+        //         offset: 200,
+        //         delay: 0,
+        //         ease: 'linear'
+        //     })
+        //     .add({
+        //         targets: ".item-3",
+        //         opacity: 1,
+        //         duration: 200,
+        //         offset: 275,
+        //         delay: 0,
+        //         ease: 'linear'
+        //     })
+    }
 
-        animationTimeline
-            .add({
-                targets: ".item-0",
-                opacity: 1,
-                duration: 250,
-                offset: 0,
-                delay: 0,
-                ease: 'linear'
-            })
-            .add({
-                targets: ".item-1",
-                opacity: 1,
-                duration: 250,
-                offset: 100,
-                delay: 0,
-                ease: 'linear'
-            })
-            .add({
-                targets: ".item-2",
-                opacity: 1,
-                duration: 225,
-                offset: 200,
-                delay: 0,
-                ease: 'linear'
-            })
-            .add({
-                targets: ".item-3",
-                opacity: 1,
-                duration: 200,
-                offset: 275,
-                delay: 0,
-                ease: 'linear'
-            })
+    checkIfLoaded() {
+        let imgs = 0;
+        let loadedImgs = 0;
+        console.log("checking");
+        this.state.content.map((obj) => {
+            imgs++;
+            return <img src={obj.img} onLoad={loadedImgs++} alt=""/>
+        });
+        if (loadedImgs === imgs) {
+            console.log("equal");
+           this.handleLoaded();
+        }
+    }
+
+    handleLoaded() {
+        console.log("jee");
+        this.setState({loaded: true})
     }
 
     render() {
