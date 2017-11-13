@@ -39,6 +39,9 @@
     height: 100vh;
     z-index: 5555;
     transition: all 0.5s;
+    -webkit-transition:  all 0.5s;
+    -moz-transition:  all 0.5s;
+    -o-transition:  all 0.5s;
     background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
@@ -75,6 +78,9 @@
     text-decoration: none;
     color: grey;
     transition: 0.25s all ease;
+    -webkit-transition:  0.25s all ease;
+    -moz-transition:  0.25s all ease;
+    -o-transition:  0.25s all ease;
 }
 
 .overlay ul li a:hover {
@@ -85,6 +91,9 @@
     opacity: 0;
     z-index: 0;
     transition: all 1s ease;
+    -webkit-transition:  all 1s ease;
+    -moz-transition:  all 1s ease;
+    -o-transition:  all 1s ease;
 }
 
 .overlay.open {
@@ -111,10 +120,16 @@
 @keyframes fadeFromTop {
     0% {
         transform: translateY(-100px);
+        -webkit-transform: translateY(-100px);
+        -moz-transform: translateY(-100px);
+        -o-transform: translateY(-100px);
     }
 
     100% {
         transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
         opacity: 1;
     }
 }
@@ -143,11 +158,17 @@
 @keyframes fadeToTop {
     0% {
         transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -o-transform: translateY(0);
         opacity: 1;
     }
 
     100% {
         transform: translateY(-100px);
+        -webkit-transform: translateY(-100px);
+        -moz-transform: translateY(-100px);
+        -o-transform: translateY(-100px);
         opacity: 0;
     }
 }
@@ -176,6 +197,9 @@
     cursor: pointer;
     z-index: 5556;
     transition: all 1s ease;
+    -webkit-transition:  all 1s ease;
+    -moz-transition:  all 1s ease;
+    -o-transition:  all 1s ease;
     width: 18px;
     height: 18px;
     display: flex;
