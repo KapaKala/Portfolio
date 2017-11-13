@@ -34,7 +34,6 @@ export default class Info extends Component {
           {/*<p className="close-button" onClick={this.props.close}>close</p>*/}
         </div>
       </div>
-
     )
   }
 }
