@@ -32,7 +32,7 @@ export default class ConsoleArea extends Component {
                 <h1 ref={"history-command-" + i}>
                     <span key={i}>{this.props.console + o.text}</span>
                 </h1>
-                <h1 ref={"history-reply-" + i} style={{whiteSpace: 'pre', width: '100%', wordWrap: 'break-word'}}>
+                <h1 ref={"history-reply-" + i} style={{whiteSpace: 'pre-wrap', width: '100%', wordWrap: 'break-word'}}>
                     <span style={o.reply.length > 50 ? {fontSize: '0.5em'} : {fontSize: '1em'}} key={i}>{o.reply}</span>
                 </h1>
             </div>

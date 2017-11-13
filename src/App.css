@@ -60,13 +60,3 @@ body {
 .hidden {
     opacity: 0;
 }
-
-.title {
-    position: absolute;
-    display: flex;
-    top: 1em;
-    margin: auto;
-    justify-content: center;
-    align-content: center;
-    font-weight: bold;
-}

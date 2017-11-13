@@ -2,6 +2,7 @@
     height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .landing-container {
@@ -92,6 +93,14 @@
 .console-text-area {
     outline: none;
     white-space: normal;
+}
+
+@media screen and (max-width: 560px) {
+    .landing-container {
+        border: none;
+        width: 100%;
+        white-space: normal;
+    }
 }
 
 
