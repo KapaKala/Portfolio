@@ -3,6 +3,10 @@ import './Info.css';
 
 export default class Info extends Component {
 
+  state = {
+    displayImg: false
+  }
+
   render() {
     return (
       <div className={this.props.visible ? "info-overlay open" : "info-overlay close"}>
@@ -15,8 +19,8 @@ export default class Info extends Component {
               })}
             </div>
           </div>
-          <div className="info-right">
-            <img className="info-image" src={this.props.info.img} alt={this.props.info.name}/>
+          <div style={this.state.displayImg ? {display: 'block'} : {display: 'none'}}>
+            <img className="info-image" src={this.props.info.img} alt={this.props.info.name} onLoad={() => {this.setState({displayImg: true})}}/>
           </div>
           <div className="info-bottom">
             {this.props.info.links.map((link, i) => {
