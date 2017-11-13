@@ -60,3 +60,9 @@ body {
 .hidden {
     opacity: 0;
 }
+
+@media screen and (max-width: 560px) {
+    .App {
+        padding-top: 2em;
+    }
+}
