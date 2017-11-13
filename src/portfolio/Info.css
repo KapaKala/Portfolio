@@ -16,6 +16,7 @@
     -moz-transition:  all 0.4s ease;
     -o-transition:  all 0.4s ease;
     padding-top: 2em;
+    -webkit-backface-visibility: hidden;
 }
 
 .info-overlay.close {
