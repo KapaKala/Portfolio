@@ -27,9 +27,9 @@
 
 .info-overlay.open {
     animation: fadeIn 0.2s ease forwards;
-    -webkit-animation: fadeOut 0.2s ease forwards;
-    -moz-animation: fadeOut 0.2s ease forwards;
-    -o-animation: fadeOut 0.2s ease forwards;
+    -webkit-animation: fadeIn 0.2s ease forwards;
+    -moz-animation: fadeIn 0.2s ease forwards;
+    -o-animation: fadeIn 0.2s ease forwards;
     visibility: visible;
 }
 
