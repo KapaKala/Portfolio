@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8d5da975-5f73-4ba2-a7ba-969db8b6a2fd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/landing/Landing.js" afterPath="$PROJECT_DIR$/src/landing/Landing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/landing/Landing.css" afterPath="$PROJECT_DIR$/src/landing/Landing.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,7 +28,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Landing.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Landing.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/landing/Landing.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
@@ -110,10 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Landing.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Landing.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/landing/Landing.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
+            <state relative-caret-position="352">
               <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
               <folding />
             </state>
@@ -171,8 +171,8 @@
         <option value="$PROJECT_DIR$/src/nav/Nav.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/portfolio/Portfolio.css" />
-        <option value="$PROJECT_DIR$/src/landing/Landing.css" />
         <option value="$PROJECT_DIR$/src/landing/Landing.js" />
+        <option value="$PROJECT_DIR$/src/landing/Landing.css" />
       </list>
     </option>
   </component>
@@ -556,7 +556,7 @@
       <workItem from="1506609347660" duration="58965000" />
       <workItem from="1507458729429" duration="52113000" />
       <workItem from="1509083570259" duration="33000" />
-      <workItem from="1509810020359" duration="54939000" />
+      <workItem from="1509810020359" duration="55202000" />
     </task>
     <task id="LOCAL-00001" summary="Change page transition enter animation from top in to bottom in">
       <created>1507242823197</created>
@@ -824,11 +824,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510858496893</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Fix fake text input on mobile">
+      <created>1510858719587</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1510858719587</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202306000" />
+    <option name="totallyTimeSpent" value="202569000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="878" extended-state="0" />
@@ -897,7 +904,8 @@
     <MESSAGE value="Add input to landing screen so you can write stuff on mobile" />
     <MESSAGE value="Try to fix weird bug with portfolio page on mobile" />
     <MESSAGE value="Fix styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix styles" />
+    <MESSAGE value="Fix fake text input on mobile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix fake text input on mobile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1273,18 +1281,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/landing/Landing.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/landing/Landing.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="210" column="78" lean-forward="false" selection-start-line="210" selection-start-column="78" selection-end-line="210" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/landing/Landing.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
           <folding />
         </state>
       </provider>
