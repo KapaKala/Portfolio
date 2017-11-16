@@ -208,7 +208,7 @@ export default class Landing extends Component {
               text={this.state.text}
               cursor={this.state.cursor}
             />
-            <input className="noinput" autoCapitalize="false" autoComplete="false" type="text"/>
+            <input className="noinput" autoCapitalize="none" autoComplete="off" type="text"/>
           </div>
         </div>
       </div>
