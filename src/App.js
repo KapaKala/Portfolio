@@ -18,15 +18,10 @@ const scrollToTop = () => {
   ClearShit();
 };
 
-const activeStyle = {
-  transition: 'all 0.6s ease-in-out',
-  // textDecoration: 'underline',
-  background: 'blue',
-};
-
 const App = props => (
+  <Nav location={props.location} scrollToTop={scrollToTop()}>
+
   <TransitionGroup>
-    <Nav location={props.location} scrollToTop={scrollToTop()} />
     <PageFade key={props.location.key}>
       <div className="App fix-container">
         <Switch location={props.location}>
@@ -39,6 +34,8 @@ const App = props => (
       </div>
     </PageFade>
   </TransitionGroup>
+  </Nav>
+
 );
 
 export default withRouter(App);

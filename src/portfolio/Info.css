@@ -10,7 +10,6 @@
     align-items: center;
     visibility: hidden;
     opacity: 0;
-    z-index: 1110;
     transition: all 0.5s ease;
     -webkit-transition:  all 0.5s;
     -moz-transition:  all 0.5s;
@@ -25,16 +24,17 @@
     -webkit-animation: fadeOut 0.2s ease both;
     -moz-animation: fadeOut 0.2s ease both;
     -o-animation: fadeOut 0.2s ease both;
+    z-index: 0;
 }
 
 .info-overlay.open {
     visibility: visible;
     animation: fadeIn 0.4s ease forwards;
+    z-index: 1110;
 }
 
 .info-container {
     position: relative;
-    z-index: 1111;
     width: 60%;
     height: 75%;
     background: linear-gradient(to bottom, #333 0%, #333 85%, #222 85%, #222 100%);
@@ -60,6 +60,7 @@
     -moz-animation: fadeContOut 0.5s ease backwards;
     -o-animation: fadeContOut 0.5s ease backwards;
     visibility: hidden;
+    z-index: 0;
 }
 
 .info-container.open {
@@ -68,6 +69,7 @@
     -moz-animation: fadeContIn 0.5s ease forwards;
     -o-animation: fadeContIn 0.5s ease forwards;
     visibility: visible;
+    z-index: 1111;
 }
 
 @keyframes fadeContIn {

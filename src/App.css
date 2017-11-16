@@ -14,6 +14,10 @@ body {
     display: flex;
     flex-flow: column;
     margin: 0;
+    perspective: 1200px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
 }
 
 .menu {
@@ -25,28 +29,36 @@ body {
 
 .fadeTranslate-enter {
     opacity: 0;
-    transform: translate3d(0, 16px, 100px);
-    z-index: 1;
+    /*transform: translate3d(0, 16px, 100px);*/
+    /*-webkit-transform: translate3d(0, 16px, 100px);*/
+    transform: translateY(16px);
+    -webkit-transform: translateY(16px);
 }
 
 .fadeTranslate-enter.fadeTranslate-enter-active {
     opacity: 1;
-    /*transform: translate(0, 0);*/
-    transform: translate3d(0, 0, 0);
-    transition: opacity 500ms ease-in, transform 500ms ease-in-out;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    /*transform: translate3d(0, 0, 0);*/
+    /*-webkit-transform: translate3d(0, 0, 0);*/
+    transition: opacity 500ms, transform 500ms;
 }
 
 .fadeTranslate-exit {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
-    z-index: 0;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    /*transform: translate3d(0, 0, 0);*/
+    /*-webkit-transform: translate3d(0, 0, 0);*/
 }
 
 .fadeTranslate-exit.fadeTranslate-exit-active {
     opacity: 0;
-    /*transform: translate(0, 5vh);*/
-    transform: translate3d(0, 16px, 100px);
-    transition: opacity 250ms ease-in, transform 250ms ease-in-out;
+    transform: translateY(16px);
+    -webkit-transform: translateY(16px);
+    /*transform: translate3d(0, 16px, 100px);*/
+    /*-webkit-transform: translate3d(0, 16px, 100px);*/
+    transition: opacity 250ms, transform 250ms;
 }
 
 .fix-container {
