@@ -112,9 +112,11 @@
     -webkit-box-shadow: none;
     box-shadow: none;
     width: 100vw;
-    height: 100vh;
+    height: 10vh;
     color: transparent;
     cursor: default;
+    position: relative;
+    caret-color: transparent;
 }
 
 
