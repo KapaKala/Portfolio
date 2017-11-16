@@ -105,4 +105,16 @@
     }
 }
 
+.noinput {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 100vw;
+    height: 100vh;
+    color: transparent;
+    cursor: default;
+}
+
 
