@@ -163,6 +163,7 @@ export default class Landing extends Component {
 
   render() {
     return (
+      <div className="landing-wrapper">
         <div ref="landing-container" className="landing-container">
           <div className="landing-row-1">
             <h1>
@@ -210,6 +211,7 @@ export default class Landing extends Component {
             <input className="noinput" autoCapitalize="false" autoComplete="false" type="text"/>
           </div>
         </div>
+      </div>
     );
   }
 }

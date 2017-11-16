@@ -64,16 +64,19 @@
     .portfolio-container {
         width: 100%;
         padding-top: 3em;
+        align-items: flex-start;
     }
 
     .portfolio-row {
         flex-wrap: wrap;
-        margin-top: 0 !important;
+        /*margin-top: 0 !important;*/
+
     }
 
     .portfolio-item {
         width: 100%;
         height: 300px;
+        margin: 0.5em 1em;
     }
 
     .portfolio-item:hover .item-overlay {
