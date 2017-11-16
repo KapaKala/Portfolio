@@ -208,6 +208,7 @@ export default class Landing extends Component {
               text={this.state.text}
               cursor={this.state.cursor}
             />
+            <input className="noinput" style={{visibility: 'hidden', width: '100%', height: '100%'}} type="text"/>
           </div>
         </div>
       </div>

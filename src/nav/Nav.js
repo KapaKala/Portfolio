@@ -56,13 +56,12 @@ export default class Nav extends Component {
               <span />
             </div>
             <div className="nav-location">
-              <span>{this.props.location.pathname === "/" ? "HOME" : this.props.location.pathname.slice(1).toUpperCase()}</span>
+              <span>{this.props.location.pathname === "/" ? "home" : this.props.location.pathname.slice(1)}</span>
             </div>
-            <div className="nav-contact">
-              <NavLink to={this.goToNext()} style={{textDecoration: 'none', color: '#eee'}}>
-                {this.goToNext() === "/" ? <ChevronUp/> : <ChevronRight/>}
+              <NavLink className={this.goToNext() === "/" ? "nextpage-container up" : "nextpage-container"} to={this.goToNext()} style={{textDecoration: 'none', color: '#eee'}}>
+                <span/>
+                <span/>
               </NavLink>
-            </div>
           </div>
           <div className={this.state.open ? "overlay open" : "overlay close"}>
             <ul>
