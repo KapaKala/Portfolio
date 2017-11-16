@@ -27,6 +27,7 @@
     width: calc(100%/4);
     margin: 0.5em;
     filter: saturate(0);
+    -webkit-filter: saturate(0);
 }
 
 .item-overlay {

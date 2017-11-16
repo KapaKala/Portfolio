@@ -105,8 +105,8 @@
       <file leaf-file-name="Portfolio.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/portfolio/Portfolio.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+            <state relative-caret-position="390">
+              <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -558,7 +558,7 @@
       <workItem from="1506609347660" duration="58965000" />
       <workItem from="1507458729429" duration="52113000" />
       <workItem from="1509083570259" duration="33000" />
-      <workItem from="1509810020359" duration="52302000" />
+      <workItem from="1509810020359" duration="52374000" />
     </task>
     <task id="LOCAL-00001" summary="Change page transition enter animation from top in to bottom in">
       <created>1507242823197</created>
@@ -784,11 +784,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510855898275</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Try to fix weird bug with portfolio page on mobile">
+      <created>1510856000017</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1510856000017</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199669000" />
+    <option name="totallyTimeSpent" value="199741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="878" extended-state="0" />
@@ -1248,8 +1255,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/portfolio/Portfolio.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        <state relative-caret-position="390">
+          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
           <folding />
         </state>
       </provider>
