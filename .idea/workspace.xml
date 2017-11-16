@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8d5da975-5f73-4ba2-a7ba-969db8b6a2fd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/landing/Landing.css" afterPath="$PROJECT_DIR$/src/landing/Landing.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/portfolio/Portfolio.css" afterPath="$PROJECT_DIR$/src/portfolio/Portfolio.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/portfolio/Portfolio.js" afterPath="$PROJECT_DIR$/src/portfolio/Portfolio.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -61,7 +62,7 @@
       <file leaf-file-name="Info.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/portfolio/Info.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1546">
+            <state relative-caret-position="858">
               <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
               <folding />
             </state>
@@ -82,23 +83,23 @@
         <entry file="file://$PROJECT_DIR$/src/portfolio/Portfolio.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="222">
-              <caret line="33" column="48" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Portfolio.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Portfolio.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/portfolio/Portfolio.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="78" column="22" lean-forward="false" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
+            <state relative-caret-position="287">
+              <caret line="53" column="23" lean-forward="false" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Landing.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Landing.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/landing/Landing.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -132,9 +133,9 @@
     <findStrings>
       <find>backface</find>
       <find>tra</find>
-      <find>translate3</find>
       <find>hidden</find>
       <find>translate3d</find>
+      <find>translate3</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,13 +165,13 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/portfolio/Info.css" />
         <option value="$PROJECT_DIR$/src/nav/Nav.css" />
-        <option value="$PROJECT_DIR$/src/portfolio/Portfolio.js" />
         <option value="$PROJECT_DIR$/src/nav/Nav.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
-        <option value="$PROJECT_DIR$/src/portfolio/Portfolio.css" />
         <option value="$PROJECT_DIR$/src/landing/Landing.js" />
         <option value="$PROJECT_DIR$/src/landing/ConsoleArea.js" />
         <option value="$PROJECT_DIR$/src/landing/Landing.css" />
+        <option value="$PROJECT_DIR$/src/portfolio/Portfolio.js" />
+        <option value="$PROJECT_DIR$/src/portfolio/Portfolio.css" />
       </list>
     </option>
   </component>
@@ -554,7 +555,7 @@
       <workItem from="1506609347660" duration="58965000" />
       <workItem from="1507458729429" duration="52113000" />
       <workItem from="1509083570259" duration="33000" />
-      <workItem from="1509810020359" duration="57576000" />
+      <workItem from="1509810020359" duration="58021000" />
     </task>
     <task id="LOCAL-00001" summary="Change page transition enter animation from top in to bottom in">
       <created>1507242823197</created>
@@ -850,11 +851,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510862116906</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Fix fake text input on mobile">
+      <created>1510862168963</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1510862168963</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="204943000" />
+    <option name="totallyTimeSpent" value="205388000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="878" extended-state="0" />
@@ -1236,22 +1244,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/portfolio/Portfolio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="33" column="48" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/portfolio/Info.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1546">
-          <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/nav/Nav.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5267">
@@ -1284,14 +1276,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/portfolio/Portfolio.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="78" column="22" lean-forward="false" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/landing/Landing.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2290">
@@ -1312,6 +1296,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="100" column="22" lean-forward="false" selection-start-line="100" selection-start-column="22" selection-end-line="100" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/portfolio/Info.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/portfolio/Portfolio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/portfolio/Portfolio.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="53" column="23" lean-forward="false" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
           <folding />
         </state>
       </provider>

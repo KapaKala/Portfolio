@@ -31,8 +31,8 @@ export default class Portfolio extends Component {
     return items.map((obj, i) => {
       return (
         <div key={i} onClick={() => {this.createInfo(i)}} className="portfolio-item" style={{backgroundImage: "url(" + obj.img + ")"}}>
-          <div className="portfolio-item-name">{obj.name}</div>
           <div className="item-overlay" />
+          <div className="portfolio-item-name">{obj.name}</div>
         </div>);
     })
   }

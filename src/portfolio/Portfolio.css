@@ -51,7 +51,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
     width: 100%;
     top: 50%;
     left: 0;
