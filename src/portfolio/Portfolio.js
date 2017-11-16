@@ -72,14 +72,12 @@ export default class Portfolio extends Component {
 
   render() {
     return (
-      <div className="portfolio-wrapper">
         <div className="portfolio-container">
           <Info visible={this.state.displayInfo} close={this.closeInfo} info={items[this.state.currentInfo]}/>
           <div className="portfolio-row">
             {this.createContent()}
           </div>
         </div>
-      </div>
     )
   }
 }
