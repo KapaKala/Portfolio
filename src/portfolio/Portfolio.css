@@ -124,32 +124,6 @@
     padding: 0.2em 0;
 }
 
-.fadeItems-enter {
-    opacity: 0;
-    transform: translate3d(0, 12px, 0);
-    z-index: 1;
-}
-
-.fadeItems-enter.fadeItems-enter-active {
-    opacity: 1;
-    /*transform: translate(0, 0);*/
-    transform: translate3d(0, 0, 0);
-    transition: opacity 250ms ease-in, transform 250ms ease-in-out;
-}
-
-.fadeItems-exit {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    z-index: 0;
-}
-
-.fadeItems-exit.fadeItems-exit-active {
-    opacity: 0;
-    /*transform: translate(0, 5vh);*/
-    transform: translate3d(0, 12px, 0);
-    transition: opacity 175ms ease-in, transform 175ms ease-in-out;
-}
-
 .portfolio-item-name {
     position: absolute;
     top: calc(50%);
@@ -165,7 +139,7 @@
 @media screen and (max-width: 560px) {
     .portfolio-container {
         width: 100vw;
-        padding: 0 1em;
+        padding: 0.5em;
     }
 
     .portfolio-row {
