@@ -15,7 +15,13 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.idea
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.idea/codeStyleSettings.xml
+.idea/dictionaries/
+.idea/inspectionProfiles/
+.idea/vcs.xml
+.vscode/
