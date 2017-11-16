@@ -30,24 +30,10 @@ export default class Portfolio extends Component {
   createContent() {
     return items.map((obj, i) => {
       return (
-        <div key={i} onClick={() => {this.createInfo(i)}} className={"portfolio-item item-"+i} style={{opacity: 1, transform: "translateY(0 )", backgroundImage: "url(" + obj.img + ")"}}>
+        <div key={i} onClick={() => {this.createInfo(i)}} className="portfolio-item" style={{backgroundImage: "url(" + obj.img + ")"}}>
           <div className="portfolio-item-name">{obj.name}</div>
           <div className="item-overlay" />
-          {/*<img className="portfolio-item-img" src={obj.img} onLoad={this.loadedShit.bind(this)} alt=""/>*/}
         </div>);
-      {/*<div key={obj.id} className={"portfolio-item item-"+i} style={{backgroundImage: "url(" + obj.img + ")", opacity: 1}}>*/}
-      {/*<div ref="name" className="hidden name">*/}
-      {/*<h3>{obj.name}</h3>*/}
-      {/*</div>*/}
-      {/*<div ref="description" className="hidden description">*/}
-      {/*<h5>{obj.description}</h5>*/}
-      {/*</div>*/}
-      {/*<div ref="links" className="hidden links">*/}
-      {/*{obj.links.map((link, i) => {*/}
-      {/*return <a key={i} href={link.url}><img src={link.img} alt={link.alt}/></a>*/}
-      {/*})}*/}
-      {/*</div>*/}
-      {/*</div>*/}
     })
   }
 
