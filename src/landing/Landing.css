@@ -106,7 +106,7 @@
 }
 
 .noinput {
-    background-color: white;
+    background-color: transparent;
     border: 0;
     outline: none;
     -webkit-box-shadow: none;
@@ -121,6 +121,8 @@
     font-size: 16px;
     text-shadow: 0 0 0;
     text-indent: -9999em;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 
