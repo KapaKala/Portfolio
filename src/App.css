@@ -19,13 +19,6 @@ body {
     backface-visibility: hidden;
 }
 
-.menu {
-    position: absolute;
-    left: 1em;
-    top: 1em;
-    font-weight: lighter;
-}
-
 .fadeTranslate-enter {
     opacity: 0;
     transform: translateY(16px);
@@ -64,6 +57,6 @@ body {
 
 @media screen and (max-width: 560px) {
     .App {
-        padding-top: 3em;
+
     }
 }
