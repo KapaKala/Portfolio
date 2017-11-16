@@ -4,7 +4,6 @@
     <list default="true" id="8d5da975-5f73-4ba2-a7ba-969db8b6a2fd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/portfolio/Portfolio.css" afterPath="$PROJECT_DIR$/src/portfolio/Portfolio.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/portfolio/Portfolio.js" afterPath="$PROJECT_DIR$/src/portfolio/Portfolio.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -64,7 +63,7 @@
       <file leaf-file-name="Info.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/portfolio/Info.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="1546">
               <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
               <folding />
             </state>
@@ -106,8 +105,8 @@
       <file leaf-file-name="Portfolio.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/portfolio/Portfolio.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="70" column="22" lean-forward="false" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+            <state relative-caret-position="266">
+              <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -136,10 +135,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>backface</find>
-      <find>translate3</find>
       <find>tra</find>
       <find>hidden</find>
       <find>translate3d</find>
+      <find>translate3</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -559,7 +558,7 @@
       <workItem from="1506609347660" duration="58965000" />
       <workItem from="1507458729429" duration="52113000" />
       <workItem from="1509083570259" duration="33000" />
-      <workItem from="1509810020359" duration="52198000" />
+      <workItem from="1509810020359" duration="52302000" />
     </task>
     <task id="LOCAL-00001" summary="Change page transition enter animation from top in to bottom in">
       <created>1507242823197</created>
@@ -778,11 +777,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510855700336</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Try to fix weird bug with portfolio page on mobile">
+      <created>1510855898275</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1510855898275</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199565000" />
+    <option name="totallyTimeSpent" value="199669000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="878" extended-state="0" />
@@ -1192,14 +1198,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/portfolio/Info.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/nav/Nav.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -1240,10 +1238,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/portfolio/Info.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1546">
+          <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/portfolio/Portfolio.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="70" column="22" lean-forward="false" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+        <state relative-caret-position="266">
+          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
           <folding />
         </state>
       </provider>
