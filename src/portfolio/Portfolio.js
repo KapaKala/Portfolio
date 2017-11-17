@@ -4,6 +4,21 @@ import Info from './Info';
 import anime from 'animejs';
 import items from './items';
 
+const noinfo = {
+    id: 0,
+    name: '',
+    description: '',
+    img: '',
+    links: [
+      {url: '',
+        img: '',
+        alt: ''},
+      {url: '',
+        img: '',
+        alt: ''
+      }],
+};
+
 export default class Portfolio extends Component {
   constructor(props) {
     super(props);
@@ -11,7 +26,7 @@ export default class Portfolio extends Component {
     this.state = {
       loadedImages: 0,
       loaded: false,
-      currentInfo: 0,
+      currentInfo: noinfo,
       displayInfo: false,
     };
 
@@ -38,11 +53,14 @@ export default class Portfolio extends Component {
   }
 
   createInfo(i) {
-    this.setState({currentInfo: i});
+    this.setState({currentInfo: items[i]});
     this.setState({displayInfo: !this.state.displayInfo});
   }
 
   closeInfo() {
+    window.setTimeout(() => {
+      this.setState({currentInfo: noinfo});
+    }, 250);
     this.setState({displayInfo: false})
   }
 
@@ -59,7 +77,7 @@ export default class Portfolio extends Component {
   render() {
     return (
         <div className="portfolio-container">
-          <Info visible={this.state.displayInfo} close={this.closeInfo} info={items[this.state.currentInfo]}/>
+          <Info visible={this.state.displayInfo} close={this.closeInfo} info={this.state.currentInfo}/>
           <div className="portfolio-row">
             {this.createContent()}
           </div>
