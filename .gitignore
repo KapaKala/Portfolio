@@ -25,3 +25,16 @@ yarn-error.log*
 .idea/inspectionProfiles/
 .idea/vcs.xml
 .vscode/
+src/images/sm1.png
+src/images/sm2.png
+src/images/sm4.png
+src/images/sm_game.png
+src/images/sm_lost.png
+src/images/sm_main.png
+src/images/sunko_10.png
+src/images/sunko_4.png
+src/images/sunko_5.png
+src/images/sunko_6.png
+src/images/sunko_7.png
+src/images/sunko_8.png
+src/images/sunko_9.png
