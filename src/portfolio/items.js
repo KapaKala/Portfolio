@@ -8,6 +8,7 @@ export default [
     description: "A school game project made for UKK-instituutti." +
     "\nMade with Java for Android",
     img: require('../images/sm_cover.png'),
+    images: [{img: require('../images/sa')}, {}, {}],
     links: [
       {url: "http://www.ukkinstituutti.fi/uutiskirje/smartmoves/lue/Smart-Moves--uutiskirje-2-2016%3A-Vaihtelua-tunneille-hyvinvointiteemaisilla-mobiilipeleillä/1573d55c2828a9/573d64e8ba65a",
         img: <File/>,

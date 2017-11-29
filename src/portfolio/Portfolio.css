@@ -21,7 +21,7 @@
 
 .portfolio-item {
     display: block;
-    background-size: cover;
+    background-size: 100% auto;
     background-position: center;
     height: 60vh;
     /*min-width: 10em;*/
@@ -32,16 +32,21 @@
     /*-webkit-filter: saturate(0);*/
     -webkit-transform: translateZ(0);
     -webkit-perspective: 1000px;
+    transition: 0.33s all ease;
 }
 
 .item-overlay {
     position: relative;
     background: black;
-    width: 100%;
+    width: 100.1%;
     height: 100%;
     z-index: 10;
     opacity: 0;
     transition: 0.33s all ease;
+}
+
+.portfolio-item:hover {
+    background-size: 110% auto;
 }
 
 .portfolio-item:hover .item-overlay {
