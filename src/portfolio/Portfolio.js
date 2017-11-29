@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Portfolio.css';
 import Info from './Info';
-import anime from 'animejs';
 import items from './items';
 
 const noinfo = {
@@ -38,7 +37,6 @@ export default class Portfolio extends Component {
     this.setState({loadedImages: this.state.loadedImages+1});
     if (this.state.loadedImages+1 === items.length) {
       this.setState({loaded: true});
-      // this.animate();
     }
   }
 
@@ -46,8 +44,8 @@ export default class Portfolio extends Component {
     return items.map((obj, i) => {
       return (
         <div key={i} onClick={() => {this.createInfo(i)}} className="portfolio-item" style={{backgroundImage: "url(" + obj.img + ")"}}>
+          <div className="portfolio-item-name"><h2>{obj.name}</h2></div>
           <div className="item-overlay" />
-          <div className="portfolio-item-name">{obj.name}</div>
         </div>);
     })
   }
@@ -70,7 +68,6 @@ export default class Portfolio extends Component {
 
   componentDidMount() {
     console.log("component did mount");
-    // this.animate();
   }
 
 

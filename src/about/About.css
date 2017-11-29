@@ -5,8 +5,33 @@
     height: 100%;
 }
 
+.about-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .about-img {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
+}
+
+.left-container {
+    margin: 2em;
+    max-width: 25%;
+}
+
+.right-container {
+    margin: 2em;
+    max-width: 55%;
+}
+
+@media screen and (max-width: 560px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .left-container, .right-container {
+        max-width: 100%;
+    }
 }

@@ -16,9 +16,6 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    perspective: 1200px;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 
 .fadeTranslate-enter {

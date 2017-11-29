@@ -118,7 +118,7 @@
     bottom: 50px;
     position: absolute;
     /*border: 5px solid #eee;*/
-    filter: saturate(0);
+    /*filter: saturate(0);*/
 }
 
 .info-bottom {
