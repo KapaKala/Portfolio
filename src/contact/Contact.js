@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Github, Facebook, Instagram } from 'react-feather';
 import FontAwesome from 'react-fontawesome';
 import faStyles from '../font-awesome.css';
 import './Contact.css';

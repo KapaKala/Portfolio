@@ -4,18 +4,19 @@ import Info from './Info';
 import items from './items';
 
 const noinfo = {
-    id: 0,
-    name: '',
-    description: '',
-    img: '',
-    links: [
-      {url: '',
-        img: '',
-        alt: ''},
-      {url: '',
-        img: '',
-        alt: ''
-      }],
+  id: 0,
+  name: '',
+  description: '',
+  img: '',
+  images: [''],
+  links: [
+    {url: '',
+      img: '',
+      alt: ''},
+    {url: '',
+      img: '',
+      alt: ''
+    }],
 };
 
 export default class Portfolio extends Component {
@@ -73,12 +74,12 @@ export default class Portfolio extends Component {
 
   render() {
     return (
-        <div className="portfolio-container">
-          <Info visible={this.state.displayInfo} close={this.closeInfo} info={this.state.currentInfo}/>
-          <div className="portfolio-row">
-            {this.createContent()}
-          </div>
+      <div className={this.state.displayInfo ? "portfolio-container no-scroll" : "portfolio-container"}>
+        <Info visible={this.state.displayInfo} close={this.closeInfo} info={this.state.currentInfo}/>
+        <div className="portfolio-row">
+          {this.createContent()}
         </div>
+      </div>
     )
   }
 }
