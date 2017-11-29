@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d5da975-5f73-4ba2-a7ba-969db8b6a2fd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/bs_screen1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/bs_screen2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/bs_screen3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/bs_screen4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/bs_screen5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/k_addworker.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/k_hourform.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/k_login.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/sm_screen1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/sm_screen2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/sm_screen3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/sunko_screen1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/sunko_screen2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/sunko_screen3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/sunko_screen4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/sunko_screen5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/Untitled.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/contact/Contact.js" afterPath="$PROJECT_DIR$/src/contact/Contact.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/portfolio/Info.css" afterPath="$PROJECT_DIR$/src/portfolio/Info.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/portfolio/Info.js" afterPath="$PROJECT_DIR$/src/portfolio/Info.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/portfolio/Portfolio.css" afterPath="$PROJECT_DIR$/src/portfolio/Portfolio.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/portfolio/Portfolio.js" afterPath="$PROJECT_DIR$/src/portfolio/Portfolio.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/portfolio/items.js" afterPath="$PROJECT_DIR$/src/portfolio/items.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -540,7 +519,7 @@
       <workItem from="1507458729429" duration="52113000" />
       <workItem from="1509083570259" duration="33000" />
       <workItem from="1509810020359" duration="60702000" />
-      <workItem from="1511221488827" duration="29210000" />
+      <workItem from="1511221488827" duration="29376000" />
     </task>
     <task id="LOCAL-00001" summary="Change page transition enter animation from top in to bottom in">
       <created>1507242823197</created>
@@ -871,11 +850,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511974396207</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Add content to works page">
+      <created>1511999098163</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1511999098163</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237279000" />
+    <option name="totallyTimeSpent" value="237445000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="878" extended-state="6" />
@@ -948,7 +934,8 @@
     <MESSAGE value="Improve displaying work info on the overlay" />
     <MESSAGE value="Implement cooler previews for works page" />
     <MESSAGE value="Add content to contacts and about page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add content to contacts and about page" />
+    <MESSAGE value="Add content to works page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add content to works page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
