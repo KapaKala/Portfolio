@@ -1,16 +1,25 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-export default class FourOhFour extends Component {
-    render() {
-        return (
-            <div className="four-oh-four-container"
-                 style={{backgroundImage: "url(" + require('../images/1401994195056.gif') + ")",
-                         backgroundSize: 'cover', backgroundPosition: '50% 70%', width: '100%', height: '100%',
-                         display: 'flex'}}>
-                <div style={{fontSize: 200, margin: 'auto'}}>
-                    <h1 className="not-found" style={{margin: 'auto', padding: 0}}>404</h1>
-                </div>
-            </div>
-        )
-    }
-}
+const bg = require('../images/1401994195056.gif');
+
+const FourOhFour = () => (
+  <div
+    className="four-oh-four-container"
+    style={{
+      backgroundImage: `url(${bg})`,
+      backgroundSize: 'cover',
+      backgroundPosition: '50% 70%',
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+    }}
+  >
+    <div style={{ fontSize: 200, margin: 'auto' }}>
+      <h1 className="not-found" style={{ margin: 'auto', padding: 0 }}>
+        404
+      </h1>
+    </div>
+  </div>
+);
+
+export default FourOhFour;

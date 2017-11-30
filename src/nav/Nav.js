@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import './Nav.css';
 
@@ -13,7 +14,7 @@ export default class Nav extends Component {
     super(props);
 
     this.state = {
-      open: false
+      open: false,
     };
 
     this.click = this.click.bind(this);
@@ -22,26 +23,26 @@ export default class Nav extends Component {
   }
 
   click() {
-    this.setState({open: !this.state.open})
+    this.setState({ open: !this.state.open });
   }
 
   menuClick() {
     this.click();
-    this.props.scrollToTop;
+    this.props.scrollToTop();
   }
 
   goToNext() {
-    switch(this.props.location.pathname) {
-      case "/":
-        return "/works";
-      case "/works":
-        return "/about";
-      case "/about":
-        return "/contact";
-      case "/contact":
-        return "/";
+    switch (this.props.location.pathname) {
+      case '/':
+        return '/works';
+      case '/works':
+        return '/about';
+      case '/about':
+        return '/contact';
+      case '/contact':
+        return '/';
       default:
-        return "/";
+        return '/';
     }
   }
 
@@ -50,19 +51,26 @@ export default class Nav extends Component {
       <div className="content-wrapper">
         <div className="nav-container">
           <div className="top-container">
-            <div ref="menu" className={this.state.open ? "menu-container open" : "menu-container close"} onClick={this.click}>
+            <div
+              className={this.state.open ? 'menu-container open' : 'menu-container close'}
+              onClick={this.click}
+            >
               <span />
               <span />
             </div>
-            {/*<div className="nav-location">*/}
-              {/*<span>{this.props.location.pathname === "/" ? "home" : this.props.location.pathname.slice(1)}</span>*/}
-            {/*</div>*/}
-              <NavLink className={this.goToNext() === "/" ? "nextpage-container up" : "nextpage-container"} to={this.goToNext()} style={{textDecoration: 'none', color: '#eee'}}>
-                <span/>
-                <span/>
-              </NavLink>
+            {/* <div className="nav-location"> */}
+            {/* <span>{this.props.location.pathname === "/" ? "home" : this.props.location.pathname.slice(1)}</span> */}
+            {/* </div> */}
+            <NavLink
+              className={this.goToNext() === '/' ? 'nextpage-container up' : 'nextpage-container'}
+              to={this.goToNext()}
+              style={{ textDecoration: 'none', color: '#eee' }}
+            >
+              <span />
+              <span />
+            </NavLink>
           </div>
-          <div onClick={this.click} className={this.state.open ? "overlay open" : "overlay close"}>
+          <div onClick={this.click} className={this.state.open ? 'overlay open' : 'overlay close'}>
             <ul>
               <li>
                 <NavLink exact onClick={this.menuClick} to="/" activeStyle={activeStyle}>
@@ -92,3 +100,9 @@ export default class Nav extends Component {
     );
   }
 }
+
+Nav.propTypes = {
+  location: PropTypes.shape().isRequired,
+  children: PropTypes.shape().isRequired,
+  scrollToTop: PropTypes.func.isRequired,
+};

@@ -15,7 +15,6 @@ export const ClearShit = () => {
   window.clearTimeout(blinkTimeout);
   window.clearInterval(intObject);
   historyMover = 0;
-  console.log('cleared shit');
 };
 
 export default class Landing extends Component {
@@ -59,7 +58,6 @@ export default class Landing extends Component {
     const stateCopy = this.state;
 
     if (timer) {
-      console.log('cleared timeout');
       window.clearTimeout(timer);
       timer = null;
     }
@@ -70,15 +68,12 @@ export default class Landing extends Component {
     if (e.key.length === 1) {
       let textCopy = this.state.text;
       this.setState({ text: (textCopy += e.key) });
-      console.log(this.state.text);
     } else {
       switch (e.key) {
         case 'ArrowUp':
           e.preventDefault();
           if (this.state.history.length > 0 && historyMover < this.state.history.length) {
             historyMover += 1;
-            console.log('Arrow up!');
-
             stateCopy.text = stateCopy.history[stateCopy.history.length - historyMover].text;
             this.setState(stateCopy);
           }
@@ -87,29 +82,32 @@ export default class Landing extends Component {
           e.preventDefault();
           if (historyMover > 0) {
             historyMover -= 1;
-            console.log('Arrow down!');
-            historyMover === 0
-              ? (stateCopy.text = '')
-              : (stateCopy.text = stateCopy.history[stateCopy.history.length - historyMover].text);
+            if (historyMover === 0) {
+              stateCopy.text = '';
+            } else {
+              stateCopy.text = stateCopy.history[stateCopy.history.length - historyMover].text;
+            }
             this.setState(stateCopy);
           }
           break;
-        case 'Backspace':
+        case 'Backspace': {
           e.preventDefault();
-          const text = this.state.text;
-          if (text.length > 0) this.setState({ text: text.slice(0, text.length - 1) });
+          const { text } = this.state.text;
+          if (text.length > 0) {
+            this.setState({ text: text.slice(0, text.length - 1) });
+          }
           break;
+        }
         case 'Enter':
           stateCopy.history.push({
+            id: stateCopy.history.length,
             text: stateCopy.text,
             reply: reply(stateCopy.text),
           });
           stateCopy.text = '';
           this.setState(stateCopy);
-          console.log(this.state.history);
-          this.refs['landing-container'].scrollTop =
-            this.refs['landing-container'].scrollHeight -
-            this.refs['landing-container'].clientHeight;
+          this.landingContainer.scrollTop =
+            this.landingContainer.scrollHeight - this.landingContainer.clientHeight;
           break;
         default:
           break;
@@ -119,12 +117,11 @@ export default class Landing extends Component {
   }
 
   animateText() {
-    const animateRow = this.animateRow;
-    animateRow('Hello!', 1, () => {
-      animateRow("I'm Henri", 2, () => {
-        animateRow('I study web and software development', 3, () => {
-          this.refs.consoleArea.classList.remove('hidden');
-          // this.refs["landing-container"].focus();
+    const { animateRow } = this;
+    animateRow('Hello!', 1, this.cursor1, this.console1, () => {
+      animateRow("I'm Henri", 2, this.cursor2, this.console2, () => {
+        animateRow('I study web and software development', 3, this.cursor3, this.console3, () => {
+          this.consoleArea.classList.remove('hidden');
 
           blinkTimeout = setTimeout(() => {
             this.setState({ consoleBlink: true });
@@ -134,26 +131,26 @@ export default class Landing extends Component {
     });
   }
 
-  animateRow(text, id, callback) {
-    this.refs[`cursor-${id}`].classList.add('not-blinking');
-    this.refs[`cursor-${id}`].classList.remove('hidden');
-    this.refs[`console-${id}`].classList.remove('hidden');
+  animateRow(text, id, cu, co, callback) {
+    cu.classList.add('not-blinking');
+    cu.classList.remove('hidden');
+    co.classList.remove('hidden');
 
     let index = 0;
     intObject = setInterval(() => {
-      const stateCopy = this.state.print.slice();
+      let stateCopy = this.state.print.slice();
       stateCopy[id - 1].text += text[index];
       this.setState(stateCopy);
       index += 1;
       if (index === text.length) {
         clearInterval(intObject);
         animationTimeout = setTimeout(() => {
-          this.refs[`cursor-${id}`].classList.remove('not-blinking');
-          this.refs[`cursor-${id}`].classList.add('blinking');
+          cu.classList.remove('not-blinking');
+          cu.classList.add('blinking');
           if (callback) {
-            const stateCopy = this.state.print.slice();
+            stateCopy = this.state.print.slice();
             this.setState(stateCopy);
-            this.refs[`cursor-${id}`].classList.add('hidden');
+            cu.classList.add('hidden');
             callback();
           }
         }, 200);
@@ -164,41 +161,81 @@ export default class Landing extends Component {
   render() {
     return (
       <div className="landing-wrapper">
-        <div ref="landing-container" className="landing-container">
+        <div
+          ref={(ref) => {
+            this.landingContainer = ref;
+          }}
+          className="landing-container"
+        >
           <div className="landing-row-1">
             <h1>
-              <span ref="console-1" className="hidden">
+              <span
+                ref={(ref) => {
+                  this.console1 = ref;
+                }}
+                className="hidden"
+              >
                 {this.state.console}
               </span>
               <span>{this.state.print[0].text}</span>
-              <span ref="cursor-1" className="hidden">
+              <span
+                ref={(ref) => {
+                  this.cursor1 = ref;
+                }}
+                className="hidden"
+              >
                 {this.state.cursor}
               </span>
             </h1>
           </div>
           <div className="landing-row-2">
             <h1>
-              <span ref="console-2" className="hidden">
+              <span
+                ref={(ref) => {
+                  this.console2 = ref;
+                }}
+                className="hidden"
+              >
                 {this.state.console}
               </span>
               <span>{this.state.print[1].text}</span>
-              <span ref="cursor-2" className="hidden">
+              <span
+                ref={(ref) => {
+                  this.cursor2 = ref;
+                }}
+                className="hidden"
+              >
                 {this.state.cursor}
               </span>
             </h1>
           </div>
           <div className="landing-row-3">
             <h1>
-              <span ref="console-3" className="hidden">
+              <span
+                ref={(ref) => {
+                  this.console3 = ref;
+                }}
+                className="hidden"
+              >
                 {this.state.console}
               </span>
               <span>{this.state.print[2].text}</span>
-              <span ref="cursor-3" className="hidden">
+              <span
+                ref={(ref) => {
+                  this.cursor3 = ref;
+                }}
+                className="hidden"
+              >
                 {this.state.cursor}
               </span>
             </h1>
           </div>
-          <div ref="consoleArea" className="hidden">
+          <div
+            ref={(ref) => {
+              this.consoleArea = ref;
+            }}
+            className="hidden"
+          >
             <ConsoleArea
               id="input"
               history={this.state.history}
@@ -208,7 +245,7 @@ export default class Landing extends Component {
               text={this.state.text}
               cursor={this.state.cursor}
             />
-            <input className="noinput" autoCapitalize="none" autoComplete="off" type="text"/>
+            <input className="noinput" autoCapitalize="none" autoComplete="off" type="text" />
           </div>
         </div>
       </div>
