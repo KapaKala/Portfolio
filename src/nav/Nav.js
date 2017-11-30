@@ -20,6 +20,21 @@ export default class Nav extends Component {
     this.click = this.click.bind(this);
     this.menuClick = this.menuClick.bind(this);
     this.goToNext = this.goToNext.bind(this);
+    this.onKeyDown = this.onKeyDown.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('keydown', this.onKeyDown);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.onKeyDown);
+  }
+
+  onKeyDown(e) {
+    if (e.key === 'Escape' && this.state.open) {
+      this.setState({ open: false });
+    }
   }
 
   click() {

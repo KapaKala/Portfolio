@@ -93,7 +93,7 @@ export default class Landing extends Component {
           break;
         case 'Backspace': {
           e.preventDefault();
-          const { text } = this.state.text;
+          const { text } = this.state;
           if (text.length > 0) {
             this.setState({ text: text.slice(0, text.length - 1) });
           }
