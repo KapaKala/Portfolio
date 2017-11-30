@@ -98,6 +98,7 @@ export default class Portfolio extends Component {
           close={this.closeInfo}
           info={this.state.currentInfo}
         />
+
         <div className="portfolio-row">{this.createContent()}</div>
       </div>
     );

@@ -7,8 +7,7 @@ const Contact = () => (
   <div className="contact-container">
     <h1>Get in touch!</h1>
     <p>
-      Drop me an email at
-      <span />
+      Drop me an email at{' '}
       <a
         className="email-link"
         href="mailto:henri.kankaanpaa@outlook.com?Subject=Hello"
@@ -16,8 +15,7 @@ const Contact = () => (
         target="_blank"
       >
         henri.kankaanpaa@outlook.com
-      </a>
-      <span />
+      </a>{' '}
       and say hi!
     </p>
     <p>You can also find me on the following social media: </p>

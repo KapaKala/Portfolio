@@ -11,10 +11,10 @@
   visibility: hidden;
   padding-top: 3em;
   opacity: 0;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
+  transition: all 0.33s;
+  -webkit-transition: all 0.33s;
+  -moz-transition: all 0.33s;
+  -o-transition: all 0.33s;
 }
 
 .info-overlay.close {
@@ -34,9 +34,9 @@
   background: #333;
   padding: 1em;
   transition: all 1s ease;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
+  -webkit-transition: all 0.33s ease;
+  -moz-transition: all 0.33s ease;
+  -o-transition: all 0.33s ease;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-12px);
@@ -48,19 +48,19 @@
 }
 
 .info-container.close {
-  animation: fadeContOut 0.5s ease backwards;
-  -webkit-animation: fadeContOut 0.5s ease backwards;
-  -moz-animation: fadeContOut 0.5s ease backwards;
-  -o-animation: fadeContOut 0.5s ease backwards;
+  animation: fadeContOut 0.33s ease backwards;
+  -webkit-animation: fadeContOut 0.33s ease backwards;
+  -moz-animation: fadeContOut 0.33s ease backwards;
+  -o-animation: fadeContOut 0.33s ease backwards;
   visibility: hidden;
   z-index: 0;
 }
 
 .info-container.open {
-  animation: fadeContIn 0.5s ease forwards;
-  -webkit-animation: fadeContIn 0.5s ease forwards;
-  -moz-animation: fadeContIn 0.5s ease forwards;
-  -o-animation: fadeContIn 0.5s ease forwards;
+  animation: fadeContIn 0.33s ease forwards;
+  -webkit-animation: fadeContIn 0.33s ease forwards;
+  -moz-animation: fadeContIn 0.33s ease forwards;
+  -o-animation: fadeContIn 0.33s ease forwards;
   visibility: visible;
   z-index: 1111;
 }
@@ -241,13 +241,17 @@
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 720px) {
   .info-overlay {
     position: fixed;
   }
 
-  .info-image {
-    visibility: hidden;
+  .info-container {
+    width: 90%;
+  }
+
+  .info-links {
+    flex-wrap: wrap;
   }
 }
 

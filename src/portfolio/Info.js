@@ -4,6 +4,7 @@ import Slider from './Slider';
 
 import './Info.css';
 
+let timeout;
 export default class Info extends Component {
   constructor(props) {
     super(props);
@@ -20,13 +21,17 @@ export default class Info extends Component {
     this.nextImg = this.nextImg.bind(this);
     this.prevImg = this.prevImg.bind(this);
     this.createImages = this.createImages.bind(this);
+    this.adjustSize = this.adjustSize.bind(this);
   }
 
   componentDidMount() {
     this.adjustSize();
-    window.addEventListener('resize', () => {
-      this.adjustSize();
-    });
+    window.addEventListener('resize', this.adjustSize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.adjustSize);
+    clearTimeout(timeout);
   }
 
   adjustSize() {
@@ -63,9 +68,12 @@ export default class Info extends Component {
 
   close() {
     this.props.close();
-    setTimeout(() => {
+    timeout = setTimeout(() => {
       this.setState({
-        currentImg: 0, displayImg: false, loadedImgs: 0, translateValue: 0,
+        currentImg: 0,
+        displayImg: false,
+        loadedImgs: 0,
+        translateValue: 0,
       });
     }, 250);
   }
