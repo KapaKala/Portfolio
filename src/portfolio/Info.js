@@ -6,23 +6,49 @@ import './Info.css';
 
 export default class Info extends Component {
   state = {
-    displayImg: false,
+    displayImg: true,
     currentImg: 0,
+    imgWidth: 0,
+    imgHeight: document.body.scrollWidth * 0.56 * 0.6,
+    translateValue: 0,
   };
+
+  componentDidMount() {
+    this.adjustSize();
+    window.addEventListener('resize', () => {
+      this.adjustSize();
+    });
+  }
+
+  adjustSize() {
+    this.setState({
+      imgWidth: this.infoContainer.clientWidth - 32,
+      imgHeight: (this.infoContainer.clientWidth - 32) * 0.6,
+    });
+  }
 
   nextImg() {
     if (this.state.currentImg === this.props.info.images.length - 1) {
-      this.setState({ currentImg: 0 });
+      this.setState({ currentImg: 0, translateValue: 0 });
     } else {
-      this.setState({ currentImg: this.state.currentImg + 1 });
+      this.setState({
+        currentImg: (this.state.currentImg += 1),
+        translateValue: (this.state.translateValue -= this.state.imgWidth),
+      });
     }
   }
 
   prevImg() {
     if (this.state.currentImg === 0) {
-      this.setState({ currentImg: this.props.info.images.length - 1 });
+      this.setState({
+        currentImg: this.props.info.images.length - 1,
+        translateValue: -((this.props.info.images.length - 1) * this.state.imgWidth),
+      });
     } else {
-      this.setState({ currentImg: this.state.currentImg - 1 });
+      this.setState({
+        currentImg: (this.state.currentImg -= 1),
+        translateValue: (this.state.translateValue += this.state.imgWidth),
+      });
     }
   }
 
@@ -31,10 +57,25 @@ export default class Info extends Component {
     this.setState({ currentImg: 0 });
   }
 
+  createImages() {
+    const imageSlides = [];
+
+    this.props.info.images.forEach((o) => {
+      imageSlides.push(<div key={o} className="info-image" style={{ backgroundImage: `url(${o})` }} />);
+    });
+
+    return imageSlides;
+  }
+
   render() {
     return (
       <div className={this.props.visible ? 'info-overlay open' : 'info-overlay close'}>
-        <div className={this.props.visible ? 'info-container open' : 'info-container close'}>
+        <div
+          ref={(ref) => {
+            this.infoContainer = ref;
+          }}
+          className={this.props.visible ? 'info-container open' : 'info-container close'}
+        >
           <div className="top">
             <h1 className="info-name">{this.props.info.name}</h1>
             <div className="info-links">
@@ -53,15 +94,36 @@ export default class Info extends Component {
             style={
               this.state.displayImg
                 ? {
-                    display: 'inline-block',
-                    backgroundImage: `url(${this.props.info.images[this.state.currentImg]})`,
-                    width: document.body.scrollWidth * 0.55,
-                    height: document.body.scrollWidth * 0.55 * 0.6,
+                    display: 'flex',
+                    width: this.state.imgWidth,
+                    height: this.state.imgHeight,
+                    // backgroundImage: `url(${this.props.info.images[this.state.currentImg]})`,
                   }
                 : { display: 'none' }
             }
           >
-            <div className="img-controls">
+            <div
+              className="img-wrapper"
+              style={{ transform: `translateX(${this.state.translateValue}px)` }}
+            >
+              {this.createImages()}
+            </div>
+            {/* <img
+              ref={(img) => {
+                this.image1 = img;
+              }}
+              className="info-image"
+              src={this.props.info.images[this.state.currentImg]}
+              alt={this.props.info.name}
+              onLoad={() => {
+                this.setState({ displayImg: true });
+              }}
+            /> */}
+
+            <div
+              className="img-controls"
+              style={{ width: this.state.imgWidth, height: this.state.imgHeight }}
+            >
               <div
                 className="prev-img"
                 onClick={() => {
@@ -97,17 +159,6 @@ export default class Info extends Component {
                 </span>
               </div>
             </div>
-            <img
-              ref={(img) => {
-                this.image = img;
-              }}
-              className="info-image"
-              src={this.props.info.images[this.state.currentImg]}
-              alt={this.props.info.name}
-              onLoad={() => {
-                this.setState({ displayImg: true });
-              }}
-            />
           </div>
 
           <div
@@ -126,7 +177,6 @@ export default class Info extends Component {
             <span className="line-1" />
             <span className="line-2" />
           </div>
-          {/* <p className="close-button" onClick={this.props.close}>close</p> */}
         </div>
       </div>
     );
