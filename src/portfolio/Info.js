@@ -64,7 +64,9 @@ export default class Info extends Component {
   close() {
     this.props.close();
     setTimeout(() => {
-      this.setState({ currentImg: 0, displayImg: false, loadedImgs: 0 });
+      this.setState({
+        currentImg: 0, displayImg: false, loadedImgs: 0, translateValue: 0,
+      });
     }, 250);
   }
 
