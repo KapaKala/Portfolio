@@ -43,11 +43,11 @@ export default class Nav extends Component {
 
   menuClick() {
     this.click();
-    this.props.scrollToTop(1000);
+    this.props.scrollToTop();
   }
 
   goToNext() {
-    this.props.scrollToTop(1000);
+    this.props.scrollToTop();
     switch (this.props.location.pathname) {
       case '/':
         return '/works';
