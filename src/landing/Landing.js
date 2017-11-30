@@ -10,7 +10,6 @@ let intObject;
 let historyMover = 0;
 
 export const ClearShit = () => {
-  console.log('cleared all the shit');
   window.clearTimeout(timer);
   window.clearTimeout(animationTimeout);
   window.clearTimeout(blinkTimeout);
