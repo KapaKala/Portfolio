@@ -36,6 +36,18 @@ export default class Portfolio extends Component {
     this.closeInfo = this.closeInfo.bind(this);
   }
 
+  componentDidMount() {
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && this.state.displayInfo) {
+        this.setState({ displayInfo: false });
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown');
+  }
+
   createContent() {
     return items.map((obj, i) => (
       <div

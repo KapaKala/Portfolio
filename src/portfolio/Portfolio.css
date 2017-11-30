@@ -35,7 +35,7 @@
   transform: translateZ(0);
   -webkit-perspective: 1000px;
   perspective: 1000px;
-  transition: transform 0.5s ease-in;
+  transition: 0.33s all ease;
   outline: none;
 }
 

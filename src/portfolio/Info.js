@@ -6,7 +6,8 @@ import './Info.css';
 
 export default class Info extends Component {
   state = {
-    displayImg: true,
+    loadedImgs: 0,
+    displayImg: false,
     currentImg: 0,
     imgWidth: 0,
     imgHeight: document.body.scrollWidth * 0.56 * 0.6,
@@ -54,14 +55,27 @@ export default class Info extends Component {
 
   close() {
     this.props.close();
-    this.setState({ currentImg: 0 });
+    this.setState({ currentImg: 0, displayImg: false, loadedImgs: 0 });
+  }
+
+  confirmImageLoad() {
+    this.setState({ loadedImgs: (this.state.loadedImgs += 1) });
+    if (this.state.loadedImgs === this.props.info.images.length) {
+      this.setState({ displayImg: true });
+    }
   }
 
   createImages() {
     const imageSlides = [];
 
-    this.props.info.images.forEach((o) => {
-      imageSlides.push(<div key={o} className="info-image" style={{ backgroundImage: `url(${o})` }} />);
+    this.props.info.images.forEach((o, i) => {
+      imageSlides.push(<img
+        key={o}
+        className="info-image"
+        src={o}
+        alt={`info-${i}`}
+        onLoad={() => this.confirmImageLoad()}
+      />);
     });
 
     return imageSlides;
@@ -91,34 +105,23 @@ export default class Info extends Component {
           </div>
           <div
             className="img-div"
-            style={
-              this.state.displayImg
-                ? {
-                    display: 'flex',
-                    width: this.state.imgWidth,
-                    height: this.state.imgHeight,
-                    // backgroundImage: `url(${this.props.info.images[this.state.currentImg]})`,
-                  }
-                : { display: 'none' }
-            }
+            style={{
+              display: 'flex',
+              width: this.state.imgWidth,
+              height: this.state.imgHeight,
+            }}
           >
+            {!this.state.displayImg ? (
+              <div className="img-loader">
+                <h1>wait</h1>
+              </div>
+            ) : null}
             <div
               className="img-wrapper"
               style={{ transform: `translateX(${this.state.translateValue}px)` }}
             >
               {this.createImages()}
             </div>
-            {/* <img
-              ref={(img) => {
-                this.image1 = img;
-              }}
-              className="info-image"
-              src={this.props.info.images[this.state.currentImg]}
-              alt={this.props.info.name}
-              onLoad={() => {
-                this.setState({ displayImg: true });
-              }}
-            /> */}
 
             <div
               className="img-controls"

@@ -32,6 +32,7 @@ export default class Nav extends Component {
   }
 
   goToNext() {
+    this.props.scrollToTop();
     switch (this.props.location.pathname) {
       case '/':
         return '/works';
@@ -54,6 +55,11 @@ export default class Nav extends Component {
             <div
               className={this.state.open ? 'menu-container open' : 'menu-container close'}
               onClick={this.click}
+              onKeyPress={() => {
+                this.setState({ open: false });
+              }}
+              role="button"
+              tabIndex="0"
             >
               <span />
               <span />
@@ -62,7 +68,11 @@ export default class Nav extends Component {
             {/* <span>{this.props.location.pathname === "/" ? "home" : this.props.location.pathname.slice(1)}</span> */}
             {/* </div> */}
             <NavLink
-              className={this.goToNext() === '/' ? 'nextpage-container up' : 'nextpage-container'}
+              className={
+                this.props.location.pathname === '/contact'
+                  ? 'nextpage-container up'
+                  : 'nextpage-container'
+              }
               to={this.goToNext()}
               style={{ textDecoration: 'none', color: '#eee' }}
             >
