@@ -14,10 +14,13 @@ const PageFade = props => (
   <CSSTransition {...props} classNames="fadeTranslate" timeout={1000} mountOnEnter unmountOnExit />
 );
 
-const scrollToTop = () => {
-  // window.scrollTo(0, 0);
+function scrollToTop() {
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 125);
+
   ClearShit();
-};
+}
 
 const App = props => (
   <Nav location={props.location} scrollToTop={scrollToTop}>
