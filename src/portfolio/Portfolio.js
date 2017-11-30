@@ -34,18 +34,21 @@ export default class Portfolio extends Component {
 
     this.createInfo = this.createInfo.bind(this);
     this.closeInfo = this.closeInfo.bind(this);
+    this.onKeyDown = this.onKeyDown.bind(this);
   }
 
   componentDidMount() {
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && this.state.displayInfo) {
-        this.setState({ displayInfo: false });
-      }
-    });
+    window.addEventListener('keydown', this.onKeyDown);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('keydown');
+    window.removeEventListener('keydown', this.onKeyDown);
+  }
+
+  onKeyDown(e) {
+    if (e.key === 'Escape' && this.state.displayInfo) {
+      this.setState({ displayInfo: false });
+    }
   }
 
   createContent() {

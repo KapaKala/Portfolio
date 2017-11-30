@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import FontAwesome from 'react-fontawesome';
-import '../font-awesome.css';
+import Slider from './Slider';
+
 import './Info.css';
 
 export default class Info extends Component {
-  state = {
-    loadedImgs: 0,
-    displayImg: false,
-    currentImg: 0,
-    imgWidth: 0,
-    imgHeight: document.body.scrollWidth * 0.56 * 0.6,
-    translateValue: 0,
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loadedImgs: 0,
+      displayImg: false,
+      currentImg: 0,
+      imgWidth: 0,
+      imgHeight: document.body.scrollWidth * 0.56 * 0.6,
+      translateValue: 0,
+    };
+
+    this.nextImg = this.nextImg.bind(this);
+    this.prevImg = this.prevImg.bind(this);
+    this.createImages = this.createImages.bind(this);
+  }
 
   componentDidMount() {
     this.adjustSize();
@@ -55,7 +63,9 @@ export default class Info extends Component {
 
   close() {
     this.props.close();
-    this.setState({ currentImg: 0, displayImg: false, loadedImgs: 0 });
+    setTimeout(() => {
+      this.setState({ currentImg: 0, displayImg: false, loadedImgs: 0 });
+    }, 250);
   }
 
   confirmImageLoad() {
@@ -103,66 +113,16 @@ export default class Info extends Component {
           <div className="info-description">
             {this.props.info.description.split('\n').map(o => <div key={o}>{o}</div>)}
           </div>
-          <div
-            className="img-div"
-            style={{
-              display: 'flex',
-              width: this.state.imgWidth,
-              height: this.state.imgHeight,
-            }}
-          >
-            {!this.state.displayImg ? (
-              <div className="img-loader">
-                <h1>wait</h1>
-              </div>
-            ) : null}
-            <div
-              className="img-wrapper"
-              style={{ transform: `translateX(${this.state.translateValue}px)` }}
-            >
-              {this.createImages()}
-            </div>
 
-            <div
-              className="img-controls"
-              style={{ width: this.state.imgWidth, height: this.state.imgHeight }}
-            >
-              <div
-                className="prev-img"
-                onClick={() => {
-                  this.prevImg();
-                }}
-                onKeyDown={(e) => {
-                  if (e.key === 'ArrowLeft') {
-                    this.prevImg();
-                  }
-                }}
-                role="button"
-                tabIndex="0"
-              >
-                <span className="control">
-                  <FontAwesome name="angle-left" size="3x" />
-                </span>
-              </div>
-              <div
-                className="next-img"
-                onClick={() => {
-                  this.nextImg();
-                }}
-                onKeyDown={(e) => {
-                  if (e.key === 'ArrowRight') {
-                    this.nextImg();
-                  }
-                }}
-                role="button"
-                tabIndex="-1"
-              >
-                <span className="control">
-                  <FontAwesome name="angle-right" size="3x" />
-                </span>
-              </div>
-            </div>
-          </div>
+          <Slider
+            width={this.state.imgWidth}
+            height={this.state.imgHeight}
+            display={this.state.displayImg}
+            nextImg={this.nextImg}
+            prevImg={this.prevImg}
+            createImages={this.createImages}
+            translateValue={this.state.translateValue}
+          />
 
           <div
             onClick={() => {

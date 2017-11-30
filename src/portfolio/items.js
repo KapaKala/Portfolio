@@ -98,7 +98,7 @@ export default [
     description:
       'Done as a school project, Baka Store is a web store template made with React + Redux',
     img: bsCover,
-    images: [bs1, bs2, bs3, bs4, bs5],
+    images: [bs1, bs4, bs3, bs5, bs2],
     links: [
       {
         url: 'https://github.com/eetukallio/TeamBakaProject',
