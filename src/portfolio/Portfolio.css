@@ -1,9 +1,9 @@
 .portfolio-container {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   padding-top: 3em;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
@@ -19,92 +19,92 @@
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   position: relative;
 }
 
 .portfolio-item {
-  display: block;
-  background-size: 100% auto;
-  background-position: center;
-  height: 60vh;
-  width: calc(100%/2 - 1.5em);
-  max-width: 600px;
-  margin: 0.5em;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  transition: 0.33s all ease;
-  outline: none;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
-.item-overlay {
+.portfolio-item-title {
+  font-size: 4em;
+  margin: 0;
+  padding: 0.25em 0;
+}
+
+.portfolio-image-container {
   position: relative;
-  background: black;
-  width: 100.1%;
-  height: 100.1%;
-  z-index: 10;
-  opacity: 0;
-  transition: 0.33s all ease;
+  width: 100%;
+  height: 50vh;
+  min-height: 100%;
+  margin: 1em;
+  background-position: center;
+  background-size: cover;
 }
 
-.portfolio-item:hover {
-  background-size: 110% auto;
+.portfolio-image {
+  width: 100%;
+  height: 100%;
 }
 
-.portfolio-item:hover .item-overlay {
-  opacity: 0.75;
-}
-
-.portfolio-item:hover .portfolio-item-name {
-  opacity: 1;
-  font-size: 2em;
-}
-
-.portfolio-item-name {
+.portfolio-info {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  margin: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  font-size: 2.5em;
-  opacity: 0;
-  transition: 0.4s all ease;
-  z-index: 11;
+  flex-direction: column;
 }
 
-@media screen and (max-width: 940px) {
-  .portfolio-container {
-    width: 100%;
-    padding-top: 3em;
-  }
+.portfolio-buttons {
+  height: 3em;
+  position: relative;
+  display: flex;
+  margin-top: 1em;
+  justify-content: center;
+  align-items: center;
+}
 
-  .portfolio-item {
-    background-size: auto 100%;
-  }
+.img-overlay {
+  position: relative;
+  background: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
 
-  .portfolio-item:hover {
-    background-size: auto 110%;
+@media screen and (max-width: 670px) {
+  .portfolio-item-title {
+    font-size: 3em;
   }
 }
 
 @media screen and (max-width: 560px) {
-  .portfolio-row {
-    flex-wrap: wrap;
-    /*margin-top: 0 !important;*/
-  }
-
   .portfolio-item {
-    background-size: 100% auto;
+    position: relative;
     width: 100%;
-    height: 300px;
-    margin: 0.5em 1em;
   }
 
-  .portfolio-item:hover {
-    background-size: 110% auto;
+  .portfolio-info {
+    height: 90%;
+    top: 0;
+    left: 0;
+    padding: 0 1em;
+    width: auto;
+    margin: 1em;
+    position: absolute;
+    text-align: center;
+  }
+
+  .img-overlay {
+    opacity: 0.75;
   }
 }

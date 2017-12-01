@@ -3,7 +3,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Nav from './nav/Nav';
-import Portfolio from './portfolio/Portfolio';
+import Works from './portfolio/Works';
 import Landing, { ClearShit } from './landing/Landing';
 import About from './about/About';
 import Contact from './contact/Contact';
@@ -29,10 +29,10 @@ const App = props => (
         <div className="App fix-container">
           <Switch location={props.location}>
             <Route exact path="/" component={Landing} />
-            <Route exact path="/works" component={Portfolio} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/contact" component={Contact} />
-            <Route path="*" component={FourOhFour} />
+            <Route path="/works" component={Works} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+            <Route component={FourOhFour} />
           </Switch>
         </div>
       </PageFade>

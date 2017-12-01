@@ -48,11 +48,14 @@ export default class Nav extends Component {
 
   goToNext() {
     this.props.scrollToTop();
+    console.log(this.props.location.pathname);
     switch (this.props.location.pathname) {
       case '/':
         return '/works';
       case '/works':
         return '/about';
+      case `/works/${this.props.location.pathname.slice(-1)}`:
+        return '/works';
       case '/about':
         return '/contact';
       case '/contact':
@@ -81,7 +84,8 @@ export default class Nav extends Component {
             </div>
             <NavLink
               className={
-                this.props.location.pathname === '/contact'
+                this.props.location.pathname === '/contact' ||
+                this.props.location.pathname === `/works/${this.props.location.pathname.slice(-1)}`
                   ? 'nextpage-container up'
                   : 'nextpage-container'
               }

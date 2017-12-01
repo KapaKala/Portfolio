@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import Slider from './Slider';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import Slider from "./Slider";
+import items from "./items";
 
-import './Info.css';
+import "./Info.css";
 
 let timeout;
 export default class Info extends Component {
@@ -10,12 +12,13 @@ export default class Info extends Component {
     super(props);
 
     this.state = {
+      info: items[this.props.match.params.id],
       loadedImgs: 0,
       displayImg: false,
       currentImg: 0,
       imgWidth: 0,
       imgHeight: document.body.scrollWidth * 0.56 * 0.6,
-      translateValue: 0,
+      translateValue: 0
     };
 
     this.nextImg = this.nextImg.bind(this);
@@ -25,29 +28,31 @@ export default class Info extends Component {
   }
 
   componentDidMount() {
+    console.log(this.props);
+
     this.adjustSize();
-    window.addEventListener('resize', this.adjustSize);
+    window.addEventListener("resize", this.adjustSize);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.adjustSize);
+    window.removeEventListener("resize", this.adjustSize);
     clearTimeout(timeout);
   }
 
   adjustSize() {
     this.setState({
       imgWidth: this.infoContainer.clientWidth - 32,
-      imgHeight: (this.infoContainer.clientWidth - 32) * 0.6,
+      imgHeight: (this.infoContainer.clientWidth - 32) * 0.6
     });
   }
 
   nextImg() {
-    if (this.state.currentImg === this.props.info.images.length - 1) {
+    if (this.state.currentImg === this.state.info.images.length - 1) {
       this.setState({ currentImg: 0, translateValue: 0 });
     } else {
       this.setState({
         currentImg: (this.state.currentImg += 1),
-        translateValue: (this.state.translateValue -= this.state.imgWidth),
+        translateValue: (this.state.translateValue -= this.state.imgWidth)
       });
     }
   }
@@ -55,13 +60,16 @@ export default class Info extends Component {
   prevImg() {
     if (this.state.currentImg === 0) {
       this.setState({
-        currentImg: this.props.info.images.length - 1,
-        translateValue: -((this.props.info.images.length - 1) * this.state.imgWidth),
+        currentImg: this.state.info.images.length - 1,
+        translateValue: -(
+          (this.state.info.images.length - 1) *
+          this.state.imgWidth
+        )
       });
     } else {
       this.setState({
         currentImg: (this.state.currentImg -= 1),
-        translateValue: (this.state.translateValue += this.state.imgWidth),
+        translateValue: (this.state.translateValue += this.state.imgWidth)
       });
     }
   }
@@ -73,14 +81,14 @@ export default class Info extends Component {
         currentImg: 0,
         displayImg: false,
         loadedImgs: 0,
-        translateValue: 0,
+        translateValue: 0
       });
     }, 250);
   }
 
   confirmImageLoad() {
     this.setState({ loadedImgs: (this.state.loadedImgs += 1) });
-    if (this.state.loadedImgs === this.props.info.images.length) {
+    if (this.state.loadedImgs === this.state.info.images.length) {
       this.setState({ displayImg: true });
     }
   }
@@ -88,14 +96,16 @@ export default class Info extends Component {
   createImages() {
     const imageSlides = [];
 
-    this.props.info.images.forEach((o, i) => {
-      imageSlides.push(<img
-        key={o}
-        className="info-image"
-        src={o}
-        alt={`info-${i}`}
-        onLoad={() => this.confirmImageLoad()}
-      />);
+    this.state.info.images.forEach((o, i) => {
+      imageSlides.push(
+        <img
+          key={o}
+          className="info-image"
+          src={o}
+          alt={`info-${i}`}
+          onLoad={() => this.confirmImageLoad()}
+        />
+      );
     });
 
     return imageSlides;
@@ -103,25 +113,32 @@ export default class Info extends Component {
 
   render() {
     return (
-      <div className={this.props.visible ? 'info-overlay open' : 'info-overlay close'}>
+      <div className="info-overlay">
         <div
-          ref={(ref) => {
+          ref={ref => {
             this.infoContainer = ref;
           }}
-          className={this.props.visible ? 'info-container open' : 'info-container close'}
+          className="info-container"
         >
           <div className="top">
-            <h1 className="info-name">{this.props.info.name}</h1>
+            <h1 className="info-name">{this.state.info.name}</h1>
             <div className="info-links">
-              {this.props.info.links.map(link => (
-                <a key={link.url} href={link.url} rel="noopener noreferrer" target="_blank">
+              {this.state.info.links.map(link => (
+                <a
+                  key={link.url}
+                  href={link.url}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
                   {link.img} <span> {link.alt}</span>
                 </a>
               ))}
             </div>
           </div>
           <div className="info-description">
-            {this.props.info.description.split('\n').map(o => <div key={o}>{o}</div>)}
+            {this.state.info.description
+              .split("\n")
+              .map(o => <div key={o}>{o}</div>)}
           </div>
 
           <Slider
@@ -134,10 +151,16 @@ export default class Info extends Component {
             translateValue={this.state.translateValue}
           />
 
-          <div
-            onClick={() => {
-              this.close();
-            }}
+          <h2>About this project</h2>
+          <p>{this.state.info.about}</p>
+          <h2>Technologies</h2>
+          <ul>
+            {this.state.info.technologies.map((o, i) => {
+              return <li key={i}>{o}</li>;
+            })}
+          </ul>
+
+          {/* <div
             onKeyDown={(e) => {
               if (e.key === 'Enter') {
                 this.close();
@@ -146,18 +169,13 @@ export default class Info extends Component {
             className="close-button"
             role="button"
             tabIndex="-1"
-          >
-            <span className="line-1" />
-            <span className="line-2" />
-          </div>
+          > */}
+
+          {/* </div> */}
         </div>
       </div>
     );
   }
 }
 
-Info.propTypes = {
-  info: PropTypes.shape().isRequired,
-  visible: PropTypes.bool.isRequired,
-  close: PropTypes.func.isRequired,
-};
+Info.propTypes = {};

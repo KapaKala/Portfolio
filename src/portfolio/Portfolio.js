@@ -1,104 +1,45 @@
-import React, { Component } from 'react';
-import './Portfolio.css';
-import Info from './Info';
-import items from './items';
-
-const noinfo = {
-  id: 0,
-  name: '',
-  description: '',
-  img: '',
-  images: [''],
-  links: [
-    {
-      url: '1',
-      img: '',
-      alt: '',
-    },
-    {
-      url: '2',
-      img: '',
-      alt: '',
-    },
-  ],
-};
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import "./Portfolio.css";
+import items from "./items";
 
 export default class Portfolio extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      currentInfo: noinfo,
-      displayInfo: false,
-    };
-
-    this.createInfo = this.createInfo.bind(this);
-    this.closeInfo = this.closeInfo.bind(this);
-    this.onKeyDown = this.onKeyDown.bind(this);
-  }
-
-  componentDidMount() {
-    window.addEventListener('keydown', this.onKeyDown);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('keydown', this.onKeyDown);
-  }
-
-  onKeyDown(e) {
-    if (e.key === 'Escape' && this.state.displayInfo) {
-      this.setState({ displayInfo: false });
-    }
-  }
-
   createContent() {
-    return items.map((obj, i) => (
+    return items.map(obj => (
       <div
         key={obj.id}
-        onClick={() => {
-          this.createInfo(i);
-        }}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter') {
-            this.createInfo(i);
-          }
-        }}
-        role="button"
-        tabIndex="0"
         className="portfolio-item"
-        style={{ backgroundImage: `url(${obj.img})` }}
+        // Grid version
+        // style={{ backgroundImage: `url(${obj.img})` }}
       >
+        {/* Remove for grid version */}
+        <div
+          className="portfolio-image-container"
+          style={{ backgroundImage: `url(${obj.img})` }}
+        >
+          <div className="img-overlay" />
+          {/* <img className="portfolio-image" src={obj.img} alt={obj.name} /> */}
+        </div>
+        <div className="portfolio-info">
+          <h1 className="portfolio-item-title">{obj.name}</h1>
+          <p>{obj.description}</p>
+          <div className="portfolio-buttons buttons">
+            <Link to={`${this.props.match.url}/${obj.id}`}>show me more!</Link>
+          </div>
+        </div>
+
+        {/* Grid version
         <div className="portfolio-item-name">
           <h2>{obj.name}</h2>
         </div>
-        <div className="item-overlay" />
+        <div className="item-overlay" /> */}
       </div>
     ));
   }
 
-  createInfo(i) {
-    this.setState({ currentInfo: items[i] });
-    this.setState({ displayInfo: !this.state.displayInfo });
-  }
-
-  closeInfo() {
-    window.setTimeout(() => {
-      this.setState({ currentInfo: noinfo });
-    }, 250);
-    this.setState({ displayInfo: false });
-  }
-
   render() {
     return (
-      <div
-        className={this.state.displayInfo ? 'portfolio-container no-scroll' : 'portfolio-container'}
-      >
-        <Info
-          visible={this.state.displayInfo}
-          close={this.closeInfo}
-          info={this.state.currentInfo}
-        />
-
+      <div className="portfolio-container">
         <div className="portfolio-row">{this.createContent()}</div>
       </div>
     );
