@@ -38,18 +38,18 @@
 }
 
 .footer {
-  width: auto;
+  width: 90%;
   position: absolute;
   bottom: 3em;
   font-size: 0.75em;
   color: grey;
-  margin: 0 1em;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 920px) {
   .contact-container {
     width: auto;
-    margin: 0 1em;
+    margin: 0 2em;
   }
 
   .links {
