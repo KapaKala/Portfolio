@@ -128,9 +128,9 @@ export default class Landing extends Component {
   animateText() {
     const { animateRow } = this;
     animateRow("Hello!", 1, this.cursor1, this.console1, () => {
-      animateRow("I'm Henri", 2, this.cursor2, this.console2, () => {
+      animateRow("My name is Henri", 2, this.cursor2, this.console2, () => {
         animateRow(
-          "I study web and software development",
+          "I'm a full stack developer",
           3,
           this.cursor3,
           this.console3,

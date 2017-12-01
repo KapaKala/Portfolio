@@ -25,7 +25,7 @@
 
 .left-container {
   margin: 2em;
-  max-width: 25%;
+  max-width: 30%;
 }
 
 .right-container {
@@ -33,9 +33,16 @@
   max-width: 55%;
 }
 
+@media screen and (max-width: 920px) {
+  .left-container,
+  .right-container {
+    max-width: 40%;
+  }
+}
+
 @media screen and (max-width: 720px) {
   .about-container {
-    margin-top: 10em;
+    margin-top: 8em;
     display: block;
   }
 
@@ -48,5 +55,21 @@
     display: inline-block;
     max-width: 100%;
     margin: 0 2em;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .frontend-container {
+    margin-right: 1em;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .left-container,
+  .right-container {
+    margin: 0 1em;
   }
 }

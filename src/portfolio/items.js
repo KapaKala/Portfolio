@@ -75,6 +75,9 @@ export default [
     about:
       "Kuippana is a web app, made for Tampereen Urho Oy to improve on their work hour tracking and management. With it employees can report their work hours along with the location and client. The employer can manage information on the employees, and can view and manage all information related to the work hours, and the application calcucates wages based on the information submitted.",
     technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
       "React",
       "Redux",
       "Node.js",
@@ -122,6 +125,14 @@ export default [
     ],
     about:
       "I apologize for the contents of the web app, I swear it wasn't my idea. Our aim with Baka Store was to create a fully functional web store template, where the admin has the option to add and remove categories and products in the store as well as manage the quantities. The user has the ability to register and sign in, to review all products, to add items into their shopping cart, and to check out with the shipping information being filled out automatically in case the user has registered.",
-    technologies: ["React", "Redux", "Spring", "MySQL"]
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Redux",
+      "Spring",
+      "MySQL"
+    ]
   }
 ];
