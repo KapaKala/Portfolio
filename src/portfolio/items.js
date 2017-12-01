@@ -73,7 +73,7 @@ export default [
       }
     ],
     about:
-      "Kuippana is a web app, made for Tampereen Urho Oy to improve on their work hour tracking and management. With it employees can report their work hours along with the location and client. The employer can manage information on the employees, and can view and manage all information related to the work hours, and the application calcucates wages based on the information submitted.",
+      "Kuippana is a web app, made for Tampereen Urho Oy to improve on their work hour tracking and management. With it employees can report their work hours along with the location and client. The employer can manage information on the employees, and can view and manage all information related to the work hours, and the application calculates wages based on the information submitted.",
     technologies: [
       "HTML",
       "CSS",
@@ -90,7 +90,7 @@ export default [
     id: 2,
     name: "Sunko",
     description:
-      "A minimalistic weather app that tells you the weather quite literally.",
+      "A sleek weather app that tells you the weather quite literally.",
     img: sCover,
     images: [s1, s2, s3, s4, s5],
     links: [
