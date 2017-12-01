@@ -1,7 +1,7 @@
-import React from 'react';
-import './About.css';
+import React from "react";
+import "./About.css";
 
-const img = require('../images/Untitled.png');
+const img = require("../images/Untitled.png");
 
 const About = () => (
   <div className="about-container">
@@ -12,12 +12,14 @@ const About = () => (
       <div className="left-container">
         <h3>Hello!</h3>
         <p>
-          I am Henri Kankaanpää, a third-year student of business information systems at Tampere
-          University of Applied Sciences.
+          I'm Henri Kankaanpää, a third-year business information systems
+          student at Tampere University of Applied Sciences.
         </p>
         <p>
-          My goal is to always produce good-looking, usable and all around awesome products, mainly
-          focusing on full-stack web and mobile development.
+          What I like to do is create software that feels good to use and looks
+          even better. My main focus been full stack web and mobile development,
+          but there's not much I'm not interested in doing - learning new stuff
+          is always cool.
         </p>
       </div>
       <div className="right-container">
@@ -33,6 +35,7 @@ const About = () => (
         <h4>Backend</h4>
         <ul>
           <li>Node + Express</li>
+          <li>Passwordjs</li>
           <li>Spring</li>
           <li>MySQL</li>
         </ul>
