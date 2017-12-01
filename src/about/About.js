@@ -17,9 +17,9 @@ const About = () => (
         </p>
         <p>
           What I like to do is create software that feels good to use and looks
-          even better. My main focus been full stack web and mobile development,
-          but there's not much I'm not interested in doing - learning new stuff
-          is always cool.
+          even better. My main focus has been full stack web and mobile
+          development, but there's not much I'm not interested in doing -
+          learning new stuff is always cool.
         </p>
       </div>
       <div className="right-container">

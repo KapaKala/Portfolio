@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
-import './Nav.css';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
+import "./Nav.css";
 
 const activeStyle = {
-  transition: 'all 0.6s ease-in-out',
+  transition: "all 0.6s ease-in-out",
   // textDecoration: 'underline',
-  color: 'rgba(255,255,255,1)',
+  color: "rgba(255,255,255,1)"
 };
 
 export default class Nav extends Component {
@@ -14,7 +14,7 @@ export default class Nav extends Component {
     super(props);
 
     this.state = {
-      open: false,
+      open: false
     };
 
     this.click = this.click.bind(this);
@@ -24,15 +24,15 @@ export default class Nav extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('keydown', this.onKeyDown);
+    window.addEventListener("keydown", this.onKeyDown);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('keydown', this.onKeyDown);
+    window.removeEventListener("keydown", this.onKeyDown);
   }
 
   onKeyDown(e) {
-    if (e.key === 'Escape' && this.state.open) {
+    if (e.key === "Escape" && this.state.open) {
       this.setState({ open: false });
     }
   }
@@ -50,18 +50,22 @@ export default class Nav extends Component {
     this.props.scrollToTop();
     console.log(this.props.location.pathname);
     switch (this.props.location.pathname) {
-      case '/':
-        return '/works';
-      case '/works':
-        return '/about';
+      case "/":
+        document.title = "Home - Henri Kankaanpää";
+        return "/works";
+      case "/works":
+        document.title = "Works - Henri Kankaanpää";
+        return "/about";
       case `/works/${this.props.location.pathname.slice(-1)}`:
-        return '/works';
-      case '/about':
-        return '/contact';
-      case '/contact':
-        return '/';
+        return "/works";
+      case "/about":
+        document.title = "About - Henri Kankaanpää";
+        return "/contact";
+      case "/contact":
+        document.title = "Contact - Henri Kankaanpää";
+        return "/";
       default:
-        return '/';
+        return "/";
     }
   }
 
@@ -71,7 +75,9 @@ export default class Nav extends Component {
         <div className="nav-container">
           <div className="top-container">
             <div
-              className={this.state.open ? 'menu-container open' : 'menu-container close'}
+              className={
+                this.state.open ? "menu-container open" : "menu-container close"
+              }
               onClick={this.click}
               onKeyPress={() => {
                 this.setState({ open: false });
@@ -84,13 +90,14 @@ export default class Nav extends Component {
             </div>
             <NavLink
               className={
-                this.props.location.pathname === '/contact' ||
-                this.props.location.pathname === `/works/${this.props.location.pathname.slice(-1)}`
-                  ? 'nextpage-container up'
-                  : 'nextpage-container'
+                this.props.location.pathname === "/contact" ||
+                this.props.location.pathname ===
+                  `/works/${this.props.location.pathname.slice(-1)}`
+                  ? "nextpage-container up"
+                  : "nextpage-container"
               }
               to={this.goToNext()}
-              style={{ textDecoration: 'none', color: '#eee' }}
+              style={{ textDecoration: "none", color: "#eee" }}
             >
               <span />
               <span />
@@ -101,26 +108,46 @@ export default class Nav extends Component {
             onKeyDown={this.click}
             role="button"
             tabIndex="0"
-            className={this.state.open ? 'overlay open' : 'overlay close'}
+            className={this.state.open ? "overlay open" : "overlay close"}
           >
             <ul>
               <li>
-                <NavLink exact onClick={this.menuClick} to="/" activeStyle={activeStyle}>
+                <NavLink
+                  exact
+                  onClick={this.menuClick}
+                  to="/"
+                  activeStyle={activeStyle}
+                >
                   home
                 </NavLink>
               </li>
               <li>
-                <NavLink exact onClick={this.menuClick} to="/works" activeStyle={activeStyle}>
+                <NavLink
+                  exact
+                  onClick={this.menuClick}
+                  to="/works"
+                  activeStyle={activeStyle}
+                >
                   works
                 </NavLink>
               </li>
               <li>
-                <NavLink exact onClick={this.menuClick} to="/about" activeStyle={activeStyle}>
+                <NavLink
+                  exact
+                  onClick={this.menuClick}
+                  to="/about"
+                  activeStyle={activeStyle}
+                >
                   about
                 </NavLink>
               </li>
               <li>
-                <NavLink exact onClick={this.menuClick} to="/contact" activeStyle={activeStyle}>
+                <NavLink
+                  exact
+                  onClick={this.menuClick}
+                  to="/contact"
+                  activeStyle={activeStyle}
+                >
                   contact
                 </NavLink>
               </li>
@@ -136,5 +163,5 @@ export default class Nav extends Component {
 Nav.propTypes = {
   location: PropTypes.shape().isRequired,
   children: PropTypes.shape().isRequired,
-  scrollToTop: PropTypes.func.isRequired,
+  scrollToTop: PropTypes.func.isRequired
 };

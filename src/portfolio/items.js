@@ -8,9 +8,11 @@ const sm2 = require("../images/sm_screen2.jpg");
 const sm3 = require("../images/sm_screen3.jpg");
 
 const kCover = require("../images/k_cover.png");
-const k1 = require("../images/k_addworker.png");
-const k2 = require("../images/k_hourform.png");
-const k3 = require("../images/k_login.png");
+const k1 = require("../images/k_screen1.jpg");
+const k2 = require("../images/k_screen2.jpg");
+const k3 = require("../images/k_screen3.jpg");
+const k4 = require("../images/k_screen4.jpg");
+const k5 = require("../images/k_screen5.jpg");
 
 const sCover = require("../images/s_cover2.png");
 const s1 = require("../images/sunko_screen1.jpg");
@@ -25,6 +27,7 @@ const bs2 = require("../images/bs_screen2.jpg");
 const bs3 = require("../images/bs_screen3.jpg");
 const bs4 = require("../images/bs_screen4.jpg");
 const bs5 = require("../images/bs_screen5.jpg");
+const bs6 = require("../images/bs_screen6.jpg");
 
 export default [
   {
@@ -61,7 +64,7 @@ export default [
     description:
       "A web app for tracking and managing the work hours of employees.",
     img: kCover,
-    images: [k1, k2, k3],
+    images: [k1, k2, k3, k4, k5],
     links: [
       {
         url: "https://github.com/eetukallio/Uhro-Kuippana",
@@ -109,7 +112,7 @@ export default [
     description:
       "Done as a school project, Baka Store is a web store template.",
     img: bsCover,
-    images: [bs1, bs4, bs3, bs5, bs2],
+    images: [bs1, bs4, bs3, bs5, bs2, bs6],
     links: [
       {
         url: "https://github.com/eetukallio/TeamBakaProject",

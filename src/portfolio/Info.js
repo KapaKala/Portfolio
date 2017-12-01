@@ -28,8 +28,7 @@ export default class Info extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props);
-
+    document.title = `${this.state.info.name} - Henri Kankaanpää`;
     this.adjustSize();
     window.addEventListener("resize", this.adjustSize);
   }
