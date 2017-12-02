@@ -103,9 +103,6 @@
 }
 
 @media screen and (max-width: 560px) {
-  .landing-wrapper {
-  }
-
   .landing-container {
     display: block;
     border: none;

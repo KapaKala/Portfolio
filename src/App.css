@@ -53,11 +53,6 @@ body {
   opacity: 0;
 }
 
-@media screen and (max-width: 560px) {
-  .App {
-  }
-}
-
 .buttons a {
   display: flex;
   justify-content: center;
