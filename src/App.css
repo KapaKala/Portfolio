@@ -14,8 +14,9 @@ body {
   display: flex;
   flex-flow: column;
   margin: 0;
-  padding-top: 3em;
-  height: calc(100% - 3em);
+  padding-top: 5em;
+  height: calc(100% - 5em);
+  overflow: auto;
 }
 
 .fadeTranslate-enter {
@@ -70,4 +71,11 @@ body {
 
 .buttons a:hover {
   border-bottom: 1px #999 solid;
+}
+
+@media screen and (max-width: 560px) {
+  .App {
+    padding-top: 0;
+    height: 100%;
+  }
 }

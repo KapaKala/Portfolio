@@ -84,6 +84,7 @@ export default class Nav extends Component {
             >
               <span />
               <span />
+              <span />
             </div>
             <NavLink
               className={
