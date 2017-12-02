@@ -17,7 +17,7 @@
       {
         "components": ["Link "],
         "specialLink": ["to", "hrefLeft", "hrefRight"],
-        "aspects": ["noHref", "invalidHref", "prefButton"]
+        "aspects": ["noHref", "invalidHref", "preferButton"]
       }
     ]
   }
