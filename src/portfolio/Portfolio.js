@@ -25,7 +25,6 @@ export default class Portfolio extends Component {
             <Link to={`${this.props.match.url}/${obj.id}`}>show me more!</Link>
           </div>
         </div>
-
         {/* Grid version
         <div className="portfolio-item-name">
           <h2>{obj.name}</h2>

@@ -1,5 +1,5 @@
 import { Route, Switch, withRouter } from 'react-router-dom';
-import { AnimatedSwitch } from 'react-router-transition';
+import { TransitionGroup, Transition, CSSTransition } from 'react-transition-group';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Nav from './nav/Nav';
@@ -10,36 +10,31 @@ import Contact from './contact/Contact';
 import FourOhFour from './fourOhFour/FourOhFour';
 import './App.css';
 
+const PageFade = props => (
+  <CSSTransition {...props} classNames="fadeTranslate" timeout={500} mountOnEnter unmountOnExit />
+);
+
 function scrollToTop() {
   setTimeout(() => {
     window.scrollTo(0, 0);
   }, 125);
 }
 
-function mapStyles(styles) {
-  return {
-    opacity: styles.opacity,
-    transform: `translateY(${styles.offset}px)`,
-  };
-}
-
 const App = props => (
   <Nav location={props.location} scrollToTop={scrollToTop}>
-    <Switch location={props.location}>
-      <AnimatedSwitch
-        atEnter={{ opacity: 0, offset: -100 }}
-        atLeave={{ opacity: 0, offset: 100 }}
-        atActive={{ opacity: 1, offset: 0 }}
-        mapStyles={mapStyles}
-        className="App"
-      >
-        <Route exact path="/" component={Landing} />
-        <Route path="/works" component={Works} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
-        <Route component={FourOhFour} />
-      </AnimatedSwitch>
-    </Switch>
+    <TransitionGroup>
+      <PageFade key={props.location.key}>
+        <div className="App fix-container">
+          <Switch location={props.location}>
+            <Route exact path="/" component={Landing} />
+            <Route path="/works" component={Works} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+            <Route component={FourOhFour} />
+          </Switch>
+        </div>
+      </PageFade>
+    </TransitionGroup>
   </Nav>
 );
 

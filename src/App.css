@@ -1,23 +1,71 @@
 html,
 body,
-#root {
+#root,
+.App {
   background: #111;
   color: #eee;
-}
-body {
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box;
+  display: block;
+  max-height: 100vh;
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
 .App {
-  position: relative;
+  position: absolute;
   display: flex;
+  flex: 1;
   flex-flow: column;
   margin: 0;
   padding-top: 5em;
-  height: calc(100vh - 5em);
-  width: 100vw;
-  overflow-x: hidden;
+  height: calc(100% - 5em);
+}
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  50% {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeTranslate-enter {
+  opacity: 0;
+  transform: translateY(16px);
+  overflow: hidden;
+}
+
+.fadeTranslate-enter.fadeTranslate-enter-active {
+  animation: animation 500ms;
+  backface-visibility: hidden;
+  transform: scale(1);
+  transform-style: preserve-3d;
+}
+
+.fadeTranslate-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fadeTranslate-exit.fadeTranslate-exit-active {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: all 250ms;
+}
+
+.fix-container {
+  position: absolute;
+  top: 0;
 }
 
 .hidden {
@@ -48,21 +96,4 @@ body {
     padding-top: 0;
     height: 100%;
   }
-}
-
-.App > div {
-  position: absolute;
-  overflow: hidden;
-}
-
-.sub-app {
-  position: relative;
-  width: 100vw;
-  height: calc(100vh - 5em);
-  overflow: auto;
-}
-
-.sub-app > div {
-  position: absolute;
-  overflow: hidden;
 }
