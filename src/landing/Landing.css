@@ -1,141 +1,145 @@
 .landing-wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
 }
 
 .landing-container {
-    width: 70vw;
-    height: 70vh;
-    max-height: 80vh;
-    margin: auto;
-    padding: 0 1em;
-    border: 1px solid white;
-    border-top: 3em solid white;
-    overflow: auto;
-    font-size: 0.75em;
-    border-radius: 3px;
+  width: 70vw;
+  height: 70vh;
+  max-height: 80vh;
+  margin: auto;
+  padding: 0 1em;
+  border: 1px solid white;
+  border-top: 3em solid white;
+  overflow: auto;
+  font-size: 0.75em;
+  border-radius: 3px;
 }
 
 .blinking {
-    -webkit-animation: 1s blink step-end infinite;
-    -moz-animation: 1s blink step-end infinite;
-    -o-animation: 1s blink step-end infinite;
-    animation: 1s blink step-end infinite;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
 }
 
 .not-blinking {
-    -webkit-animation: 0;
-    -moz-animation: 0;
-    -o-animation: 0;
-    animation: 0;
+  -webkit-animation: 0;
+  -moz-animation: 0;
+  -o-animation: 0;
+  animation: 0;
 }
 
 @keyframes blink {
-    from, to {
-        color: transparent;
-    }
-    50% {
-        color: white;
-    }
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
 }
 
 @-moz-keyframes blink {
-    from, to {
-        color: transparent;
-    }
-    50% {
-        color: white;
-    }
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
 }
 
 @-webkit-keyframes blink {
-    from, to {
-        color: transparent;
-    }
-    50% {
-        color: white;
-    }
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
 }
 
 @-ms-keyframes blink {
-    from, to {
-        color: transparent;
-    }
-    50% {
-        color: white;
-    }
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
 }
 
 @-o-keyframes blink {
-    from, to {
-        color: transparent;
-    }
-    50% {
-        color: white;
-    }
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
 }
 
 .hidden {
-    opacity: 0;
+  opacity: 0;
 }
 
 .console {
-    display: inline-block;
+  display: inline-block;
 }
 
 .console-container {
-    outline: none;
-    word-wrap: break-word;
+  outline: none;
+  word-wrap: break-word;
 }
 
 .console-text-area {
-    outline: none;
-    white-space: normal;
+  outline: none;
+  white-space: normal;
 }
 
 @media screen and (max-width: 560px) {
-    .landing-wrapper {
-        padding: 48px 0 0 0;
-        margin: 0;
-    }
+  .landing-wrapper {
+    padding: 48px 0 0 0;
+    margin: 0;
+  }
 
-    .landing-container {
-        display: block;
-        border: none;
-        width: 100%;
-        height: 100%;
-        max-height: 95vh;
-        white-space: normal;
-        padding: 0 16px;
-        margin: 0;
-    }
+  .landing-container {
+    display: block;
+    border: none;
+    width: 100%;
+    height: 100%;
+    max-height: 95vh;
+    white-space: normal;
+    padding: 0 16px;
+    margin: 0;
+  }
 }
 
 .noinput {
-    background-color: transparent;
-    border: 0;
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    width: 100%;
-    height: 10vh;
-    color: transparent;
-    cursor: default;
-    position: relative;
-    transform: translateY(-50px);
-    -webkit-text-fill-color: transparent;
-    font-size: 16px;
-    text-shadow: 0 0 0;
-    text-indent: -9999em;
-    user-select: none;
-    -webkit-user-select: none;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 100%;
+  height: 10vh;
+  color: transparent;
+  cursor: default;
+  position: relative;
+  transform: translateY(-50px);
+  -webkit-text-fill-color: transparent;
+  font-size: 16px;
+  text-shadow: 0 0 0;
+  text-indent: -9999em;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .prompt-text {
-    margin-bottom: -1em;
+  margin-bottom: -1em;
 }
-
-

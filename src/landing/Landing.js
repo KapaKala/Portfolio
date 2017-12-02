@@ -22,7 +22,7 @@ export default class Landing extends Component {
     super(props);
 
     this.state = {
-      console: "$ > ",
+      console: "~ $ ",
       cursor: "_",
       text: "",
       print: [{ text: "" }, { text: "" }, { text: "" }],

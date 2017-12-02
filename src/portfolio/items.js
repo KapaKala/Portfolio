@@ -44,7 +44,7 @@ export default [
         alt: "newsletter"
       },
       {
-        url: "http://www.github.com",
+        url: "https://github.com/KapaKala/Sandman-Public",
         img: <FontAwesome name="github" />,
         alt: "github"
       },

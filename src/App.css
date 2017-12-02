@@ -7,6 +7,7 @@ body,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: scroll;
 }
 
 .App {
@@ -47,7 +48,6 @@ body {
 .fix-container {
   position: absolute;
   width: 100%;
-  height: 100%;
 }
 
 .hidden {
