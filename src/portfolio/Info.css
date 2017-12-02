@@ -1,5 +1,5 @@
 .info-overlay {
-  width: 100%;
+  width: 100vw;
   height: auto;
   display: flex;
   justify-content: center;
@@ -8,7 +8,6 @@
   -webkit-transition: all 0.33s;
   -moz-transition: all 0.33s;
   -o-transition: all 0.33s;
-  overflow-x: hidden;
 }
 
 .info-overlay.close {

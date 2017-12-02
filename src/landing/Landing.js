@@ -51,6 +51,7 @@ export default class Landing extends Component {
   }
 
   componentWillUnmount() {
+    ClearShit();
     document.removeEventListener('keydown', this.onKeyDown);
   }
 

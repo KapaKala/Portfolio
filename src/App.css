@@ -16,45 +16,6 @@ body {
   margin: 0;
   padding-top: 5em;
   height: calc(100% - 5em);
-  overflow: auto;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-}
-
-.fadeTranslate-enter {
-  opacity: 0;
-  transform: translateY(16px);
-  -webkit-transform: translateY(16px);
-  overflow: hidden;
-}
-
-.fadeTranslate-enter.fadeTranslate-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-  -webkit-transform: translateY(0);
-  transition: opacity 500ms, transform 500ms;
-  overflow: auto;
-}
-
-.fadeTranslate-exit {
-  opacity: 1;
-  transform: translateY(0);
-  -webkit-transform: translateY(0);
-  overflow: hidden;
-}
-
-.fadeTranslate-exit.fadeTranslate-exit-active {
-  opacity: 0;
-  transform: translateY(16px);
-  -webkit-transform: translateY(16px);
-  transition: opacity 250ms, transform 250ms;
-  overflow: auto;
-}
-
-.fix-container {
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 
 .hidden {
@@ -85,4 +46,16 @@ body {
     padding-top: 0;
     height: 100%;
   }
+}
+
+.App > div {
+  position: absolute;
+}
+
+.sub-app {
+  position: relative;
+}
+
+.sub-app > div {
+  position: absolute;
 }

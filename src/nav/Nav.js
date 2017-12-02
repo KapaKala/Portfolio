@@ -47,7 +47,6 @@ export default class Nav extends Component {
   }
 
   goToNext() {
-    this.props.scrollToTop();
     switch (this.props.location.pathname) {
       case '/':
         document.title = 'Home - Henri Kankaanpää';

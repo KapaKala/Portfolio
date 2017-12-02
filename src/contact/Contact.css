@@ -1,11 +1,20 @@
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: calc(100vh - 5em);
+}
+
 .contact-container {
+  width: 100%;
+  height: 75%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   word-wrap: break-word;
   text-align: center;
-  height: calc(100% - 3em);
 }
 
 .links {
@@ -37,12 +46,13 @@
 }
 
 .footer {
-  width: 90%;
+  width: 100%;
   position: absolute;
   bottom: 2em;
   font-size: 0.75em;
   color: grey;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 920px) {
@@ -57,5 +67,8 @@
   }
 }
 
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 560px) {
+  .contact-container {
+    height: 100vh;
+  }
 }
