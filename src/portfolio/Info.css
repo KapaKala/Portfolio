@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 3em;
   transition: all 0.33s;
   -webkit-transition: all 0.33s;
   -moz-transition: all 0.33s;

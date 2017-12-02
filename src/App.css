@@ -7,16 +7,15 @@ body,
 body {
   margin: 0;
   padding: 0;
-  overflow-x: scroll;
 }
 
 .App {
   position: relative;
   display: flex;
   flex-flow: column;
-  justify-content: center;
-  align-items: center;
   margin: 0;
+  padding-top: 3em;
+  height: calc(100% - 3em);
 }
 
 .fadeTranslate-enter {

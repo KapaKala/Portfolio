@@ -3,10 +3,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
   word-wrap: break-word;
-  white-space: pre-wrap;
   text-align: center;
+  height: calc(100% - 3em);
 }
 
 .links {
@@ -40,7 +39,7 @@
 .footer {
   width: 90%;
   position: absolute;
-  bottom: 3em;
+  bottom: 2em;
   font-size: 0.75em;
   color: grey;
   margin: 0 auto;
@@ -50,6 +49,7 @@
   .contact-container {
     width: auto;
     margin: 0 2em;
+    /* justify-content: flex-start; */
   }
 
   .links {

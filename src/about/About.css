@@ -3,9 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  flex: 1 1 auto;
   height: 100%;
-  margin-top: 3em;
 }
 
 .bottom-container {
@@ -13,12 +11,14 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: row;
+  flex: 0.75;
 }
 
 .about-img-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 0.25;
 }
 .about-img {
   width: 100px;
@@ -44,7 +44,7 @@
 
 @media screen and (max-width: 720px) {
   .about-container {
-    margin-top: 8em;
+    margin-top: 2em;
     display: block;
   }
 
