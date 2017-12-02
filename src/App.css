@@ -50,6 +50,7 @@ body {
 
 .App > div {
   position: absolute;
+  overflow: hide;
 }
 
 .sub-app {
