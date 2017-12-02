@@ -1,7 +1,7 @@
-import React from "react";
-import "./About.css";
+import React from 'react';
+import './About.css';
 
-const img = require("../images/Untitled.png");
+const img = require('../images/Untitled.png');
 
 const About = () => (
   <div className="about-container">
@@ -12,14 +12,13 @@ const About = () => (
       <div className="left-container">
         <h3>Hello!</h3>
         <p>
-          I'm Henri Kankaanpää, a third-year business information systems
-          student at Tampere University of Applied Sciences.
+          I&apos;m Henri Kankaanpää, a third-year business information systems student at Tampere
+          University of Applied Sciences.
         </p>
         <p>
-          What I like to do is create software that feels good to use and looks
-          even better. My main focus has been full stack web and mobile
-          development, but there isn't much I'm not interested in doing - who
-          doesn't like learning new things?
+          What I like to do is create software that feels good to use and looks even better. My main
+          focus has been full stack web and mobile development, but there isn&apos;t much I&apos;m
+          not interested in doing - who doesn&apos;t like learning new things?
         </p>
       </div>
       <div className="right-container">

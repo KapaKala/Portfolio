@@ -1,7 +1,8 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import "./Portfolio.css";
-import items from "./items";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import './Portfolio.css';
+import items from './items';
 
 export default class Portfolio extends Component {
   createContent() {
@@ -13,10 +14,7 @@ export default class Portfolio extends Component {
         // style={{ backgroundImage: `url(${obj.img})` }}
       >
         {/* Remove for grid version */}
-        <div
-          className="portfolio-image-container"
-          style={{ backgroundImage: `url(${obj.img})` }}
-        >
+        <div className="portfolio-image-container" style={{ backgroundImage: `url(${obj.img})` }}>
           <div className="img-overlay" />
           {/* <img className="portfolio-image" src={obj.img} alt={obj.name} /> */}
         </div>
@@ -45,3 +43,7 @@ export default class Portfolio extends Component {
     );
   }
 }
+
+Portfolio.propTypes = {
+  match: PropTypes.shape({ url: PropTypes.string.isRequired }).isRequired,
+};

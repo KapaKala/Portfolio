@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import "./Landing.css";
-import ConsoleArea from "./ConsoleArea";
-import { reply } from "./Commands";
+import React, { Component } from 'react';
+import './Landing.css';
+import ConsoleArea from './ConsoleArea';
+import { reply } from './Commands';
 
 let timer;
 let animationTimeout;
@@ -22,12 +22,12 @@ export default class Landing extends Component {
     super(props);
 
     this.state = {
-      console: "~ $ ",
-      cursor: "_",
-      text: "",
-      print: [{ text: "" }, { text: "" }, { text: "" }],
+      console: '~ $ ',
+      cursor: '_',
+      text: '',
+      print: [{ text: '' }, { text: '' }, { text: '' }],
       consoleBlink: false,
-      history: []
+      history: [],
     };
 
     this.animateRow = this.animateRow.bind(this);
@@ -43,7 +43,7 @@ export default class Landing extends Component {
 
   componentDidMount() {
     this.animateText();
-    document.addEventListener("keydown", this.onKeyDown);
+    document.addEventListener('keydown', this.onKeyDown);
     window.focus();
     if (document.activeElement) {
       document.activeElement.blur();
@@ -51,7 +51,7 @@ export default class Landing extends Component {
   }
 
   componentWillUnmount() {
-    document.removeEventListener("keydown", this.onKeyDown);
+    document.removeEventListener('keydown', this.onKeyDown);
   }
 
   onKeyDown(e) {
@@ -70,32 +70,27 @@ export default class Landing extends Component {
       this.setState({ text: (textCopy += e.key) });
     } else {
       switch (e.key) {
-        case "ArrowUp":
+        case 'ArrowUp':
           e.preventDefault();
-          if (
-            this.state.history.length > 0 &&
-            historyMover < this.state.history.length
-          ) {
+          if (this.state.history.length > 0 && historyMover < this.state.history.length) {
             historyMover += 1;
-            stateCopy.text =
-              stateCopy.history[stateCopy.history.length - historyMover].text;
+            stateCopy.text = stateCopy.history[stateCopy.history.length - historyMover].text;
             this.setState(stateCopy);
           }
           break;
-        case "ArrowDown":
+        case 'ArrowDown':
           e.preventDefault();
           if (historyMover > 0) {
             historyMover -= 1;
             if (historyMover === 0) {
-              stateCopy.text = "";
+              stateCopy.text = '';
             } else {
-              stateCopy.text =
-                stateCopy.history[stateCopy.history.length - historyMover].text;
+              stateCopy.text = stateCopy.history[stateCopy.history.length - historyMover].text;
             }
             this.setState(stateCopy);
           }
           break;
-        case "Backspace": {
+        case 'Backspace': {
           e.preventDefault();
           const { text } = this.state;
           if (text.length > 0) {
@@ -103,53 +98,43 @@ export default class Landing extends Component {
           }
           break;
         }
-        case "Enter":
+        case 'Enter':
           stateCopy.history.push({
             id: stateCopy.history.length,
             text: stateCopy.text,
-            reply: reply(stateCopy.text)
+            reply: reply(stateCopy.text),
           });
-          stateCopy.text = "";
+          stateCopy.text = '';
           this.setState(stateCopy);
           this.landingContainer.scrollTop =
-            this.landingContainer.scrollHeight -
-            this.landingContainer.clientHeight;
+            this.landingContainer.scrollHeight - this.landingContainer.clientHeight;
           break;
         default:
           break;
       }
     }
-    timer = window.setTimeout(
-      () => this.setState({ consoleBlink: true }),
-      1000
-    );
+    timer = window.setTimeout(() => this.setState({ consoleBlink: true }), 1000);
   }
 
   animateText() {
     const { animateRow } = this;
-    animateRow("Hello!", 1, this.cursor1, this.console1, () => {
-      animateRow("My name is Henri", 2, this.cursor2, this.console2, () => {
-        animateRow(
-          "I'm a full stack developer",
-          3,
-          this.cursor3,
-          this.console3,
-          () => {
-            this.consoleArea.classList.remove("hidden");
+    animateRow('Hello!', 1, this.cursor1, this.console1, () => {
+      animateRow('My name is Henri', 2, this.cursor2, this.console2, () => {
+        animateRow("I'm a full stack developer", 3, this.cursor3, this.console3, () => {
+          this.consoleArea.classList.remove('hidden');
 
-            blinkTimeout = setTimeout(() => {
-              this.setState({ consoleBlink: true });
-            }, 1000);
-          }
-        );
+          blinkTimeout = setTimeout(() => {
+            this.setState({ consoleBlink: true });
+          }, 1000);
+        });
       });
     });
   }
 
   animateRow(text, id, cu, co, callback) {
-    cu.classList.add("not-blinking");
-    cu.classList.remove("hidden");
-    co.classList.remove("hidden");
+    cu.classList.add('not-blinking');
+    cu.classList.remove('hidden');
+    co.classList.remove('hidden');
 
     let index = 0;
     intObject = setInterval(() => {
@@ -160,12 +145,12 @@ export default class Landing extends Component {
       if (index === text.length) {
         clearInterval(intObject);
         animationTimeout = setTimeout(() => {
-          cu.classList.remove("not-blinking");
-          cu.classList.add("blinking");
+          cu.classList.remove('not-blinking');
+          cu.classList.add('blinking');
           if (callback) {
             stateCopy = this.state.print.slice();
             this.setState(stateCopy);
-            cu.classList.add("hidden");
+            cu.classList.add('hidden');
             callback();
           }
         }, 200);
@@ -177,7 +162,7 @@ export default class Landing extends Component {
     return (
       <div className="landing-wrapper">
         <div
-          ref={ref => {
+          ref={(ref) => {
             this.landingContainer = ref;
           }}
           className="landing-container"
@@ -185,7 +170,7 @@ export default class Landing extends Component {
           <div className="landing-row-1">
             <h1>
               <span
-                ref={ref => {
+                ref={(ref) => {
                   this.console1 = ref;
                 }}
                 className="hidden"
@@ -194,7 +179,7 @@ export default class Landing extends Component {
               </span>
               <span>{this.state.print[0].text}</span>
               <span
-                ref={ref => {
+                ref={(ref) => {
                   this.cursor1 = ref;
                 }}
                 className="hidden"
@@ -206,7 +191,7 @@ export default class Landing extends Component {
           <div className="landing-row-2">
             <h1>
               <span
-                ref={ref => {
+                ref={(ref) => {
                   this.console2 = ref;
                 }}
                 className="hidden"
@@ -215,7 +200,7 @@ export default class Landing extends Component {
               </span>
               <span>{this.state.print[1].text}</span>
               <span
-                ref={ref => {
+                ref={(ref) => {
                   this.cursor2 = ref;
                 }}
                 className="hidden"
@@ -227,7 +212,7 @@ export default class Landing extends Component {
           <div className="landing-row-3">
             <h1>
               <span
-                ref={ref => {
+                ref={(ref) => {
                   this.console3 = ref;
                 }}
                 className="hidden"
@@ -236,7 +221,7 @@ export default class Landing extends Component {
               </span>
               <span>{this.state.print[2].text}</span>
               <span
-                ref={ref => {
+                ref={(ref) => {
                   this.cursor3 = ref;
                 }}
                 className="hidden"
@@ -246,7 +231,7 @@ export default class Landing extends Component {
             </h1>
           </div>
           <div
-            ref={ref => {
+            ref={(ref) => {
               this.consoleArea = ref;
             }}
             className="hidden"
@@ -260,12 +245,7 @@ export default class Landing extends Component {
               text={this.state.text}
               cursor={this.state.cursor}
             />
-            <input
-              className="noinput"
-              autoCapitalize="none"
-              autoComplete="off"
-              type="text"
-            />
+            <input className="noinput" autoCapitalize="none" autoComplete="off" type="text" />
           </div>
         </div>
       </div>
