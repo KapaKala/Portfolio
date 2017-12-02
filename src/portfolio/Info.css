@@ -8,6 +8,7 @@
   -webkit-transition: all 0.33s;
   -moz-transition: all 0.33s;
   -o-transition: all 0.33s;
+  overflow-x: hidden;
 }
 
 .info-overlay.close {
