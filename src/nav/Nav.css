@@ -6,7 +6,7 @@
   align-items: center;
   position: fixed;
   width: 100%;
-  z-index: 5555;
+  z-index: 222;
   transition: opacity 0.5s, visibility 0s 0.5s;
   -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
 }
@@ -33,11 +33,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 5555;
+  bottom: 0;
+  right: 0;
+  z-index: 221;
   transition: opacity 0.5s, visibility 0s 0.5s;
   -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
   background-color: rgba(0, 0, 0, 0.9);
@@ -159,7 +157,7 @@
 
 .menu-container {
   cursor: pointer;
-  z-index: 5556;
+  z-index: 223;
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
@@ -237,7 +235,7 @@
 
 .nextpage-container {
   cursor: pointer;
-  z-index: 5555;
+  z-index: 223;
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -294,12 +292,13 @@
 @media screen and (max-width: 560px) {
   .nav-container {
     bottom: 1em;
-    left: 1em;
+    right: 1em;
     height: 3em;
     width: 3em;
-    padding: 0.5em;
-    opacity: 0.9;
-    border-radius: 10px;
+    padding: 0.25em;
+    opacity: 1;
+    border-radius: 5px;
+    background-color: #111;
   }
 
   .nextpage-container {

@@ -17,12 +17,15 @@ body {
   padding-top: 5em;
   height: calc(100% - 5em);
   overflow: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .fadeTranslate-enter {
   opacity: 0;
   transform: translateY(16px);
   -webkit-transform: translateY(16px);
+  overflow: hidden;
 }
 
 .fadeTranslate-enter.fadeTranslate-enter-active {
@@ -30,12 +33,14 @@ body {
   transform: translateY(0);
   -webkit-transform: translateY(0);
   transition: opacity 500ms, transform 500ms;
+  overflow: auto;
 }
 
 .fadeTranslate-exit {
   opacity: 1;
   transform: translateY(0);
   -webkit-transform: translateY(0);
+  overflow: hidden;
 }
 
 .fadeTranslate-exit.fadeTranslate-exit-active {
@@ -43,10 +48,12 @@ body {
   transform: translateY(16px);
   -webkit-transform: translateY(16px);
   transition: opacity 250ms, transform 250ms;
+  overflow: hidden;
 }
 
 .fix-container {
-  position: absolute;
+  position: fixed;
+  top: 0;
   width: 100%;
 }
 
