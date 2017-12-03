@@ -94,6 +94,11 @@ body,
   border-radius: 50%;
   background: black;
   margin: 0.75em;
+  outline: none;
+}
+
+.clickable {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 560px) {

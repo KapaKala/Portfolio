@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import './Landing.css';
+import FontAwesome from 'react-fontawesome';
 import ConsoleArea from './ConsoleArea';
-import { reply } from './Commands';
+import reply from './Commands';
+import '../font-awesome.css';
+import './Landing.css';
 
 let timer;
 let animationTimeout;
@@ -28,6 +30,8 @@ export default class Landing extends Component {
       print: [{ text: '' }, { text: '' }, { text: '' }],
       consoleBlink: false,
       history: [],
+      display: true,
+      fullscreen: false,
     };
 
     this.animateRow = this.animateRow.bind(this);
@@ -159,6 +163,14 @@ export default class Landing extends Component {
     }, 60);
   }
 
+  toggleFullscreen() {
+    this.setState({ fullscreen: !this.state.fullscreen });
+  }
+
+  toggleClose() {
+    this.setState({ display: !this.state.display });
+  }
+
   render() {
     return (
       <div className="landing-wrapper">
@@ -166,12 +178,34 @@ export default class Landing extends Component {
           ref={(ref) => {
             this.landingContainer = ref;
           }}
-          className="landing-container"
+          className={
+            this.state.display
+              ? `landing-container ${this.state.fullscreen ? 'fullscreen' : ''}`
+              : 'landing-container hidden'
+          }
         >
           <div className="window-titlebar">
-            <span className="titlebar-button" />
-            <span className="titlebar-button" />
-            <span className="titlebar-button" />
+            <span
+              onClick={() => this.toggleClose()}
+              onKeyDown={() => this.toggleClose()}
+              role="button"
+              tabIndex="0"
+              className="titlebar-button clickable"
+            />
+            <span
+              onClick={() => this.toggleClose()}
+              onKeyDown={() => this.toggleClose()}
+              role="button"
+              tabIndex="-1"
+              className="titlebar-button clickable"
+            />
+            <span
+              onClick={() => this.toggleFullscreen()}
+              onKeyDown={() => this.toggleFullscreen()}
+              role="button"
+              tabIndex="-1"
+              className="titlebar-button clickable"
+            />
           </div>
           <div className="console-content">
             <div className="landing-row-1">
@@ -254,6 +288,20 @@ export default class Landing extends Component {
               />
               <input className="noinput" autoCapitalize="none" autoComplete="off" type="text" />
             </div>
+          </div>
+        </div>
+        <div
+          className={this.state.display ? 'terminal-icon-wrapper hidden' : 'terminal-icon-wrapper'}
+        >
+          <div
+            onClick={() => this.toggleClose()}
+            onKeyDown={() => this.toggleClose()}
+            role="button"
+            tabIndex="0"
+            className={this.state.display ? 'terminal-icon hidden' : 'terminal-icon clickable'}
+          >
+            <FontAwesome name="terminal" size="3x" className="actual-icon" />
+            <span>terminal</span>
           </div>
         </div>
       </div>
