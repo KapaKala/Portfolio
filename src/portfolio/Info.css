@@ -38,10 +38,9 @@
 
 .img-div {
   border: 1px solid white;
-  border-top: 20px solid white;
   border-radius: 3px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
@@ -220,5 +219,9 @@
   .close-button {
     top: 3em;
     right: 0;
+  }
+
+  .window-titlebar {
+    display: none !important;
   }
 }

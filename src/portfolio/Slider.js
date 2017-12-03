@@ -14,6 +14,11 @@ const Slider = props => (
       height: props.height,
     }}
   >
+    <div className="window-titlebar" style={{ width: props.width, height: 12 }}>
+      <span className="titlebar-button" style={{ height: 14, width: 14, marginLeft: 14 }} />
+      <span className="titlebar-button" style={{ height: 14, width: 14 }} />
+      <span className="titlebar-button" style={{ height: 14, width: 14 }} />
+    </div>
     <div
       className="img-loader"
       style={

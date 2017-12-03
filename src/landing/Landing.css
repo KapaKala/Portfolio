@@ -11,12 +11,27 @@
   height: 70vh;
   max-height: 80vh;
   margin: auto;
-  padding: 0 1em;
+  padding: 0;
   border: 1px solid white;
-  border-top: 3em solid white;
   overflow: auto;
   font-size: 0.75em;
   border-radius: 3px;
+}
+
+.window-titlebar {
+  height: 2em;
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.titlebar-button {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: black;
+  margin-right: 0.5em;
 }
 
 .blinking {
@@ -136,4 +151,8 @@
 
 .prompt-text {
   margin-bottom: -1em;
+}
+
+.console-content {
+  padding: 0 1em;
 }

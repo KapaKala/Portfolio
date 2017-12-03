@@ -168,85 +168,92 @@ export default class Landing extends Component {
           }}
           className="landing-container"
         >
-          <div className="landing-row-1">
-            <h1>
-              <span
-                ref={(ref) => {
-                  this.console1 = ref;
-                }}
-                className="hidden"
-              >
-                {this.state.console}
-              </span>
-              <span>{this.state.print[0].text}</span>
-              <span
-                ref={(ref) => {
-                  this.cursor1 = ref;
-                }}
-                className="hidden"
-              >
-                {this.state.cursor}
-              </span>
-            </h1>
+          <div className="window-titlebar">
+            <span className="titlebar-button" />
+            <span className="titlebar-button" />
+            <span className="titlebar-button" />
           </div>
-          <div className="landing-row-2">
-            <h1>
-              <span
-                ref={(ref) => {
-                  this.console2 = ref;
-                }}
-                className="hidden"
-              >
-                {this.state.console}
-              </span>
-              <span>{this.state.print[1].text}</span>
-              <span
-                ref={(ref) => {
-                  this.cursor2 = ref;
-                }}
-                className="hidden"
-              >
-                {this.state.cursor}
-              </span>
-            </h1>
-          </div>
-          <div className="landing-row-3">
-            <h1>
-              <span
-                ref={(ref) => {
-                  this.console3 = ref;
-                }}
-                className="hidden"
-              >
-                {this.state.console}
-              </span>
-              <span>{this.state.print[2].text}</span>
-              <span
-                ref={(ref) => {
-                  this.cursor3 = ref;
-                }}
-                className="hidden"
-              >
-                {this.state.cursor}
-              </span>
-            </h1>
-          </div>
-          <div
-            ref={(ref) => {
-              this.consoleArea = ref;
-            }}
-            className="hidden"
-          >
-            <ConsoleArea
-              id="input"
-              history={this.state.history}
-              blinking={this.state.consoleBlink}
-              initialCommands={this.state.print}
-              console={this.state.console}
-              text={this.state.text}
-              cursor={this.state.cursor}
-            />
-            <input className="noinput" autoCapitalize="none" autoComplete="off" type="text" />
+          <div className="console-content">
+            <div className="landing-row-1">
+              <h1>
+                <span
+                  ref={(ref) => {
+                    this.console1 = ref;
+                  }}
+                  className="hidden"
+                >
+                  {this.state.console}
+                </span>
+                <span>{this.state.print[0].text}</span>
+                <span
+                  ref={(ref) => {
+                    this.cursor1 = ref;
+                  }}
+                  className="hidden"
+                >
+                  {this.state.cursor}
+                </span>
+              </h1>
+            </div>
+            <div className="landing-row-2">
+              <h1>
+                <span
+                  ref={(ref) => {
+                    this.console2 = ref;
+                  }}
+                  className="hidden"
+                >
+                  {this.state.console}
+                </span>
+                <span>{this.state.print[1].text}</span>
+                <span
+                  ref={(ref) => {
+                    this.cursor2 = ref;
+                  }}
+                  className="hidden"
+                >
+                  {this.state.cursor}
+                </span>
+              </h1>
+            </div>
+            <div className="landing-row-3">
+              <h1>
+                <span
+                  ref={(ref) => {
+                    this.console3 = ref;
+                  }}
+                  className="hidden"
+                >
+                  {this.state.console}
+                </span>
+                <span>{this.state.print[2].text}</span>
+                <span
+                  ref={(ref) => {
+                    this.cursor3 = ref;
+                  }}
+                  className="hidden"
+                >
+                  {this.state.cursor}
+                </span>
+              </h1>
+            </div>
+            <div
+              ref={(ref) => {
+                this.consoleArea = ref;
+              }}
+              className="hidden"
+            >
+              <ConsoleArea
+                id="input"
+                history={this.state.history}
+                blinking={this.state.consoleBlink}
+                initialCommands={this.state.print}
+                console={this.state.console}
+                text={this.state.text}
+                cursor={this.state.cursor}
+              />
+              <input className="noinput" autoCapitalize="none" autoComplete="off" type="text" />
+            </div>
           </div>
         </div>
       </div>
