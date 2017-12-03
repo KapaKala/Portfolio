@@ -71,64 +71,62 @@ export default class Nav extends Component {
     return (
       <div className="content-wrapper">
         <div className="nav-container">
-          <div className="top-container">
-            <div
-              className={this.state.open ? 'menu-container open' : 'menu-container close'}
-              onClick={this.click}
-              onKeyPress={() => {
-                this.setState({ open: false });
-              }}
-              role="button"
-              tabIndex="0"
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-            <NavLink
-              className={
-                this.props.location.pathname === '/contact' ||
-                this.props.location.pathname === `/works/${this.props.location.pathname.slice(-1)}`
-                  ? 'nextpage-container up'
-                  : 'nextpage-container'
-              }
-              to={this.goToNext()}
-              style={{ textDecoration: 'none', color: '#eee' }}
-            >
-              <span />
-              <span />
-            </NavLink>
-          </div>
           <div
+            className={this.state.open ? 'menu-container open' : 'menu-container close'}
             onClick={this.click}
-            onKeyDown={this.click}
+            onKeyPress={() => {
+              this.setState({ open: false });
+            }}
             role="button"
             tabIndex="0"
-            className={this.state.open ? 'overlay open' : 'overlay close'}
           >
-            <ul>
-              <li>
-                <NavLink exact onClick={this.menuClick} to="/" activeStyle={activeStyle}>
-                  home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink exact onClick={this.menuClick} to="/works" activeStyle={activeStyle}>
-                  works
-                </NavLink>
-              </li>
-              <li>
-                <NavLink exact onClick={this.menuClick} to="/about" activeStyle={activeStyle}>
-                  about
-                </NavLink>
-              </li>
-              <li>
-                <NavLink exact onClick={this.menuClick} to="/contact" activeStyle={activeStyle}>
-                  contact
-                </NavLink>
-              </li>
-            </ul>
+            <span />
+            <span />
+            <span />
           </div>
+          <NavLink
+            className={
+              this.props.location.pathname === '/contact' ||
+              this.props.location.pathname === `/works/${this.props.location.pathname.slice(-1)}`
+                ? 'nextpage-container up'
+                : 'nextpage-container'
+            }
+            to={this.goToNext()}
+            style={{ textDecoration: 'none', color: '#eee' }}
+          >
+            <span />
+            <span />
+          </NavLink>
+        </div>
+        <div
+          onClick={this.click}
+          onKeyDown={this.click}
+          role="button"
+          tabIndex="0"
+          className={this.state.open ? 'overlay open' : 'overlay close'}
+        >
+          <ul>
+            <li>
+              <NavLink exact onClick={this.menuClick} to="/" activeStyle={activeStyle}>
+                home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink exact onClick={this.menuClick} to="/works" activeStyle={activeStyle}>
+                works
+              </NavLink>
+            </li>
+            <li>
+              <NavLink exact onClick={this.menuClick} to="/about" activeStyle={activeStyle}>
+                about
+              </NavLink>
+            </li>
+            <li>
+              <NavLink exact onClick={this.menuClick} to="/contact" activeStyle={activeStyle}>
+                contact
+              </NavLink>
+            </li>
+          </ul>
         </div>
         {this.props.children}
       </div>

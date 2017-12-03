@@ -12,11 +12,9 @@
 
 .portfolio-row {
   width: 100%;
+  margin: 0 1.75em;
   display: flex;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
@@ -42,7 +40,7 @@
   width: 100%;
   height: 60vh;
   max-height: 100%;
-  margin: 1em;
+  margin: 0 0 1.75em 0;
   background-position: center;
   background-size: cover;
 }
@@ -101,6 +99,10 @@
     margin: 1em;
     position: absolute;
     text-align: center;
+  }
+
+  .portfolio-row {
+    margin: 0 0.5em;
   }
 
   .img-overlay {
