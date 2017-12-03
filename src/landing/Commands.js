@@ -19,7 +19,8 @@ const reply = (command) => {
         'Following commands are defined internally:\n' +
         ' fact\t\tA random fact about yours truly\n' +
         ' github\t\tOpens my GitHub page\n' +
-        ' nethack\tPlay an in-browser implementation of Nethack'
+        ' nethack\tPlay an in-browser implementation of Nethack\n' +
+        ' time\t\tDisplay the current time\n'
       );
     case 'github':
       window.open('https://github.com/KapaKala');
@@ -35,6 +36,10 @@ const reply = (command) => {
           allowFullScreen
         />
       );
+    case 'time': {
+      const currentTime = new Date().toLocaleTimeString();
+      return `Current time is ${currentTime}`;
+    }
     case '':
       return '';
     default:

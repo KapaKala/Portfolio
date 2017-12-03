@@ -82,7 +82,8 @@ body,
 }
 
 .window-titlebar {
-  width: 100%;
+  position: fixed;
+  width: inherit;
   background: white;
   display: flex;
   align-items: center;

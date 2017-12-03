@@ -18,6 +18,7 @@
   border-radius: 3px;
   box-shadow: 10px 10px 10px 0 #000;
   transition: all 0.25s;
+  box-sizing: content-box;
 }
 
 .landing-container.fullscreen {
@@ -141,7 +142,7 @@
 }
 
 .console-content {
-  padding: 0 1em;
+  padding: 2em 1em 0 1em;
 }
 
 .terminal-icon-wrapper {

@@ -187,21 +187,21 @@ export default class Landing extends Component {
           <div className="window-titlebar">
             <span
               onClick={() => this.toggleClose()}
-              onKeyDown={() => this.toggleClose()}
+              onKeyDown={() => {}}
               role="button"
               tabIndex="0"
               className="titlebar-button clickable"
             />
             <span
               onClick={() => this.toggleClose()}
-              onKeyDown={() => this.toggleClose()}
+              onKeyDown={() => {}}
               role="button"
               tabIndex="-1"
               className="titlebar-button clickable"
             />
             <span
               onClick={() => this.toggleFullscreen()}
-              onKeyDown={() => this.toggleFullscreen()}
+              onKeyDown={() => {}}
               role="button"
               tabIndex="-1"
               className="titlebar-button clickable"
