@@ -2,26 +2,26 @@ import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import '../font-awesome.css';
 
-const smCover = require('../images/sm_cover.png');
+const smCover = require('../images/sm_cover_large.jpg');
 const sm1 = require('../images/sm_screen1.jpg');
 const sm2 = require('../images/sm_screen2.jpg');
 const sm3 = require('../images/sm_screen3.jpg');
 
-const kCover = require('../images/k_cover.png');
+const kCover = require('../images/k_cover_large.jpg');
 const k1 = require('../images/k_screen1.jpg');
 const k2 = require('../images/k_screen2.jpg');
 const k3 = require('../images/k_screen3.jpg');
 const k4 = require('../images/k_screen4.jpg');
 const k5 = require('../images/k_screen5.jpg');
 
-const sCover = require('../images/s_cover2.png');
+const sCover = require('../images/s_cover_large2.jpg');
 const s1 = require('../images/sunko_screen1.jpg');
 const s2 = require('../images/sunko_screen2.jpg');
 const s3 = require('../images/sunko_screen3.jpg');
 const s4 = require('../images/sunko_screen4.jpg');
 const s5 = require('../images/sunko_screen5.jpg');
 
-const bsCover = require('../images/bs_cover.png');
+const bsCover = require('../images/bs_cover_large.jpg');
 const bs1 = require('../images/bs_screen1.jpg');
 const bs2 = require('../images/bs_screen2.jpg');
 const bs3 = require('../images/bs_screen3.jpg');
@@ -63,7 +63,7 @@ export default [
     name: 'Kuippana',
     description: 'A web app for tracking and managing the work hours of employees.',
     img: kCover,
-    images: [k1, k2, k3, k4, k5],
+    images: [k5, k1, k2, k3, k4],
     links: [
       {
         url: 'https://github.com/eetukallio/Uhro-Kuippana',
@@ -112,7 +112,7 @@ export default [
     name: 'Baka Store',
     description: 'Done as a school project, Baka Store is a web store template.',
     img: bsCover,
-    images: [bs1, bs4, bs3, bs5, bs2, bs6],
+    images: [bs6, bs1, bs4, bs3, bs5, bs2],
     links: [
       {
         url: 'https://github.com/eetukallio/TeamBakaProject',
