@@ -49,10 +49,12 @@
   width: 100%;
   position: absolute;
   bottom: 2em;
+  padding: 0.5em;
   font-size: 0.75em;
   color: grey;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 @media screen and (max-width: 920px) {
