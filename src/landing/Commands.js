@@ -17,7 +17,8 @@ exports.reply = (command) => {
         'Following commands are defined internally:\n' +
         ' hello\t\tdo this\n' +
         ' fact\t\tA random fact about yours truly\n' +
-        ' github\t\tOpens my GitHub page'
+        ' github\t\tOpens my GitHub page' +
+        ' nethack\t\tPlay an in-browser implementation of Nethack'
       );
     case 'github':
       window.open('https://github.com/KapaKala');

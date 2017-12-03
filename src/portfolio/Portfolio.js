@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Portfolio.css';
 import items from './items';
 
@@ -22,7 +22,16 @@ export default class Portfolio extends Component {
           <h1 className="portfolio-item-title">{obj.name}</h1>
           <p>{obj.description}</p>
           <div className="portfolio-buttons buttons">
-            <Link to={`${this.props.match.url}/${obj.id}`}>show me more!</Link>
+            <NavLink
+              onClick={() => {
+                setTimeout(() => {
+                  window.scrollTo(0, 0);
+                }, 250);
+              }}
+              to={`${this.props.match.url}/${obj.id}`}
+            >
+              Show me more!
+            </NavLink>
           </div>
         </div>
         {/* Grid version
