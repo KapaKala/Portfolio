@@ -30,9 +30,7 @@ const About = () => (
               <li>HTML5</li>
               <li>CSS3</li>
               <li>JavaScript</li>
-              <li>React</li>
-              <li>React Native</li>
-              <li>Redux</li>
+              <li>React/Native + Redux</li>
               <li>Java + Java for Android</li>
               <li>libgdx</li>
               <li>C++</li>
@@ -42,7 +40,6 @@ const About = () => (
             <h4>Back end</h4>
             <ul>
               <li>Node + Express</li>
-              <li>Passwordjs</li>
               <li>Spring</li>
               <li>MySQL</li>
             </ul>
