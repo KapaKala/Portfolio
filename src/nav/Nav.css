@@ -245,6 +245,12 @@
     opacity: 1;
     border-radius: 5px;
     background-color: rgba(17, 17, 17, 0.9);
+    min-width: auto;
+  }
+
+  .menu-container {
+    top: auto;
+    left: auto;
   }
 
   .nextpage-container {

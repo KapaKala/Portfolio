@@ -102,7 +102,11 @@
   }
 
   .portfolio-row {
-    margin: 0 0.5em;
+    margin: 1em 1.5em;
+  }
+
+  .portfolio-image-container {
+    margin: 1em 0;
   }
 
   .img-overlay {
