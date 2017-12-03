@@ -6,50 +6,40 @@ body,
   color: #eee;
   box-sizing: border-box;
   display: block;
-  max-height: 100vh;
+  max-height: calc(100vh - 1em);
   height: 100%;
   width: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 .App {
-  position: absolute;
   display: flex;
   flex: 1;
   flex-flow: column;
   margin: 0;
   padding-top: 5em;
-  height: calc(100% - 5em);
-}
-
-@keyframes animation {
-  0% {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-
-  50% {
-    transform: translateY(16px);
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  height: 100%;
 }
 
 .fadeTranslate-enter {
   opacity: 0;
   transform: translateY(16px);
-  overflow: hidden;
 }
 
 .fadeTranslate-enter.fadeTranslate-enter-active {
+  opacity: 1;
+  transform: translateY(0);
   animation: animation 500ms;
   backface-visibility: hidden;
   transform: scale(1);
   transform-style: preserve-3d;
+  transition: all 250ms 250ms;
 }
 
 .fadeTranslate-exit {
@@ -58,6 +48,7 @@ body,
 }
 
 .fadeTranslate-exit.fadeTranslate-exit-active {
+  visibility: visible;
   opacity: 0;
   transform: translateY(16px);
   transition: all 250ms;
@@ -65,11 +56,10 @@ body,
 
 .fix-container {
   position: absolute;
+  width: 100%;
+  display: flex;
+  flex: 1;
   top: 0;
-}
-
-.hidden {
-  opacity: 0;
 }
 
 .buttons a {
