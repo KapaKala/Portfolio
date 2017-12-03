@@ -18,22 +18,6 @@
   border-radius: 3px;
 }
 
-.window-titlebar {
-  height: 2em;
-  background: white;
-  display: flex;
-  align-items: center;
-  padding: 0.5em;
-}
-
-.titlebar-button {
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  background: black;
-  margin-right: 0.5em;
-}
-
 .blinking {
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;

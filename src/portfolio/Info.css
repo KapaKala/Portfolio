@@ -22,7 +22,7 @@
   max-width: 1000px;
   width: 70%;
   height: auto;
-  padding: 1em;
+  padding: 0 1em;
   transition: all 1s ease;
   box-sizing: content-box;
 }
