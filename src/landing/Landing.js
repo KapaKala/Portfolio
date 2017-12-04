@@ -295,7 +295,7 @@ export default class Landing extends Component {
         >
           <div
             onClick={() => this.toggleClose()}
-            onKeyDown={() => this.toggleClose()}
+            onKeyDown={() => {}}
             role="button"
             tabIndex="0"
             className={this.state.display ? 'terminal-icon hidden' : 'terminal-icon clickable'}
