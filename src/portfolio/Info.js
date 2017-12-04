@@ -15,34 +15,27 @@ export default class Info extends Component {
       loadedImgs: 0,
       displayImg: false,
       currentImg: 0,
-      imgWidth: 0,
-      imgHeight: document.body.scrollWidth * 0.56 * 0.6,
       translateValue: 0,
     };
 
     this.nextImg = this.nextImg.bind(this);
     this.prevImg = this.prevImg.bind(this);
     this.createImages = this.createImages.bind(this);
-    this.adjustSize = this.adjustSize.bind(this);
   }
 
   componentDidMount() {
     document.title = `${this.state.info.name} - Henri Kankaanpää`;
-    this.adjustSize();
-    window.addEventListener('resize', this.adjustSize);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.adjustSize);
     clearTimeout(timeout);
   }
 
-  adjustSize() {
-    this.setState({
-      imgWidth: this.infoContainer.clientWidth - 32,
-      imgHeight: (this.infoContainer.clientWidth - 32) * 0.6,
-    });
-  }
+  getSlideWidth = () => {
+    console.log('hee');
+    const img = document.querySelector('.info-image');
+    return img.clientWidth;
+  };
 
   nextImg() {
     if (this.state.currentImg === this.state.info.images.length - 1) {
@@ -50,7 +43,7 @@ export default class Info extends Component {
     } else {
       this.setState({
         currentImg: (this.state.currentImg += 1),
-        translateValue: (this.state.translateValue -= this.state.imgWidth),
+        translateValue: (this.state.translateValue -= this.getSlideWidth()),
       });
     }
   }
@@ -59,12 +52,12 @@ export default class Info extends Component {
     if (this.state.currentImg === 0) {
       this.setState({
         currentImg: this.state.info.images.length - 1,
-        translateValue: -((this.state.info.images.length - 1) * this.state.imgWidth),
+        translateValue: -((this.state.info.images.length - 1) * this.getSlideWidth()),
       });
     } else {
       this.setState({
         currentImg: (this.state.currentImg -= 1),
-        translateValue: (this.state.translateValue += this.state.imgWidth),
+        translateValue: (this.state.translateValue += this.getSlideWidth()),
       });
     }
   }

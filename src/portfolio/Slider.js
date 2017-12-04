@@ -8,10 +8,10 @@ import './Info.css';
 const Slider = props => (
   <div
     className="img-div"
-    style={{
-      width: props.width,
-      height: props.height,
-    }}
+    // style={{
+    //   width: props.width,
+    //   height: props.height,
+    // }}
   >
     <div className="slider-img-container">
       <div
@@ -29,7 +29,10 @@ const Slider = props => (
         {props.createImages()}
       </div>
 
-      <div className="img-controls" style={{ width: props.width, height: props.height }}>
+      <div
+        className="img-controls"
+        // style={{ width: props.width, height: props.height }}
+      >
         <div
           className="prev-img"
           onClick={() => {
@@ -73,8 +76,6 @@ Slider.propTypes = {
   nextImg: PropTypes.func.isRequired,
   prevImg: PropTypes.func.isRequired,
   createImages: PropTypes.func.isRequired,
-  width: PropTypes.number.isRequired,
-  height: PropTypes.number.isRequired,
   translateValue: PropTypes.number.isRequired,
   display: PropTypes.bool.isRequired,
 };
