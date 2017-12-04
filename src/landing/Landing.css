@@ -22,9 +22,31 @@
 }
 
 .landing-container.fullscreen {
+  top: 7em;
+  position: fixed;
   width: 100vw;
-  max-height: 100vh;
-  height: 100vh;
+  max-height: calc(100vh - 7em);
+  height: calc(100vh - 7em);
+}
+
+.window-titlebar {
+  position: fixed;
+  width: inherit;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+
+.window-titlebar.fullscreen {
+}
+
+.titlebar-button {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: black;
+  margin: 0.75em;
+  outline: none;
 }
 
 .blinking {

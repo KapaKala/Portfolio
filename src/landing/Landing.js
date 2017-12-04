@@ -184,7 +184,7 @@ export default class Landing extends Component {
               : 'landing-container hidden'
           }
         >
-          <div className="window-titlebar">
+          <div className={this.state.fullscreen ? 'window-titlebar fullscreen' : 'window-titlebar'}>
             <span
               onClick={() => this.toggleClose()}
               onKeyDown={() => {}}

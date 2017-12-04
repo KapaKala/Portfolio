@@ -82,23 +82,6 @@ body,
   border-bottom: 1px #999 solid;
 }
 
-.window-titlebar {
-  position: fixed;
-  width: inherit;
-  background: white;
-  display: flex;
-  align-items: center;
-}
-
-.titlebar-button {
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  background: black;
-  margin: 0.75em;
-  outline: none;
-}
-
 .clickable {
   cursor: pointer;
 }
