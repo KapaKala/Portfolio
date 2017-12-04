@@ -9,6 +9,7 @@ body,
   max-height: calc(100vh - 1em);
   height: 100%;
   width: 100%;
+  font-family: Roboto Mono, monospace, monospace, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 

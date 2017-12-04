@@ -70,7 +70,7 @@ export default class Nav extends Component {
   render() {
     return (
       <div className="content-wrapper">
-        <div className="nav-container">
+        <div className={this.state.open ? 'nav-container open' : 'nav-container'}>
           <div
             className={this.state.open ? 'menu-container open' : 'menu-container close'}
             onClick={this.click}

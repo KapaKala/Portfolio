@@ -7,6 +7,11 @@
   position: fixed;
   min-width: 100vw;
   z-index: 222;
+  transition: all 0.5s;
+}
+
+.nav-container.open {
+  background-color: transparent;
 }
 
 .nav-location {
@@ -26,7 +31,7 @@
   bottom: 0;
   right: 0;
   z-index: 221;
-  transition: opacity 0.5s, visibility 0s 0.5s;
+  transition: all 0.5s;
   background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
@@ -37,8 +42,10 @@
 .overlay.open {
   opacity: 1;
   visibility: visible;
-  /*animation: fadeIn 0.4s ease forwards;*/
-  transition: opacity 0.5s;
+}
+
+.overlay.open > div {
+  background-color: transparent;
 }
 
 .overlay ul {
