@@ -12,6 +12,7 @@ export default class Info extends Component {
 
     this.state = {
       info: items[this.props.match.params.id],
+      imgs: items[this.props.match.params.id].images.length,
       loadedImgs: 0,
       displayImg: false,
       currentImg: 0,
@@ -96,6 +97,34 @@ export default class Info extends Component {
     return imageSlides;
   }
 
+  createButtons() {
+    const buttons = [];
+
+    for (let i = 0; i < this.state.imgs; i += 1) {
+      buttons.push(
+      <div key={i} className="slider-button-wrapper">
+        <div
+          className={this.state.currentImg === i ? 'slider-button active' : 'slider-button'}
+          role="button"
+          tabIndex="-1"
+          onKeyPress={() => {}}
+          onClick={() => this.clickButton(i)}
+        >{i+1}</div>
+      </div>);
+    }
+
+    return buttons;
+  }
+
+  clickButton(imgNum) {
+    this.setState({ currentImg: imgNum });
+    if (imgNum === 0) {
+      this.setState({ translateValue: 0 });
+    } else {
+      this.setState({ translateValue: -this.getSlideWidth() * imgNum });
+    }
+  }
+
   render() {
     return (
       <div className="info-overlay">
@@ -123,11 +152,14 @@ export default class Info extends Component {
             width={this.state.imgWidth}
             height={this.state.imgHeight}
             display={this.state.displayImg}
+            imgs={this.state.imgs}
             nextImg={this.nextImg}
             prevImg={this.prevImg}
             createImages={this.createImages}
             translateValue={this.state.translateValue}
           />
+
+          <div className="slider-button-container">{this.createButtons()}</div>
 
           <h2>About this project</h2>
           <p>{this.state.info.about}</p>

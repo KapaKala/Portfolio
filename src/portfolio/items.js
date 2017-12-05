@@ -7,7 +7,7 @@ const sm1 = require('../images/sm_screen1.jpg');
 const sm2 = require('../images/sm_screen2.jpg');
 const sm3 = require('../images/sm_screen3.jpg');
 
-const kCover = require('../images/k_cover_large.jpg');
+const kCover = require('../images/k_cover_large2.jpg');
 const k1 = require('../images/k_screen1.jpg');
 const k2 = require('../images/k_screen2.jpg');
 const k3 = require('../images/k_screen3.jpg');
@@ -27,7 +27,7 @@ const bs2 = require('../images/bs_screen2.jpg');
 const bs3 = require('../images/bs_screen3.jpg');
 const bs4 = require('../images/bs_screen4.jpg');
 const bs5 = require('../images/bs_screen5.jpg');
-const bs6 = require('../images/bs_screen6.jpg');
+const bs6 = require('../images/bs_screen1.png');
 
 export default [
   {

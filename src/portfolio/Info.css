@@ -47,6 +47,8 @@
   position: relative;
   white-space: nowrap;
   background: white;
+  min-height: calc(70vw * 0.6 - 2px);
+  padding: -1px;
 }
 
 .img-loader {
@@ -91,9 +93,8 @@
 }
 
 .control {
-  background-color: #111;
-  width: 3em;
-  height: 3em;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,11 +113,28 @@
   justify-content: center;
   align-items: center;
   outline: none;
+  background-color: transparent;
+  transition: 0.25s all;
+}
+
+.next-img .control {
+  padding-right: 2em;
+  justify-content: flex-end;
+}
+
+.prev-img .control {
+  padding-left: 2em;
+  justify-content: flex-start;
 }
 
 .next-img:hover .control,
 .prev-img:hover .control {
   opacity: 1;
+  background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+
+.prev-img:hover .control {
+  background: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.5));
 }
 
 .control:hover {
@@ -156,38 +174,42 @@
   margin-bottom: 0.7em;
 }
 
-.close-button {
-  position: absolute;
-  top: 1em;
-  right: 1em;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
+.slider-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  padding: 0.5em 0;
+  height: 1em;
+}
+
+.slider-button-wrapper {
+  width: 1em;
+  height: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 0.25em;
+}
+
+.slider-button {
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
   outline: none;
+  transition: all 250ms;
+  color: white;
+  font-weight: 300;
 }
 
-.close-button span {
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 66%;
-  background: white;
-  opacity: 1;
-  left: 0;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+.slider-button:hover {
+  font-weight: 700;
 }
 
-.close-button span:nth-child(1) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+.slider-button.active {
+  color: #eee;
+  font-weight: 900;
 }
 
 @media screen and (max-width: 1080px) {
@@ -201,6 +223,10 @@
 
   .info-name {
     margin-bottom: 0.25em;
+  }
+
+  .info-links {
+    margin: 0;
   }
 
   .info-links a {
@@ -221,5 +247,10 @@
 
   .window-titlebar {
     display: none !important;
+  }
+
+  .next-img,
+  .prev-img {
+    width: 20%;
   }
 }
