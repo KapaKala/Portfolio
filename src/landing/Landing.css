@@ -37,16 +37,17 @@
   align-items: center;
 }
 
-.window-titlebar.fullscreen {
-}
-
 .titlebar-button {
   width: 1em;
   height: 1em;
   border-radius: 50%;
   background: black;
-  margin: 0.75em;
   outline: none;
+  margin: 1em 0.75em 1em 0;
+}
+
+.titlebar-button:first-child {
+  margin-left: 1em;
 }
 
 .blinking {

@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 import './Nav.css';
 
 const activeStyle = {
-  transition: 'all 0.6s ease-in-out',
   // textDecoration: 'underline',
   color: 'rgba(255,255,255,1)',
 };
@@ -69,7 +68,7 @@ export default class Nav extends Component {
 
   render() {
     return (
-      <div className="content-wrapper">
+      <div>
         <div className={this.state.open ? 'nav-container open' : 'nav-container'}>
           <div
             className={this.state.open ? 'menu-container open' : 'menu-container close'}
@@ -85,6 +84,9 @@ export default class Nav extends Component {
             <span />
           </div>
           <NavLink
+            onClick={() => {
+              this.setState({ open: false });
+            }}
             className={
               this.props.location.pathname === '/contact' ||
               this.props.location.pathname === `/works/${this.props.location.pathname.slice(-1)}`
@@ -128,7 +130,9 @@ export default class Nav extends Component {
             </li>
           </ul>
         </div>
-        {this.props.children}
+        <div className={this.state.open ? 'content-wrapper blurred' : 'content-wrapper'}>
+          {this.props.children}
+        </div>
       </div>
     );
   }
