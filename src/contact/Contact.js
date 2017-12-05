@@ -48,7 +48,7 @@ const Contact = () => (
       </div>
     </div>
     <div className="footer">
-      <span>Made by hand with React and love in Tampere, Finland ❤</span>
+      <span>Made by hand with ❤ in Tampere, Finland</span>
     </div>
   </div>
 );
