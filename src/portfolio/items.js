@@ -111,7 +111,7 @@ export default [
       },
     ],
     about:
-      "My idea for Sunko was originally to make a sleek looking application that simply tells you whether or not the weather is good for sunbathing or not, but it eventually evolved into a more complete weather app that gives the user an easy-to-interpret assessment on the situation outside, with a text description and a dynamically changing background. The app displays weather information for the current moment, next few hours, as well as the next week, with data from WeatherUnderground's API.",
+      "My idea for Sunko was originally to make a sleek looking application that simply tells you whether or not the weather is good for sunbathing, but it eventually evolved into a more complete weather app that gives the user an easy-to-interpret assessment on the situation outside, with a text description and a dynamically changing background. The app displays weather information for the current moment, next few hours, as well as the next week, with data from WeatherUnderground's API.",
     technologies: ['Java for Android'],
   },
   {
@@ -134,7 +134,7 @@ export default [
   {
     id: 4,
     name: 'Portfolio',
-    description: 'This site right here, my personal site.',
+    description: "My personal site. You're looking at it!",
     img: pCover,
     images: [p1, p2, p3, p4, p5],
     links: [
@@ -145,7 +145,7 @@ export default [
       },
     ],
     about:
-      "Even more so than simply being a platform alongside GitHub to showcase the projects I've worked on, I wanted my personal site to be something that is indicative of my personal values. Even if it's not the most technically magnificent thing in the world, I did my best to create a site that the user would enjoy using for the couple of minutes they might be trying to find out just who I am. If you're actually reading this then thank you for visiting, and I hope you like what you're seeing!",
-    technologies: ['JavaScript', 'React'],
+      "Even more so than simply being a platform alongside GitHub to showcase the projects I've worked on, I wanted my personal site to be something that looks and feels like me (though not literally). Even if it's not the most technically magnificent thing in the world, I tried to create a site that the user would actually enjoy visiting for the couple of minutes they might be going through what I have here. If you're actually reading this then thank you for visiting, and I hope you like what you're seeing 😘",
+    technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
   },
 ];
