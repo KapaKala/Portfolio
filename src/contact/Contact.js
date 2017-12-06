@@ -1,6 +1,6 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
-import '../font-awesome.css';
+import '../assets/font-awesome.css';
 import './Contact.css';
 
 const Contact = () => (

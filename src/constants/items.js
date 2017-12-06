@@ -1,40 +1,40 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
-import '../font-awesome.css';
+import '../assets/font-awesome.css';
 
-const smCover = require('../images/sm_cover_large.jpg');
-const sm1 = require('../images/sm_screen1.jpg');
-const sm2 = require('../images/sm_screen2.jpg');
-const sm3 = require('../images/sm_screen3.jpg');
+const smCover = require('../assets/sm_cover_large.jpg');
+const sm1 = require('../assets/sm_screen1.jpg');
+const sm2 = require('../assets/sm_screen2.jpg');
+const sm3 = require('../assets/sm_screen3.jpg');
 
-const kCover = require('../images/k_cover_large2.jpg');
-const k1 = require('../images/k_screen1.jpg');
-const k2 = require('../images/k_screen2.jpg');
-const k3 = require('../images/k_screen3.jpg');
-const k4 = require('../images/k_screen4.jpg');
-const k5 = require('../images/k_screen5.jpg');
+const kCover = require('../assets/k_cover_large2.jpg');
+const k1 = require('../assets/k_screen1.jpg');
+const k2 = require('../assets/k_screen2.jpg');
+const k3 = require('../assets/k_screen3.jpg');
+const k4 = require('../assets/k_screen4.jpg');
+const k5 = require('../assets/k_screen5.jpg');
 
-const sCover = require('../images/s_cover_large2.jpg');
-const s1 = require('../images/sunko_screen1.jpg');
-const s2 = require('../images/sunko_screen2.jpg');
-const s3 = require('../images/sunko_screen3.jpg');
-const s4 = require('../images/sunko_screen4.jpg');
-const s5 = require('../images/sunko_screen5.jpg');
+const sCover = require('../assets/s_cover_large2.jpg');
+const s1 = require('../assets/sunko_screen1.jpg');
+const s2 = require('../assets/sunko_screen2.jpg');
+const s3 = require('../assets/sunko_screen3.jpg');
+const s4 = require('../assets/sunko_screen4.jpg');
+const s5 = require('../assets/sunko_screen5.jpg');
 
-const bsCover = require('../images/bs_cover_large.jpg');
-const bs1 = require('../images/bs_screen1.jpg');
-const bs2 = require('../images/bs_screen2.jpg');
-const bs3 = require('../images/bs_screen3.jpg');
-const bs4 = require('../images/bs_screen4.jpg');
-const bs5 = require('../images/bs_screen5.jpg');
-const bs6 = require('../images/bs_screen1.png');
+const bsCover = require('../assets/bs_cover_large.jpg');
+const bs1 = require('../assets/bs_screen1.jpg');
+const bs2 = require('../assets/bs_screen2.jpg');
+const bs3 = require('../assets/bs_screen3.jpg');
+const bs4 = require('../assets/bs_screen4.jpg');
+const bs5 = require('../assets/bs_screen5.jpg');
+const bs6 = require('../assets/bs_screen1.png');
 
-const pCover = require('../images/p_cover_large.jpg');
-const p1 = require('../images/p_screen1.jpg');
-const p2 = require('../images/p_screen2.jpg');
-const p3 = require('../images/p_screen3.jpg');
-const p4 = require('../images/p_screen4.jpg');
-const p5 = require('../images/p_screen5.jpg');
+const pCover = require('../assets/p_cover_large.jpg');
+const p1 = require('../assets/p_screen1.jpg');
+const p2 = require('../assets/p_screen2.jpg');
+const p3 = require('../assets/p_screen3.jpg');
+const p4 = require('../assets/p_screen4.jpg');
+const p5 = require('../assets/p_screen5.jpg');
 
 export default [
   {

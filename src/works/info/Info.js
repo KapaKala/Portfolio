@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Slider from './Slider';
-import items from './items';
-import FourOhFour from '../fourOhFour/FourOhFour';
+import items from '../../constants/items';
+import FourOhFour from '../../fourOhFour/FourOhFour';
 
 import './Info.css';
 

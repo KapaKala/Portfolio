@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FontAwesome from 'react-fontawesome';
 import Spinner from 'react-spinkit';
-import '../font-awesome.css';
+import '../../assets/font-awesome.css';
 import './Info.css';
 
 const Slider = props => (

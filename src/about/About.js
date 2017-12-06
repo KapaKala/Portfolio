@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css';
 
-const img = require('../images/Untitled.png');
+const img = require('../assets/Untitled.png');
 
 const About = () => (
   <div className="about-container">

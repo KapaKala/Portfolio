@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import { AnimatedSwitch } from 'react-router-transition';
-import Portfolio from './Portfolio';
-import Info from './Info';
+import Portfolio from './portfolio/Portfolio';
+import Info from './info/Info';
 
 function mapStyles(styles) {
   return {

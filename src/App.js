@@ -1,10 +1,10 @@
 import { Route, Switch, withRouter } from 'react-router-dom';
-import { TransitionGroup, Transition, CSSTransition } from 'react-transition-group';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Nav from './nav/Nav';
-import Works from './portfolio/Works';
-import Landing, { ClearShit } from './landing/Landing';
+import Works from './works/Works';
+import Landing from './landing/Landing';
 import About from './about/About';
 import Contact from './contact/Contact';
 import FourOhFour from './fourOhFour/FourOhFour';

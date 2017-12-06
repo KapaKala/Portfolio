@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import FontAwesome from 'react-fontawesome';
 import ConsoleArea from './ConsoleArea';
-import reply from './Commands';
-import '../font-awesome.css';
+import reply from '../constants/Commands';
+import '../assets/font-awesome.css';
 import './Landing.css';
 
 let timer;
