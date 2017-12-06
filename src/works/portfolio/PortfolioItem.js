@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 const PortfolioItem = props => (
   <div key={props.item.id} className="portfolio-item">
+    <img src={props.item.img} alt="empty" onLoad={props.onLoad} style={{ display: 'none' }} />
     <div
       className="portfolio-image-container"
       style={{ backgroundImage: `url(${props.item.img})` }}
@@ -32,6 +33,7 @@ const PortfolioItem = props => (
 PortfolioItem.propTypes = {
   url: PropTypes.string.isRequired,
   item: PropTypes.shape().isRequired,
+  onLoad: PropTypes.func.isRequired,
 };
 
 export default PortfolioItem;
