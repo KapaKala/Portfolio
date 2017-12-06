@@ -22,7 +22,7 @@ const Slider = props => (
             : { opacity: 1, visibility: 'visible' }
         }
       >
-        <Spinner name="double-bounce" />
+        <Spinner fadeIn="none" name="double-bounce" />
         <h3>loading</h3>
       </div>
       <div className="img-wrapper" style={{ transform: `translateX(${props.translateValue}px)` }}>
