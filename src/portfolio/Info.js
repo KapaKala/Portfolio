@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Slider from './Slider';
 import items from './items';
+import FourOhFour from '../fourOhFour/FourOhFour';
 
 import './Info.css';
 
@@ -10,14 +12,18 @@ export default class Info extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      info: items[this.props.match.params.id],
-      imgs: items[this.props.match.params.id].images.length,
-      loadedImgs: 0,
-      displayImg: false,
-      currentImg: 0,
-      translateValue: 0,
-    };
+    if (this.props.match.params.id >= items.length || isNaN(this.props.match.params.id)) {
+      this.state = { redirect: true };
+    } else {
+      this.state = {
+        info: items[this.props.match.params.id] || [],
+        imgs: items[this.props.match.params.id].images.length || [],
+        loadedImgs: 0,
+        displayImg: false,
+        currentImg: 0,
+        translateValue: 0,
+      };
+    }
 
     this.nextImg = this.nextImg.bind(this);
     this.prevImg = this.prevImg.bind(this);
@@ -25,7 +31,11 @@ export default class Info extends Component {
   }
 
   componentDidMount() {
-    document.title = `${this.state.info.name} - Henri Kankaanpää`;
+    if (this.state.redirect) {
+      document.title = "Not found";
+    } else {
+      document.title = `${this.state.info.name} - Henri Kankaanpää`;
+    }
   }
 
   componentWillUnmount() {
@@ -101,16 +111,17 @@ export default class Info extends Component {
     const buttons = [];
 
     for (let i = 0; i < this.state.imgs; i += 1) {
-      buttons.push(
-      <div key={i} className="slider-button-wrapper">
+      buttons.push(<div key={i} className="slider-button-wrapper">
         <div
           className={this.state.currentImg === i ? 'slider-button active' : 'slider-button'}
           role="button"
           tabIndex="-1"
           onKeyPress={() => {}}
           onClick={() => this.clickButton(i)}
-        >{i+1}</div>
-      </div>);
+        >
+          {i + 1}
+        </div>
+                   </div>);
     }
 
     return buttons;
@@ -128,6 +139,7 @@ export default class Info extends Component {
   render() {
     return (
       <div className="info-overlay">
+      {this.state.redirect ? (<FourOhFour />) : (
         <div
           ref={(ref) => {
             this.infoContainer = ref;
@@ -179,6 +191,7 @@ export default class Info extends Component {
 
           {/* </div> */}
         </div>
+        )}
       </div>
     );
   }
