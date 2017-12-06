@@ -29,6 +29,13 @@ const bs4 = require('../images/bs_screen4.jpg');
 const bs5 = require('../images/bs_screen5.jpg');
 const bs6 = require('../images/bs_screen1.png');
 
+const pCover = require('../images/p_cover_large.jpg');
+const p1 = require('../images/p_screen1.jpg');
+const p2 = require('../images/p_screen2.jpg');
+const p3 = require('../images/p_screen3.jpg');
+const p4 = require('../images/p_screen4.jpg');
+const p5 = require('../images/p_screen5.jpg');
+
 export default [
   {
     id: 0,
@@ -123,5 +130,22 @@ export default [
     about:
       "I apologize for the contents of the web app, I swear it wasn't my idea. Our aim with Baka Store was to create a fully functional web store template, where the admin has the option to add and remove categories and products in the store as well as manage the quantities. The user has the ability to register and sign in, to review all products, to add items into their shopping cart, and to check out with the shipping information being filled out automatically in case the user has registered.",
     technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Spring', 'MySQL'],
+  },
+  {
+    id: 4,
+    name: 'Portfolio',
+    description: 'This site right here, my personal site.',
+    img: pCover,
+    images: [p1, p2, p3, p4, p5],
+    links: [
+      {
+        url: 'https://github.com/kapakala/Portfolio',
+        img: <FontAwesome name="github" />,
+        alt: 'github',
+      },
+    ],
+    about:
+      "Even more so than simply being a platform alongside GitHub to showcase the projects I've worked on, I wanted my personal site to be something that is indicative of my personal values. Even if it's not the most technically magnificent thing in the world, I did my best to create a site that the user would enjoy using for the couple of minutes they might be trying to find out just who I am. If you're actually reading this then thank you for visiting, and I hope you like what you're seeing!",
+    technologies: ['JavaScript', 'React'],
   },
 ];
