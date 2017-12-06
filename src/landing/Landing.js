@@ -39,10 +39,8 @@ export default class Landing extends Component {
   }
 
   componentWillMount() {
-    timer = null;
-    animationTimeout = null;
-    intObject = null;
-    blinkTimeout = null;
+    console.log('will mount');
+    ClearShit();
   }
 
   componentDidMount() {
