@@ -245,10 +245,6 @@
     right: 0;
   }
 
-  .window-titlebar {
-    display: none !important;
-  }
-
   .next-img,
   .prev-img {
     width: 20%;

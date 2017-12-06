@@ -1,15 +1,29 @@
 .four-oh-four-container {
+  position: absolute;
+  top: 0;
+  left: 0;
   background-size: cover;
   background-position: 50% 70%;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fof-text-container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .not-found {
   font-size: 300px;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 640px) {

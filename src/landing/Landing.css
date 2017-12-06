@@ -21,6 +21,10 @@
   box-sizing: content-box;
 }
 
+.landing-container span {
+  font-weight: 500;
+}
+
 .landing-container.fullscreen {
   top: 7em;
   position: fixed;
@@ -68,46 +72,6 @@
   }
 }
 
-@-moz-keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: white;
-  }
-}
-
-@-webkit-keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: white;
-  }
-}
-
-@-ms-keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: white;
-  }
-}
-
-@-o-keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: white;
-  }
-}
-
 .hidden {
   opacity: 0;
   visibility: hidden;
@@ -121,6 +85,10 @@
 .console-container {
   outline: none;
   word-wrap: break-word;
+}
+
+.console-content {
+  padding: 3em 1em 0 1em;
 }
 
 .console-text-area {
@@ -138,6 +106,15 @@
     white-space: normal;
     padding: 0 16px;
     margin: 0;
+    box-shadow: 0;
+  }
+
+  .console-content {
+    padding: 0;
+  }
+
+  .window-titlebar {
+    display: none;
   }
 }
 
@@ -163,10 +140,6 @@
 
 .prompt-text {
   margin-bottom: -1em;
-}
-
-.console-content {
-  padding: 2em 1em 0 1em;
 }
 
 .terminal-icon-wrapper {
