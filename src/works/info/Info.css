@@ -55,11 +55,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: calc(70vw * 0.6 - 2px);
   position: absolute;
   left: 0;
   top: 0;
+  bottom: 0;
+  right: 0;
   background: white;
   color: #333;
   transition: all 0.5s;
