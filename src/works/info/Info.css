@@ -27,7 +27,7 @@
 }
 
 .info-name {
-  margin: 0 0.25em 0 0;
+  margin: 0 0.5em 0 0;
   font-size: 3em;
 }
 
@@ -46,7 +46,7 @@
   position: relative;
   white-space: nowrap;
   background: white;
-  height: calc(70vw * 0.6 - 2px);
+  height: calc((70vw - 1em) * 0.6);
   max-height: 598px;
 }
 
@@ -144,6 +144,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  flex-wrap: wrap;
 }
 
 .info-links a {
@@ -153,7 +154,7 @@
   text-decoration: none;
   white-space: pre;
   color: #111;
-  margin: 0 0.75em;
+  margin-right: 1.5em;
   background-color: white;
   padding: 0.45em 0.5em;
   border-radius: 3px;
@@ -221,7 +222,8 @@
   }
 
   .img-div {
-    height: calc((100vw - 2em) * 0.6 - 2px);
+    width: 100%;
+    height: calc((100vw - 3em - 2px) * 0.6);
   }
 
   .info-name {
