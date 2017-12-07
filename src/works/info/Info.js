@@ -109,19 +109,18 @@ export default class Info extends Component {
     const buttons = [];
 
     for (let i = 0; i < this.state.imgs; i += 1) {
-      buttons.push(
-        <div key={i} className="slider-button-wrapper">
-          <div
-            className={this.state.currentImg === i ? 'slider-button active' : 'slider-button'}
-            role="button"
-            tabIndex="-1"
-            onKeyPress={() => {}}
-            onClick={() => this.clickButton(i)}
-          >
-            {i + 1}
-          </div>
+      buttons.push(<div key={i} className="slider-button-wrapper">
+        <div
+          className={this.state.currentImg === i ? 'slider-button active' : 'slider-button'}
+          role="button"
+          tabIndex="-1"
+          onKeyPress={() => {}}
+          onClick={() => this.clickButton(i)}
+        >
+          {i + 1}
         </div>
-        ); }
+      </div>);
+    }
     return buttons;
   }
 
@@ -137,11 +136,13 @@ export default class Info extends Component {
   render() {
     return (
       <div className="info-overlay">
-        {this.state.redirect ? (<FourOhFour />) : (
+        {this.state.redirect ? (
+          <FourOhFour />
+        ) : (
           <div
             ref={(ref) => {
-            this.infoContainer = ref;
-          }}
+              this.infoContainer = ref;
+            }}
             className="info-container"
           >
             <div className="top">
