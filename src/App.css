@@ -2,7 +2,7 @@ html,
 body,
 #root,
 .App {
-  background: #111;
+  background: #111111;
   color: #eee;
   box-sizing: border-box;
   display: block;
@@ -69,7 +69,7 @@ body,
   align-items: center;
   text-decoration: none;
   white-space: pre;
-  color: #111;
+  color: #111111;
   margin: 0 0.75em;
   background-color: white;
   padding: 0.5em;
