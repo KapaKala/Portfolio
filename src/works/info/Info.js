@@ -31,7 +31,7 @@ export default class Info extends Component {
 
   componentDidMount() {
     if (this.state.redirect) {
-      document.title = "Not found";
+      document.title = 'Not found';
     } else {
       document.title = `${this.state.info.name} - Henri Kankaanpää`;
     }
@@ -42,7 +42,6 @@ export default class Info extends Component {
   }
 
   getSlideWidth = () => {
-    console.log('hee');
     const img = document.querySelector('.info-image');
     return img.clientWidth;
   };
@@ -110,19 +109,19 @@ export default class Info extends Component {
     const buttons = [];
 
     for (let i = 0; i < this.state.imgs; i += 1) {
-      buttons.push(<div key={i} className="slider-button-wrapper">
-        <div
-          className={this.state.currentImg === i ? 'slider-button active' : 'slider-button'}
-          role="button"
-          tabIndex="-1"
-          onKeyPress={() => {}}
-          onClick={() => this.clickButton(i)}
-        >
-          {i + 1}
+      buttons.push(
+        <div key={i} className="slider-button-wrapper">
+          <div
+            className={this.state.currentImg === i ? 'slider-button active' : 'slider-button'}
+            role="button"
+            tabIndex="-1"
+            onKeyPress={() => {}}
+            onClick={() => this.clickButton(i)}
+          >
+            {i + 1}
+          </div>
         </div>
-                   </div>);
-    }
-
+        ); }
     return buttons;
   }
 
@@ -138,58 +137,45 @@ export default class Info extends Component {
   render() {
     return (
       <div className="info-overlay">
-      {this.state.redirect ? (<FourOhFour />) : (
-        <div
-          ref={(ref) => {
+        {this.state.redirect ? (<FourOhFour />) : (
+          <div
+            ref={(ref) => {
             this.infoContainer = ref;
           }}
-          className="info-container"
-        >
-          <div className="top">
-            <h1 className="info-name">{this.state.info.name}</h1>
-            <div className="info-links">
-              {this.state.info.links.map(link => (
-                <a key={link.url} href={link.url} rel="noopener noreferrer" target="_blank">
-                  {link.img} <span> {link.alt}</span>
-                </a>
-              ))}
+            className="info-container"
+          >
+            <div className="top">
+              <h1 className="info-name">{this.state.info.name}</h1>
+              <div className="info-links">
+                {this.state.info.links.map(link => (
+                  <a key={link.url} href={link.url} rel="noopener noreferrer" target="_blank">
+                    {link.img} <span> {link.alt}</span>
+                  </a>
+                ))}
+              </div>
             </div>
+            <div className="info-description">
+              {this.state.info.description.split('\n').map(o => <div key={o}>{o}</div>)}
+            </div>
+
+            <Slider
+              width={this.state.imgWidth}
+              height={this.state.imgHeight}
+              display={this.state.displayImg}
+              imgs={this.state.imgs}
+              nextImg={this.nextImg}
+              prevImg={this.prevImg}
+              createImages={this.createImages}
+              translateValue={this.state.translateValue}
+            />
+
+            <div className="slider-button-container">{this.createButtons()}</div>
+
+            <h2>About this project</h2>
+            <p>{this.state.info.about}</p>
+            <h2>Technologies</h2>
+            <ul>{this.state.info.technologies.map(o => <li key={o}>{o}</li>)}</ul>
           </div>
-          <div className="info-description">
-            {this.state.info.description.split('\n').map(o => <div key={o}>{o}</div>)}
-          </div>
-
-          <Slider
-            width={this.state.imgWidth}
-            height={this.state.imgHeight}
-            display={this.state.displayImg}
-            imgs={this.state.imgs}
-            nextImg={this.nextImg}
-            prevImg={this.prevImg}
-            createImages={this.createImages}
-            translateValue={this.state.translateValue}
-          />
-
-          <div className="slider-button-container">{this.createButtons()}</div>
-
-          <h2>About this project</h2>
-          <p>{this.state.info.about}</p>
-          <h2>Technologies</h2>
-          <ul>{this.state.info.technologies.map(o => <li key={o}>{o}</li>)}</ul>
-
-          {/* <div
-            onKeyDown={(e) => {
-              if (e.key === 'Enter') {
-                this.close();
-              }
-            }}
-            className="close-button"
-            role="button"
-            tabIndex="-1"
-          > */}
-
-          {/* </div> */}
-        </div>
         )}
       </div>
     );

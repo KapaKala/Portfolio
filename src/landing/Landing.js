@@ -39,7 +39,6 @@ export default class Landing extends Component {
   }
 
   componentWillMount() {
-    console.log('will mount');
     ClearShit();
   }
 

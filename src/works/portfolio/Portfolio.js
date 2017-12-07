@@ -14,7 +14,6 @@ export default class Portfolio extends Component {
 
   confirmImageLoad = () => {
     this.setState({ loadedImages: (this.state.loadedImages += 1) });
-    console.log('boobs :D');
     if (this.state.loadedImages === this.state.images) {
       this.setState({ display: true });
     }
