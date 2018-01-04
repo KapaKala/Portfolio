@@ -74,7 +74,7 @@ export default class Nav extends Component {
             className={this.state.open ? 'menu-container open' : 'menu-container close'}
             onClick={this.click}
             onKeyPress={() => {
-              this.setState({ open: false });
+              this.onKeyDown();
             }}
             role="button"
             tabIndex="0"
