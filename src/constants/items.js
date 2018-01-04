@@ -39,31 +39,25 @@ const p5 = require('../assets/p_screen5.jpg');
 export default [
   {
     id: 0,
-    name: 'Sandman',
-    description: 'Sandman is an educational mobile game for Android devices.',
-    img: smCover,
-    images: [sm1, sm2, sm3],
+    name: 'Sunko',
+    description: 'A sleek weather app that tells you the weather quite literally.',
+    img: sCover,
+    images: [s1, s2, s3, s4, s5],
     links: [
       {
-        url:
-          'http://www.ukkinstituutti.fi/uutiskirje/smartmoves/lue/Smart-Moves--uutiskirje-2-2016%3A-Vaihtelua-tunneille-hyvinvointiteemaisilla-mobiilipeleillä/1573d55c2828a9/573d64e8ba65a',
-        img: <FontAwesome name="file" />,
-        alt: 'newsletter',
-      },
-      {
-        url: 'https://github.com/KapaKala/Sandman-Public',
+        url: 'https://github.com/KapaKala/Sunko',
         img: <FontAwesome name="github" />,
         alt: 'github',
       },
       {
-        url: 'https://play.google.com/store/apps/details?id=fi.thunder.cyborg',
+        url: 'https://play.google.com/store/apps/details?id=fi.hk.sunko',
         img: <FontAwesome name="android" />,
         alt: 'store',
       },
     ],
     about:
-      'Sandman is the product of a school game project commissioned by UKK-institute. The goal was to make an educative game, in our case related to good sleeping habits, that would appeal to junior high to high school aged kids. Our aim was to make a game that was simple but highly replayable while affirming to our guidelines. My role in this project was game logic and the actual development.',
-    technologies: ['Java for Android', 'libgdx'],
+      "My idea for Sunko was originally to make a sleek looking application that simply tells you whether or not the weather is good for sunbathing, but it eventually evolved into a more complete weather app that gives the user an easy-to-interpret assessment on the situation outside, with a text description and a dynamically changing background. The app displays weather information for the current moment, next few hours, as well as the next week, with data from WeatherUnderground's API.",
+    technologies: ['Java for Android'],
   },
   {
     id: 1,
@@ -94,25 +88,31 @@ export default [
   },
   {
     id: 2,
-    name: 'Sunko',
-    description: 'A sleek weather app that tells you the weather quite literally.',
-    img: sCover,
-    images: [s1, s2, s3, s4, s5],
+    name: 'Sandman',
+    description: 'Sandman is an educational mobile game for Android devices.',
+    img: smCover,
+    images: [sm1, sm2, sm3],
     links: [
       {
-        url: 'https://github.com/KapaKala/Sunko',
+        url:
+          'http://www.ukkinstituutti.fi/uutiskirje/smartmoves/lue/Smart-Moves--uutiskirje-2-2016%3A-Vaihtelua-tunneille-hyvinvointiteemaisilla-mobiilipeleillä/1573d55c2828a9/573d64e8ba65a',
+        img: <FontAwesome name="file" />,
+        alt: 'newsletter',
+      },
+      {
+        url: 'https://github.com/KapaKala/Sandman-Public',
         img: <FontAwesome name="github" />,
         alt: 'github',
       },
       {
-        url: 'https://play.google.com/store/apps/details?id=fi.hk.sunko',
+        url: 'https://play.google.com/store/apps/details?id=fi.thunder.cyborg',
         img: <FontAwesome name="android" />,
         alt: 'store',
       },
     ],
     about:
-      "My idea for Sunko was originally to make a sleek looking application that simply tells you whether or not the weather is good for sunbathing, but it eventually evolved into a more complete weather app that gives the user an easy-to-interpret assessment on the situation outside, with a text description and a dynamically changing background. The app displays weather information for the current moment, next few hours, as well as the next week, with data from WeatherUnderground's API.",
-    technologies: ['Java for Android'],
+      'Sandman is the product of a school game project commissioned by UKK-institute. The goal was to make an educative game, in our case related to good sleeping habits, that would appeal to junior high to high school aged kids. Our aim was to make a game that was simple but highly replayable while affirming to our guidelines. My role in this project was game logic and the actual development.',
+    technologies: ['Java for Android', 'libgdx'],
   },
   {
     id: 3,
