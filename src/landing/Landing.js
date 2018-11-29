@@ -20,23 +20,16 @@ export const ClearShit = () => {
 };
 
 export default class Landing extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      console: '~ $ ',
-      cursor: '_',
-      text: '',
-      print: [{ text: '' }, { text: '' }, { text: '' }],
-      consoleBlink: false,
-      history: [],
-      display: true,
-      fullscreen: false,
-    };
-
-    this.animateRow = this.animateRow.bind(this);
-    this.onKeyDown = this.onKeyDown.bind(this);
-  }
+  state = {
+    console: '~ $ ',
+    cursor: '_',
+    text: '',
+    print: [{ text: '' }, { text: '' }, { text: '' }],
+    consoleBlink: false,
+    history: [],
+    displayConsole: true,
+    fullscreen: false,
+  };
 
   componentWillMount() {
     ClearShit();
@@ -56,7 +49,7 @@ export default class Landing extends Component {
     document.removeEventListener('keydown', this.onKeyDown);
   }
 
-  onKeyDown(e) {
+  onKeyDown = (e) => {
     const stateCopy = this.state;
 
     if (timer) {
@@ -116,9 +109,9 @@ export default class Landing extends Component {
       }
     }
     timer = window.setTimeout(() => this.setState({ consoleBlink: true }), 1000);
-  }
+  };
 
-  animateText() {
+  animateText = () => {
     const { animateRow } = this;
     animateRow('Hello!', 1, this.cursor1, this.console1, () => {
       animateRow('My name is Henri', 2, this.cursor2, this.console2, () => {
@@ -131,12 +124,12 @@ export default class Landing extends Component {
         });
       });
     });
-  }
+  };
 
-  animateRow(text, id, cu, co, callback) {
-    cu.classList.add('not-blinking');
-    cu.classList.remove('hidden');
-    co.classList.remove('hidden');
+  animateRow = (text, id, cursor, consoleElement, callback) => {
+    cursor.classList.add('not-blinking');
+    cursor.classList.remove('hidden');
+    consoleElement.classList.remove('hidden');
 
     let index = 0;
     intObject = setInterval(() => {
@@ -147,26 +140,26 @@ export default class Landing extends Component {
       if (index === text.length) {
         clearInterval(intObject);
         animationTimeout = setTimeout(() => {
-          cu.classList.remove('not-blinking');
-          cu.classList.add('blinking');
+          cursor.classList.remove('not-blinking');
+          cursor.classList.add('blinking');
           if (callback) {
             stateCopy = this.state.print.slice();
             this.setState(stateCopy);
-            cu.classList.add('hidden');
+            cursor.classList.add('hidden');
             callback();
           }
         }, 200);
       }
     }, 60);
-  }
+  };
 
-  toggleFullscreen() {
+  toggleFullscreen = () => {
     this.setState({ fullscreen: !this.state.fullscreen });
-  }
+  };
 
-  toggleClose() {
-    this.setState({ display: !this.state.display });
-  }
+  toggleClose = () => {
+    this.setState({ displayConsole: !this.state.displayConsole });
+  };
 
   render() {
     return (
@@ -176,7 +169,7 @@ export default class Landing extends Component {
             this.landingContainer = ref;
           }}
           className={
-            this.state.display
+            this.state.displayConsole
               ? `landing-container ${this.state.fullscreen ? 'fullscreen' : ''}`
               : 'landing-container hidden'
           }
@@ -288,14 +281,18 @@ export default class Landing extends Component {
           </div>
         </div>
         <div
-          className={this.state.display ? 'terminal-icon-wrapper hidden' : 'terminal-icon-wrapper'}
+          className={
+            this.state.displayConsole ? 'terminal-icon-wrapper hidden' : 'terminal-icon-wrapper'
+          }
         >
           <div
             onClick={() => this.toggleClose()}
             onKeyDown={() => {}}
             role="button"
             tabIndex="0"
-            className={this.state.display ? 'terminal-icon hidden' : 'terminal-icon clickable'}
+            className={
+              this.state.displayConsole ? 'terminal-icon hidden' : 'terminal-icon clickable'
+            }
           >
             <FontAwesome name="terminal" size="3x" className="actual-icon" />
             <span>terminal</span>

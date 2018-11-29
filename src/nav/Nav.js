@@ -3,24 +3,8 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import './Nav.css';
 
-const activeStyle = {
-  // textDecoration: 'underline',
-  color: 'rgba(255,255,255,1)',
-};
-
 export default class Nav extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      open: false,
-    };
-
-    this.click = this.click.bind(this);
-    this.menuClick = this.menuClick.bind(this);
-    this.goToNext = this.goToNext.bind(this);
-    this.onKeyDown = this.onKeyDown.bind(this);
-  }
+  state = { open: false };
 
   componentDidMount() {
     window.addEventListener('keydown', this.onKeyDown);
@@ -30,22 +14,26 @@ export default class Nav extends Component {
     window.removeEventListener('keydown', this.onKeyDown);
   }
 
-  onKeyDown(e) {
+  onKeyDown = (e) => {
     if (e.key === 'Escape' && this.state.open) {
       this.setState({ open: false });
     }
-  }
+  };
 
-  click() {
+  activeStyle = {
+    color: 'rgba(255,255,255,1)',
+  };
+
+  click = () => {
     this.setState({ open: !this.state.open });
-  }
+  };
 
-  menuClick() {
+  menuClick = () => {
     this.click();
     this.props.scrollToTop();
-  }
+  };
 
-  goToNext() {
+  goToNext = () => {
     switch (this.props.location.pathname) {
       case '/':
         document.title = 'Home - Henri Kankaanpää';
@@ -64,7 +52,7 @@ export default class Nav extends Component {
       default:
         return '/';
     }
-  }
+  };
 
   render() {
     return (
@@ -109,30 +97,28 @@ export default class Nav extends Component {
         >
           <ul>
             <li>
-              <NavLink exact onClick={this.menuClick} to="/" activeStyle={activeStyle}>
+              <NavLink exact onClick={this.menuClick} to="/" activeStyle={this.activeStyle}>
                 home
               </NavLink>
             </li>
             <li>
-              <NavLink exact onClick={this.menuClick} to="/works" activeStyle={activeStyle}>
+              <NavLink exact onClick={this.menuClick} to="/works" activeStyle={this.activeStyle}>
                 works
               </NavLink>
             </li>
             <li>
-              <NavLink exact onClick={this.menuClick} to="/about" activeStyle={activeStyle}>
+              <NavLink exact onClick={this.menuClick} to="/about" activeStyle={this.activeStyle}>
                 about
               </NavLink>
             </li>
             <li>
-              <NavLink exact onClick={this.menuClick} to="/contact" activeStyle={activeStyle}>
+              <NavLink exact onClick={this.menuClick} to="/contact" activeStyle={this.activeStyle}>
                 contact
               </NavLink>
             </li>
           </ul>
         </div>
-        <div className={this.state.open ? 'content-wrapper blurred' : 'content-wrapper'}>
-          {this.props.children}
-        </div>
+        <div className="content-wrapper">{this.props.children}</div>
       </div>
     );
   }
