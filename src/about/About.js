@@ -12,7 +12,7 @@ const About = () => (
       <div className="left-container">
         <h3>Hello!</h3>
         <p>
-          I&apos;m Henri Kankaanpää, a third-year business information systems student at Tampere
+          I&apos;m Henri Kankaanpää, a fourth-year business information systems student at Tampere
           University of Applied Sciences.
         </p>
         <p>
@@ -27,13 +27,10 @@ const About = () => (
           <div className="frontend-container">
             <h4>Front end</h4>
             <ul>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>JavaScript</li>
+              <li>JavaScript (ES6, TS)</li>
               <li>React/Native + Redux</li>
               <li>Java + Java for Android</li>
-              <li>libgdx</li>
-              <li>C++</li>
+              <li>Clojure/CLJS (Reagent + Re-frame)</li>
             </ul>
           </div>
           <div className="backend-container">
@@ -41,7 +38,7 @@ const About = () => (
             <ul>
               <li>Node + Express</li>
               <li>Spring</li>
-              <li>MySQL</li>
+              <li>SQL (MySQL, PostgreSQL)</li>
             </ul>
           </div>
         </div>
