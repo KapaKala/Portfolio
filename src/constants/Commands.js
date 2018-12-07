@@ -1,14 +1,6 @@
 import React from 'react';
 
-const randomFact = [
-  'Dogs > cats',
-  'I like movies. How unique.',
-  'My favorite movie is probably 12 Angry Men',
-  "I might like anime but if that's not your thing I'm not gonna admit it.",
-  "I'm into all kinds of music",
-  'I am a peaceful bipedal hominid',
-  "I've put almost 2000 hours into Dota 2 but am currently kind of retired",
-];
+const randomFact = ['internal_fact_error'];
 
 const reply = (command) => {
   switch (command) {
