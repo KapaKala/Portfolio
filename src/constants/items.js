@@ -36,11 +36,32 @@ const p3 = require('../assets/p_screen3.jpg');
 const p4 = require('../assets/p_screen4.jpg');
 const p5 = require('../assets/p_screen5.jpg');
 
+const tCover = require('../assets/td_cover_large.jpg');
+const t1 = require('../assets/td_screen1.gif');
+const t2 = require('../assets/td_screen2.gif');
+
 export default [
   {
     id: 0,
+    name: 'to-do',
+    description: "A really simple thing, but it's smooth and pointy.",
+    img: tCover,
+    images: [t1, t2],
+    links: [
+      {
+        url: 'https://github.com/kapakala/cljs-to-do',
+        img: <FontAwesome name="github" />,
+        alt: 'github',
+      },
+    ],
+    about:
+      "Building a to-do app is one of the most common things to create when you want to try your hand at a new language/framework. This one is made with React Native, with the twist that instead of the standard JavaScript, it's written in ClojureScript, a functional language. The focus with the UI was to make it as simple as possible, with smooth native feeling animations (at least on iOS) and a slightly different UX, using double taps instead of the more standard buttons to manage the cards on the list.",
+    technologies: ['ClojureScript', 'React Native', 'Reagent', 'Re-frame', 'SQLite'],
+  },
+  {
+    id: 1,
     name: 'Sunko',
-    description: 'A sleek weather app that tells you the weather quite literally.',
+    description: 'A sleek weather app that literally tells you the weather.',
     img: sCover,
     images: [s1, s2, s3, s4, s5],
     links: [
@@ -60,7 +81,7 @@ export default [
     technologies: ['Java for Android'],
   },
   {
-    id: 1,
+    id: 2,
     name: 'Kuippana',
     description: 'A web app for tracking and managing the work hours of employees.',
     img: kCover,
@@ -87,7 +108,7 @@ export default [
     ],
   },
   {
-    id: 2,
+    id: 3,
     name: 'Sandman',
     description: 'Sandman is an educational mobile game for Android devices.',
     img: smCover,
@@ -115,9 +136,9 @@ export default [
     technologies: ['Java for Android', 'libgdx'],
   },
   {
-    id: 3,
+    id: 4,
     name: 'Baka Store',
-    description: 'Done as a school project, Baka Store is a web store template.',
+    description: 'Made as a school project, Baka Store is a web store template.',
     img: bsCover,
     images: [bs6, bs1, bs4, bs3, bs5, bs2],
     links: [
@@ -132,7 +153,7 @@ export default [
     technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Spring', 'MySQL'],
   },
   {
-    id: 4,
+    id: 5,
     name: 'Portfolio',
     description: "My personal site. You're looking at it!",
     img: pCover,
@@ -145,7 +166,7 @@ export default [
       },
     ],
     about:
-      "Even more so than simply being a platform alongside GitHub to showcase the projects I've worked on, I wanted my personal site to be something that looks and feels like me (though not literally). Even if it's not the most technically magnificent thing in the world, I tried to create a site that the user would actually enjoy visiting for the couple of minutes they might be going through what I have here. If you're actually reading this then thank you for visiting, and I hope you like what you're seeing 😘",
+      "Even more so than simply being a platform alongside GitHub to showcase the projects I've worked on, I wanted my personal site to be something that looks and feels like me (not literally). Even if it's not the most technically magnificent thing in the world, I tried to create a site that the user would enjoy visiting for the couple of minutes they might be going through the content I have here. If you're actually reading this then thank you for visiting, and I hope you like what you're seeing 😘",
     technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
   },
 ];
